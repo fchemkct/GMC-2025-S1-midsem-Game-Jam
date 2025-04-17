@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://ka0g1gsnp853"]
+
+[ext_resource type="Script" uid="uid://c230namowwh8r" path="res://tracewinput.gd" id="1_8qu32"]
+[ext_resource type="Texture2D" uid="uid://bav7lrqoof5g3" path="res://check.png" id="1_mm304"]
+
+[node name="tracewinput" type="Node2D" node_paths=PackedStringArray("original_pic")]
+script = ExtResource("1_8qu32")
+original_pic = NodePath("testtrace")
+
+[node name="testtrace" type="Sprite2D" parent="."]
+position = Vector2(101.5, 82.25)
+scale = Vector2(0.0952148, 0.0759277)
+texture = ExtResource("1_mm304")
