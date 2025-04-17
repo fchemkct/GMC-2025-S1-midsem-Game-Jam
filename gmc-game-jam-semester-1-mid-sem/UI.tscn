@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://b7uvbjb8jtdaf"]
+
+[ext_resource type="Texture2D" uid="uid://b6jv74r8ln2di" path="res://Screenshot 2025-04-17 004134.png" id="1_v60ag"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 2.105
+offset_bottom = -0.0400391
+texture = ExtResource("1_v60ag")
