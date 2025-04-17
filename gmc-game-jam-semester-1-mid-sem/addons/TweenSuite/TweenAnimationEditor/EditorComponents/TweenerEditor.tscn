@@ -1,10 +1,10 @@
 [gd_scene load_steps=8 format=3 uid="uid://blplsxu77noo5"]
 
 [ext_resource type="StyleBox" uid="uid://d1xmdsfvcu5yl" path="res://addons/TweenSuite/TweenAnimationEditor/GUIComponents/Panel.tres" id="1_oiwl2"]
-[ext_resource type="Script" path="res://addons/TweenSuite/TweenAnimationEditor/EditorComponents/TweenerEditor.gd" id="1_vmb5y"]
-[ext_resource type="Script" path="res://addons/TweenSuite/TweenAnimationEditor/GUIComponents/FormatLabel.gd" id="2_20eyb"]
-[ext_resource type="Script" path="res://addons/TweenSuite/TweenAnimationEditor/GUIComponents/EditorButton.gd" id="2_kbpp4"]
-[ext_resource type="Script" path="res://addons/TweenSuite/TweenAnimationEditor/GUIComponents/ExpressionEdit.gd" id="3_iulab"]
+[ext_resource type="Script" uid="uid://c2eildhrsfcf4" path="res://addons/TweenSuite/TweenAnimationEditor/EditorComponents/TweenerEditor.gd" id="1_vmb5y"]
+[ext_resource type="Script" uid="uid://cta0u0pyxtle8" path="res://addons/TweenSuite/TweenAnimationEditor/GUIComponents/FormatLabel.gd" id="2_20eyb"]
+[ext_resource type="Script" uid="uid://bsh5d74qdx4y2" path="res://addons/TweenSuite/TweenAnimationEditor/GUIComponents/EditorButton.gd" id="2_kbpp4"]
+[ext_resource type="Script" uid="uid://b8c1v70wg5cn6" path="res://addons/TweenSuite/TweenAnimationEditor/GUIComponents/ExpressionEdit.gd" id="3_iulab"]
 [ext_resource type="PackedScene" uid="uid://c5al8etaem6a6" path="res://addons/TweenSuite/TweenAnimationEditor/GUIComponents/ObjectEdit.tscn" id="4_ccge7"]
 [ext_resource type="PackedScene" uid="uid://dkuqneh7wwwbj" path="res://addons/TweenSuite/TweenAnimationEditor/GUIComponents/PropertyEdit.tscn" id="5_dogfc"]
 
