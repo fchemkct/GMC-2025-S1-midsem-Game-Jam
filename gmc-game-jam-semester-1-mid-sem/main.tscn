@@ -25,4 +25,3 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="tracewinput" parent="TileMapLayer" instance=ExtResource("2_0xm2m")]
-position = Vector2(-146, -15)
