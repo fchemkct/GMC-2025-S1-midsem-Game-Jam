@@ -3,12 +3,16 @@ extends Node2D
 @export var original_path: Array[Vector2] = []  # Reference path to match against
 var drawn_points: Array[Vector2] = []
 var is_drawing := false
+var mouse_pos: Vector2 = Vector2.ZERO
+var guide_progress := 0.0
 
 func _ready():
 	var path_node = $Path2D  # Adjust the path as needed
 	var curve = path_node.curve
 	for i in range(curve.get_point_count()):
 		original_path.append(path_node.to_global(curve.get_point_position(i)))
+	set_process(true)
+
 
 
 func _input(event):
@@ -18,19 +22,53 @@ func _input(event):
 			if is_drawing:
 				drawn_points.clear()
 				drawn_points.append(get_global_mouse_position())
+				
+	elif event is InputEventMouseMotion:
+		mouse_pos = get_global_mouse_position()  # <-- Track mouse always
+		if is_drawing:
+			drawn_points.append(mouse_pos)
+		queue_redraw() 
+	"""
 	elif event is InputEventMouseMotion and is_drawing:
 		drawn_points.append(get_global_mouse_position())
 		queue_redraw()
+	"""
+	
+func _process(delta):
+	# Animate the ghost guide along the original path
+	if original_path.size() >= 2:
+		guide_progress += delta * 0.8  # adjust speed 
+		if guide_progress > 1.0:
+			guide_progress = 0.0
+		queue_redraw()
+
 
 func _draw():
+	# Draw ghost original path
+	#if original_path.size() >= 2:
+	#	draw_polyline(original_path, Color(0.7, 0.7, 0.7, 0.5), 3)
+	#	for point in original_path:
+	#		draw_circle(point, 4, Color(0.8, 0.8, 0.8, 0.3))
+			
+			
 	if drawn_points.size() >= 2:
 		for i in range(1, drawn_points.size()):
 			draw_line(drawn_points[i - 1], drawn_points[i], Color.RED, 2)
-
-	# Optional: draw original path for reference (in green)
+	
 	if original_path.size() >= 2:
-		for i in range(1, original_path.size()):
-			draw_line(original_path[i - 1], original_path[i], Color.GREEN, 1)
+		var point_count = original_path.size()
+		var index = int(guide_progress * (point_count - 1))
+		var next_index = min(index + 1, point_count - 1)
+		var t = (guide_progress * (point_count - 1)) - index
+		var pos = original_path[index].lerp(original_path[next_index], t)
+
+		# Draw the animated guidance circle
+		draw_circle(pos, 13, Color(1, 1, 1, 1))  # Orange guide
+
+
+	draw_circle(mouse_pos, 8, Color(0, 0.6, 1, 0.4))  # Light blue guide circle
+	draw_circle(mouse_pos, 3, Color(0, 0.6, 1, 1))     # Inner dot for clarity
+
 
 # Call this to compare paths
 func compare_trace_to_original():
