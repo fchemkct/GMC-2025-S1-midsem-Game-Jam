@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://d05sr8rjnvuv6"]
+[gd_scene load_steps=5 format=3 uid="uid://d05sr8rjnvuv6"]
 
 [ext_resource type="Script" uid="uid://boy74n4e8slqm" path="res://test.gd" id="1_rkna4"]
 [ext_resource type="PackedScene" uid="uid://ka0g1gsnp853" path="res://tracewinput.tscn" id="2_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://bnrqduc4ah6q4" path="res://player.tscn" id="3_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://coc7biftqup55" path="res://Npc.tscn" id="4_lquwl"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -25,3 +27,8 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="tracewinput" parent="TileMapLayer" instance=ExtResource("2_0xm2m")]
+
+[node name="Player" parent="." instance=ExtResource("3_1bvp3")]
+
+[node name="Node2D" parent="." instance=ExtResource("4_lquwl")]
+position = Vector2(237, -160)
