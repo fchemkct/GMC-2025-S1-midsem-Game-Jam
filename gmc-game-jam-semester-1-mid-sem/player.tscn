@@ -37,7 +37,6 @@ animations = [{
 }]
 
 [node name="Player" type="Area2D"]
-position = Vector2(239, 285)
 script = ExtResource("1_sweqy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

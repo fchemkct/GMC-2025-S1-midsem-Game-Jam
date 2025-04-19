@@ -16,6 +16,7 @@ func _ready():
 	for i in range(curve.get_point_count()):
 		original_path.append(path_node.to_global(curve.get_point_position(i)))
 	set_process(true)
+	hide()
 
 
 

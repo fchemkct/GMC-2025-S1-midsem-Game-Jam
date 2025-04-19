@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://tgdagy4lm2u3"]
+
+[ext_resource type="PackedScene" uid="uid://bnrqduc4ah6q4" path="res://player.tscn" id="1_6uqi0"]
+[ext_resource type="PackedScene" uid="uid://coc7biftqup55" path="res://Npc.tscn" id="2_ppyta"]
+[ext_resource type="PackedScene" uid="uid://bap1s3otm2h7f" path="res://dialogue2.tscn" id="3_ykrsh"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_6uqi0")]
+position = Vector2(577, 359)
+
+[node name="rigit" parent="." instance=ExtResource("2_ppyta")]
+position = Vector2(175, 421)
+
+[node name="CharactersDialogue" parent="." instance=ExtResource("3_ykrsh")]
+visible = false
+offset_left = 349.0
+offset_top = 188.0
+offset_right = 349.0
+offset_bottom = 188.0

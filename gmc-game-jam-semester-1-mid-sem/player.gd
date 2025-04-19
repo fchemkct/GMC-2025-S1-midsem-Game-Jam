@@ -1,16 +1,16 @@
 extends Area2D
-
 signal inRange
 
 @export var speed = 400
 var screenSize
 var canTalk = false; ##determines if player is in range to talk to another npc
-
+##@onready var dialogue = $"../CharactersDialogue"
 func _ready():
 	screenSize = get_viewport_rect().size
 	
 func _process(delta: float):
 	walk(delta)
+	##dialogue.show()
 	pass
 	
 func walk(delta: float):
@@ -31,13 +31,14 @@ func walk(delta: float):
 		$AnimatedSprite2D.stop()
 		
 	position += velocity * delta
-	position = position.clamp(Vector2.ZERO, screenSize)
+	##position = position.clamp(Vector2.ZERO, screenSize)
 
 
 func _on_body_entered(body) -> void:
 	##hide()
 	##inRange.emit()
 	canTalk = true
+	
 	print("enter:cantalk bool is: " + str(canTalk))
 	 # Replace with function body.
 
