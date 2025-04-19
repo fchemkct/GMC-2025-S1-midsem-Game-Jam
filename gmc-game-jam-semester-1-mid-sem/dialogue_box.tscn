@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://nhdfyldki6w3"]
+
+[ext_resource type="Script" uid="uid://btp5ejus0fe0t" path="res://REALDIAG.gd" id="1_senjy"]
+
+[node name="DialogueBox" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_senjy")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Textlabel" type="Label" parent="Panel"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
