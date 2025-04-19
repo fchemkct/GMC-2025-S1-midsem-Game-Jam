@@ -17,8 +17,6 @@ func _ready():
 		original_path.append(path_node.to_global(curve.get_point_position(i)))
 	set_process(true)
 
-
-
 func _input(event):
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT:
