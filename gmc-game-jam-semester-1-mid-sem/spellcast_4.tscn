@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://b1ti3cjpodw6a"]
+
+[ext_resource type="Script" uid="uid://dqng28epwtv6g" path="res://spellcast_4.gd" id="1_ptjc6"]
+[ext_resource type="Texture2D" uid="uid://c4bqy1cumy4c1" path="res://Spellcasts/DA147F94-6F5F-4BAD-BFBD-A8BDA3D74F9E.jpg" id="1_q0dmg"]
+
+[sub_resource type="Curve2D" id="Curve2D_ptjc6"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -200, 208, 0, 0, 0, 0, -328, 206, 0, 0, 0, 0, -218, 64, 0, 0, 0, 0, -124, -36, 0, 0, 0, 0, -58, -122, 0, 0, 0, 0, 4, -220, 0, 0, 0, 0, 58, -210, 0, 0, 0, 0, 108, -148, 0, 0, 0, 0, 154, -66, 0, 0, 0, 0, 204, 38, 0, 0, 0, 0, 262, 102, 0, 0, 0, 0, 312, 180, 0, 0, 0, 0, 336, 228, 0, 0, 0, 0, 216, 196)
+}
+point_count = 14
+
+[node name="spellcast4" type="Node2D"]
+script = ExtResource("1_ptjc6")
+
+[node name="sppattern4" type="Sprite2D" parent="."]
+position = Vector2(6, 5)
+texture = ExtResource("1_q0dmg")
+
+[node name="sptrace4" type="Path2D" parent="."]
+curve = SubResource("Curve2D_ptjc6")

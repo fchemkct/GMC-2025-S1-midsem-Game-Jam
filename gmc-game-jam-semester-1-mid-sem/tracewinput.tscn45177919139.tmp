@@ -10,15 +10,12 @@ _data = {
 point_count = 8
 
 [node name="tracewinput" type="Node2D"]
-visible = false
 script = ExtResource("1_8qu32")
 
 [node name="testtrace" type="Sprite2D" parent="."]
-visible = false
 z_index = -1
 scale = Vector2(0.063, 0.05)
 texture = ExtResource("1_mm304")
 
 [node name="originalpath" type="Path2D" parent="."]
-visible = false
 curve = SubResource("Curve2D_8qu32")

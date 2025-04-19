@@ -6,8 +6,12 @@ var is_drawing := false
 var mouse_pos: Vector2 = Vector2.ZERO
 var guide_progress := 0.0
 
+var tries := 0
+const MAX_TRIES := 3
+var success := false
+
 func _ready():
-	var path_node = $originalpath  # Adjust the path as needed
+	var path_node = $sptrace5  # Adjust the path as needed
 	var curve = path_node.curve
 	for i in range(curve.get_point_count()):
 		original_path.append(path_node.to_global(curve.get_point_position(i)))
@@ -43,11 +47,12 @@ func _process(delta):
 		queue_redraw()
 
 
+
 func _draw():
-			
+	
 	if drawn_points.size() >= 2:
 		for i in range(1, drawn_points.size()):
-			draw_line(drawn_points[i - 1], drawn_points[i], Color.WHITE, 2)
+			draw_line(drawn_points[i - 1], drawn_points[i], Color.RED, 2)
 	
 	if original_path.size() >= 2:
 		var point_count = original_path.size()
@@ -57,7 +62,8 @@ func _draw():
 		var pos = original_path[index].lerp(original_path[next_index], t)
 
 		# Draw the animated guidance circle
-		draw_circle(pos, 13, Color(1, 1, 1, 1))  # Orange guide
+		draw_circle(pos, 13, Color(1, 1, 1, 1))  # white guide
+
 
 	draw_circle(mouse_pos, 8, Color(0, 0.6, 1, 0.4))  # Light blue guide circle
 	draw_circle(mouse_pos, 3, Color(0, 0.6, 1, 1))     # Inner dot for clarity
@@ -67,8 +73,10 @@ func _draw():
 func compare_trace_to_original():
 	if paths_match(original_path, drawn_points):
 		print("✅ Traced accurately!")
+		success = true
 	else:
 		print("❌ Try again, not close enough.")
+		
 
 # Core matching logic
 func paths_match(original: Array[Vector2], drawn: Array[Vector2], tolerance := 20.0) -> bool:
@@ -89,7 +97,18 @@ func paths_match(original: Array[Vector2], drawn: Array[Vector2], tolerance := 2
 	var match_ratio = float(match_count) / original.size()
 	return match_ratio > 0.8  # 80% match required
 
-# Trigger comparison when SPACE is pressed
+		
 func _unhandled_input(event):
 	if event is InputEventKey and event.pressed and event.keycode == KEY_SPACE:
+		if success:
+			return  # Already succeeded
+		if tries >= MAX_TRIES:
+			print("❌ You've used all attempts!") #JUST DELETE THIS 
+			return
+
+		tries += 1
 		compare_trace_to_original()
+
+		if tries >= MAX_TRIES and not success:
+			print("❌ Game over. No more tries.") 
+			#ADD IN THE DIALOGUES AND MOVE ON

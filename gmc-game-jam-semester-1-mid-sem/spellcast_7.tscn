@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://bb03f84xf5xcc"]
+
+[ext_resource type="Script" uid="uid://225hsrqrxytb" path="res://spellcast_7.gd" id="1_n4cqc"]
+[ext_resource type="Texture2D" uid="uid://b88wkhgw2w0m" path="res://Spellcasts/633BB882-4FD4-4B6D-8868-4AB2088E84F7.jpg" id="1_o4hjt"]
+
+[sub_resource type="Curve2D" id="Curve2D_o4hjt"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 288, -185, 0, 0, 0, 0, 277, -291, 0, 0, 0, 0, 157, -316, 0, 0, 0, 0, 51, -306, 0, 0, 0, 0, -70, -302, 0, 0, 0, 0, -189, -295, 0, 0, 0, 0, -183, -257, 0, 0, 0, 0, -156, -216, 0, 0, 0, 0, -126, -180, 0, 0, 0, 0, -91, -114, 0, 0, 0, 0, -59, -68, 0, 0, 0, 0, 13, -8, 0, 0, 0, 0, -86, 113, 0, 0, 0, 0, -164, 203, 0, 0, 0, 0, -260, 282, 0, 0, 0, 0, -277, 316, 0, 0, 0, 0, -219, 327, 0, 0, 0, 0, -144, 328, 0, 0, 0, 0, -77, 329, 0, 0, 0, 0, -10, 309, 0, 0, 0, 0, 59, 309, 0, 0, 0, 0, 128, 315, 0, 0, 0, 0, 209, 291, 0, 0, 0, 0, 260, 300, 0, 0, 0, 0, 293, 302, 0, 0, 0, 0, 292, 231)
+}
+point_count = 26
+
+[node name="spellcast7" type="Node2D"]
+script = ExtResource("1_n4cqc")
+
+[node name="sppattern7" type="Sprite2D" parent="."]
+position = Vector2(7, 10)
+scale = Vector2(1.3717, 1.25511)
+texture = ExtResource("1_o4hjt")
+
+[node name="sptrace7" type="Path2D" parent="."]
+curve = SubResource("Curve2D_o4hjt")
