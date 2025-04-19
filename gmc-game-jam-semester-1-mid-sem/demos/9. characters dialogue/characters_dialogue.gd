@@ -10,7 +10,7 @@ var dialogue_engine : DialogueEngine = null
 @onready var audio_player : AudioStreamPlayer = $AudioStreamPlayer
 
 var beep : PackedVector2Array = []
-@onready var player = $"../Player"
+##@onready var player = $"../Player"
 
 func _ready() -> void:
 	dialogue_engine = dialogue_gdscript.new()
@@ -31,10 +31,10 @@ func _ready() -> void:
 		var _ignore : bool = beep.push_back(Vector2.ONE * beep_softener_ratio * sin(phase * TAU) * audio_frame_being_filled/total_audio_frames_to_fill)
 		phase = fmod(phase + increment, 1.0)
 		audio_frame_being_filled -= 1
-	hide()
+	##hide()
 
 func _input(p_input_event : InputEvent) -> void:
-	if p_input_event.is_action_pressed(&"ui_accept") && (player.canTalk == true):
+	if p_input_event.is_action_pressed(&"ui_accept"):
 		if not animator.is_playing():
 			dialogue_engine.advance()
 		else:
