@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://bap1s3otm2h7f" path="res://dialogue2.tscn" id="8_5vw27"]
 
 [node name="Node2D" type="Node2D"]
+position = Vector2(464, 400)
 script = ExtResource("1_5vw27")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
@@ -43,7 +44,7 @@ position = Vector2(254, 101)
 disable_mode = 2
 
 [node name="spellcast1" parent="." instance=ExtResource("5_lquwl")]
-visible = false
+position = Vector2(253, -133)
 
 [node name="spellcast2" parent="." instance=ExtResource("6_272bh")]
 visible = false
@@ -52,3 +53,4 @@ visible = false
 visible = false
 
 [node name="CharactersDialogue" parent="." instance=ExtResource("8_5vw27")]
+visible = false
