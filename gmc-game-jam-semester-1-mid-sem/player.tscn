@@ -8,6 +8,8 @@
 [ext_resource type="Script" uid="uid://dl7d5qivrj7h" path="res://area_2d.gd" id="6_2hs0m"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rgmpb"]
+radius = 15.1429
+height = 50.0
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_mlk4y"]
 animations = [{
@@ -41,11 +43,13 @@ animations = [{
 script = ExtResource("1_sweqy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1.00001, -2)
 scale = Vector2(7, 7)
 shape = SubResource("CapsuleShape2D_rgmpb")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-scale = Vector2(0.1, 0.1)
+position = Vector2(0, -3.8147e-06)
+scale = Vector2(0.219009, 0.228894)
 sprite_frames = SubResource("SpriteFrames_mlk4y")
 animation = &"up"
 frame = 1

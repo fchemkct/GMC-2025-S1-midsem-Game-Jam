@@ -1,7 +1,7 @@
 extends CharacterBody2D
 signal inRange
 
-@export var speed = 600
+@export var speed = 800
 var screenSize
 var canTalk = false; ##determines if player is in range to talk to another npc
 ##@onready var dialogue = $"../CharactersDialogue"
