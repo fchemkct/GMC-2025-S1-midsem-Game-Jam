@@ -1,9 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://c7eyhk77f14cp"]
+[gd_scene load_steps=8 format=3 uid="uid://c7eyhk77f14cp"]
 
 [ext_resource type="Script" uid="uid://btge5igcwubvy" path="res://main.gd" id="1_5vw27"]
 [ext_resource type="PackedScene" uid="uid://ka0g1gsnp853" path="res://tracewinput.tscn" id="2_0xm2m"]
 [ext_resource type="PackedScene" uid="uid://bnrqduc4ah6q4" path="res://player.tscn" id="3_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://coc7biftqup55" path="res://Npc.tscn" id="4_lquwl"]
+[ext_resource type="Texture2D" uid="uid://be8r43boghfw7" path="res://terrain sprites/background.png" id="6_272bh"]
+[ext_resource type="Texture2D" uid="uid://dtgafkat0nr3g" path="res://terrain sprites/astrologist_and_botanist.png" id="7_5vw27"]
 [ext_resource type="PackedScene" uid="uid://bap1s3otm2h7f" path="res://dialogue2.tscn" id="8_5vw27"]
 
 [node name="Node2D" type="Node2D"]
@@ -41,3 +43,11 @@ disable_mode = 2
 z_index = 1
 position = Vector2(254, 101)
 disable_mode = 2
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(1903, -1390)
+texture = ExtResource("6_272bh")
+
+[node name="AstrologistAndBotanist" type="Sprite2D" parent="."]
+position = Vector2(1903, -1714)
+texture = ExtResource("7_5vw27")
