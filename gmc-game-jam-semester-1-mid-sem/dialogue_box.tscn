@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://b3d1sqc41wlqc"]
+[gd_scene load_steps=9 format=3 uid="uid://b3d1sqc41wlqc"]
 
 [ext_resource type="Script" uid="uid://btp5ejus0fe0t" path="res://REALDIAG.gd" id="1_senjy"]
+[ext_resource type="Texture2D" uid="uid://4tn3ef6rmx0s" path="res://textbox.png" id="2_if77y"]
 [ext_resource type="Script" uid="uid://ch6vhc6h4ihma" path="res://choice_2.gd" id="2_n23yb"]
 [ext_resource type="Script" uid="uid://tgjbuy27md4k" path="res://choice_1.gd" id="3_0nste"]
 
@@ -23,7 +24,15 @@ offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("1_senjy")
 
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_if77y")
+
 [node name="Panel" type="Panel" parent="."]
+visible = false
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
@@ -31,8 +40,11 @@ scale = Vector2(18.12, 1)
 
 [node name="Textlabel" type="Label" parent="."]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
+offset_left = 31.0
+offset_top = 40.0
+offset_right = 71.0
+offset_bottom = 63.0
+theme_override_font_sizes/font_size = 2
 
 [node name="choices" type="Node2D" parent="."]
 

@@ -25,7 +25,6 @@ func display_next_line():
 		print("# parsed through")
 		choice_on = true
 		$choices.show()
-		
 		current_line += 1
 	else:
 		hide()
