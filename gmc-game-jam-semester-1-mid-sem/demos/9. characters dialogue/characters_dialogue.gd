@@ -8,6 +8,7 @@ var dialogue_engine : DialogueEngine = null
 @onready var peter : TextureRect = $Center/Box/Margin/VBox/Peter
 @onready var john : TextureRect = $Center/Box/Margin/VBox/John
 @onready var audio_player : AudioStreamPlayer = $AudioStreamPlayer
+signal dialogue_finished
 
 var beep : PackedVector2Array = []
 ##@onready var player = $"../Player"
@@ -86,11 +87,13 @@ func __on_dialogue_continued(p_dialogue_entry : DialogueEntry) -> void:
 
 func __on_dialogue_finished() -> void:
 	print("Dialogue Finished! Exiting...")
-	get_tree().quit()
+	get_tree().change_scene_to_file("res://spellcast_1.tscn")
 
-
+	
 func __on_dialogue_canceled() -> void:
 	print("Dialogue Canceled! Exiting...")
+	emit_signal("dialogue_finished")
+
 	get_tree().quit()
 
 

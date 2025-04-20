@@ -1,12 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://c7eyhk77f14cp"]
+[gd_scene load_steps=6 format=3 uid="uid://c7eyhk77f14cp"]
 
-[ext_resource type="Script" path="res://main.gd" id="1_5vw27"]
+[ext_resource type="Script" uid="uid://btge5igcwubvy" path="res://main.gd" id="1_5vw27"]
 [ext_resource type="PackedScene" uid="uid://ka0g1gsnp853" path="res://tracewinput.tscn" id="2_0xm2m"]
 [ext_resource type="PackedScene" uid="uid://bnrqduc4ah6q4" path="res://player.tscn" id="3_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://coc7biftqup55" path="res://Npc.tscn" id="4_lquwl"]
-[ext_resource type="PackedScene" path="res://spellcast_1.tscn" id="5_lquwl"]
-[ext_resource type="PackedScene" path="res://spellcast_2.tscn" id="6_272bh"]
-[ext_resource type="PackedScene" path="res://spellcast_3.tscn" id="7_5vw27"]
 [ext_resource type="PackedScene" uid="uid://bap1s3otm2h7f" path="res://dialogue2.tscn" id="8_5vw27"]
 
 [node name="Node2D" type="Node2D"]
@@ -34,6 +31,8 @@ grow_vertical = 2
 [node name="tracewinput" parent="TileMapLayer" instance=ExtResource("2_0xm2m")]
 script = null
 
+[node name="CharactersDialogue" parent="." instance=ExtResource("8_5vw27")]
+
 [node name="Player" parent="." instance=ExtResource("3_1bvp3")]
 z_index = 1
 disable_mode = 2
@@ -42,15 +41,3 @@ disable_mode = 2
 z_index = 1
 position = Vector2(254, 101)
 disable_mode = 2
-
-[node name="spellcast1" parent="." instance=ExtResource("5_lquwl")]
-position = Vector2(253, -133)
-
-[node name="spellcast2" parent="." instance=ExtResource("6_272bh")]
-visible = false
-
-[node name="spellcast3" parent="." instance=ExtResource("7_5vw27")]
-visible = false
-
-[node name="CharactersDialogue" parent="." instance=ExtResource("8_5vw27")]
-visible = false

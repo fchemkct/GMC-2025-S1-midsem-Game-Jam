@@ -45,8 +45,6 @@ func _process(delta):
 			guide_progress = 0.0
 		queue_redraw()
 
-
-
 func _draw():
 	
 	if drawn_points.size() >= 2:

@@ -142,5 +142,3 @@ func create_visible_characters_animation_per_character(p_text : String, p_time_p
 				animation.track_set_key_time(track_index, key_index, key_time - p_time_per_character)
 			animation.set_length(total_animation_length - p_time_per_character)
 	return animation
-
-
