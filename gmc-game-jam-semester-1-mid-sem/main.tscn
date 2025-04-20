@@ -1,7 +1,6 @@
-[gd_scene load_steps=8 format=3 uid="uid://c7eyhk77f14cp"]
+[gd_scene load_steps=7 format=3 uid="uid://c7eyhk77f14cp"]
 
 [ext_resource type="Script" uid="uid://btge5igcwubvy" path="res://main.gd" id="1_5vw27"]
-[ext_resource type="PackedScene" uid="uid://ka0g1gsnp853" path="res://tracewinput.tscn" id="2_0xm2m"]
 [ext_resource type="PackedScene" uid="uid://bnrqduc4ah6q4" path="res://player.tscn" id="3_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://coc7biftqup55" path="res://Npc.tscn" id="4_lquwl"]
 [ext_resource type="Texture2D" uid="uid://be8r43boghfw7" path="res://terrain sprites/background.png" id="6_272bh"]
@@ -10,34 +9,18 @@
 
 [node name="Node2D" type="Node2D"]
 position = Vector2(464, 400)
+scale = Vector2(0.1, 0.1)
 script = ExtResource("1_5vw27")
-
-[node name="TileMapLayer" type="TileMapLayer" parent="."]
-
-[node name="Node2D" type="Node2D" parent="TileMapLayer"]
-
-[node name="TextureRect" type="TextureRect" parent="TileMapLayer/Node2D"]
-grow_horizontal = 2
-grow_vertical = 2
-metadata/_edit_use_anchors_ = true
-
-[node name="Camera2D" type="Camera2D" parent="TileMapLayer/Node2D"]
-
-[node name="TextEdit" type="TextEdit" parent="TileMapLayer/Node2D/Camera2D"]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="tracewinput" parent="TileMapLayer" instance=ExtResource("2_0xm2m")]
-script = null
 
 [node name="CharactersDialogue" parent="." instance=ExtResource("8_5vw27")]
 
 [node name="Player" parent="." instance=ExtResource("3_1bvp3")]
 z_index = 1
+position = Vector2(909.999, -1300)
 disable_mode = 2
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+zoom = Vector2(5, 5)
 
 [node name="Npc" parent="." instance=ExtResource("4_lquwl")]
 z_index = 1
@@ -45,7 +28,8 @@ position = Vector2(254, 101)
 disable_mode = 2
 
 [node name="Background" type="Sprite2D" parent="."]
-position = Vector2(1903, -1390)
+position = Vector2(410, -170)
+scale = Vector2(2.1, 2.1)
 texture = ExtResource("6_272bh")
 
 [node name="AstrologistAndBotanist" type="Sprite2D" parent="."]
