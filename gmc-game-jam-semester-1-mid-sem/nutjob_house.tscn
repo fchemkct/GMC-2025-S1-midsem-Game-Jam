@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://dqsdwf3pijiyi"]
+
+[ext_resource type="Texture2D" uid="uid://12irw7lbs1or" path="res://terrain sprites/nutjob.png" id="1_mq0md"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mq0md"]
+size = Vector2(1855, 1159)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1k0t4"]
+radius = 100.0
+height = 1118.0
+
+[node name="StaticBody2D" type="StaticBody2D"]
+
+[node name="Nutjob" type="Sprite2D" parent="."]
+position = Vector2(850, -750)
+scale = Vector2(1.733, 1.633)
+texture = ExtResource("1_mq0md")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(3518.5, -2610.5)
+shape = SubResource("RectangleShape2D_mq0md")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(4805, -2589)
+shape = SubResource("CapsuleShape2D_1k0t4")

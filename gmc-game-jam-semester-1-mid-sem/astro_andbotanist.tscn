@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://ckfq0d2ievmte"]
+
+[ext_resource type="Texture2D" uid="uid://dtgafkat0nr3g" path="res://terrain sprites/astrologist_and_botanist.png" id="1_axvdq"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_axvdq"]
+radius = 1099.0
+height = 2198.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_axvdq"]
+size = Vector2(1640, 1225)
+
+[node name="StaticBody2D" type="StaticBody2D"]
+
+[node name="AstrologistAndBotanist" type="Sprite2D" parent="."]
+position = Vector2(659, 332)
+scale = Vector2(1.53, 1.843)
+texture = ExtResource("1_axvdq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-480, 2317)
+shape = SubResource("CapsuleShape2D_axvdq")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(-2234, 1969.5)
+shape = SubResource("RectangleShape2D_axvdq")

@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://3tyic821r1j0"]
+
+[ext_resource type="Texture2D" uid="uid://cysmyj14iturx" path="res://terrain sprites/doctor_and_sheriff.png" id="1_s1yrv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s1yrv"]
+size = Vector2(3112, 1192.63)
+
+[node name="StaticBody2D" type="StaticBody2D"]
+
+[node name="DoctorAndSheriff" type="Sprite2D" parent="."]
+position = Vector2(70, -750)
+scale = Vector2(1.553, 1.459)
+texture = ExtResource("1_s1yrv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-109, -2425.69)
+shape = SubResource("RectangleShape2D_s1yrv")

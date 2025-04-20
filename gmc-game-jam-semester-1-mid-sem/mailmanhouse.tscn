@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://dc8p0es8bdekp"]
+
+[ext_resource type="Texture2D" uid="uid://c6alg0jx06nlh" path="res://terrain sprites/mailman.png" id="1_g1wos"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j34rn"]
+size = Vector2(1956, 1246)
+
+[node name="StaticBody2D" type="StaticBody2D"]
+
+[node name="Mailman" type="Sprite2D" parent="."]
+position = Vector2(1160, 490)
+scale = Vector2(1.442, 1.632)
+texture = ExtResource("1_g1wos")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2798, 2387)
+shape = SubResource("RectangleShape2D_j34rn")

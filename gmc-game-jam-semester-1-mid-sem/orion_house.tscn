@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://chkv487d7fx7l"]
+
+[ext_resource type="Texture2D" uid="uid://bywkc4q724o2l" path="res://terrain sprites/orion.png" id="1_e3aky"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e3aky"]
+size = Vector2(1541, 1285.5)
+
+[node name="StaticBody2D" type="StaticBody2D"]
+
+[node name="Orion" type="Sprite2D" parent="."]
+position = Vector2(1490, -160)
+scale = Vector2(1.5, 1.543)
+texture = ExtResource("1_e3aky")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(4325, -47.75)
+shape = SubResource("RectangleShape2D_e3aky")

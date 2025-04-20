@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://bl3uhtnb6p7es"]
+
+[ext_resource type="Texture2D" uid="uid://b3lole0xhp1lr" path="res://terrain sprites/townsquare.png" id="1_cn2h4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cn2h4"]
+size = Vector2(1972.5, 2000)
+
+[node name="StaticBody2D" type="StaticBody2D"]
+
+[node name="Townsquare" type="Sprite2D" parent="."]
+position = Vector2(-355, -550)
+scale = Vector2(1.59, 1.6)
+texture = ExtResource("1_cn2h4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-3097, -1094)
+shape = SubResource("RectangleShape2D_cn2h4")

@@ -1,20 +1,11 @@
-[gd_scene load_steps=14 format=3 uid="uid://c7eyhk77f14cp"]
+[gd_scene load_steps=7 format=3 uid="uid://c7eyhk77f14cp"]
 
 [ext_resource type="Script" uid="uid://btge5igcwubvy" path="res://main.gd" id="1_5vw27"]
 [ext_resource type="PackedScene" uid="uid://bnrqduc4ah6q4" path="res://player.tscn" id="3_1bvp3"]
 [ext_resource type="Script" uid="uid://c2hi7pbdvyjc6" path="res://npc.gd" id="4_7mycd"]
 [ext_resource type="PackedScene" uid="uid://coc7biftqup55" path="res://Npc.tscn" id="4_lquwl"]
 [ext_resource type="Texture2D" uid="uid://be8r43boghfw7" path="res://terrain sprites/background.png" id="6_272bh"]
-[ext_resource type="Texture2D" uid="uid://dtgafkat0nr3g" path="res://terrain sprites/astrologist_and_botanist.png" id="7_5vw27"]
-[ext_resource type="Texture2D" uid="uid://bnujx76210cyk" path="res://terrain sprites/tavern.png" id="7_272bh"]
 [ext_resource type="Texture2D" uid="uid://b3lole0xhp1lr" path="res://terrain sprites/townsquare.png" id="8_5vw27"]
-[ext_resource type="Texture2D" uid="uid://bywkc4q724o2l" path="res://terrain sprites/orion.png" id="9_dg77c"]
-[ext_resource type="Texture2D" uid="uid://12irw7lbs1or" path="res://terrain sprites/nutjob.png" id="10_ycdy4"]
-[ext_resource type="Texture2D" uid="uid://cysmyj14iturx" path="res://terrain sprites/doctor_and_sheriff.png" id="11_w48qg"]
-[ext_resource type="Texture2D" uid="uid://c6alg0jx06nlh" path="res://terrain sprites/mailman.png" id="12_vivmo"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_dg77c"]
-size = Vector2(1930.08, 800)
 
 [node name="Node2D" type="Node2D"]
 position = Vector2(462, 400)
@@ -27,13 +18,14 @@ position = Vector2(909.999, -1300)
 disable_mode = 2
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
-zoom = Vector2(5, 5)
+zoom = Vector2(2, 2)
 limit_left = 0
 limit_top = 0
 limit_right = 10000
 limit_bottom = 750
 
 [node name="Npc" parent="." instance=ExtResource("4_lquwl")]
+visible = false
 z_index = 1
 position = Vector2(254, 101)
 disable_mode = 2
@@ -47,43 +39,7 @@ scale = Vector2(2.1, 2.1)
 texture = ExtResource("6_272bh")
 metadata/_edit_lock_ = true
 
-[node name="AstrologistAndBotanist" type="Sprite2D" parent="."]
-z_index = -2
-position = Vector2(-170, 760)
-scale = Vector2(1.52969, 1.42361)
-texture = ExtResource("7_5vw27")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AstrologistAndBotanist"]
-position = Vector2(-1366.29, 1018.54)
-scale = Vector2(1, 1)
-shape = SubResource("RectangleShape2D_dg77c")
-
-[node name="Orion" type="Sprite2D" parent="."]
-position = Vector2(1490, -160)
-scale = Vector2(1.50104, 1.54306)
-texture = ExtResource("9_dg77c")
-
-[node name="Tavern" type="Sprite2D" parent="."]
-position = Vector2(580, -40.0001)
-scale = Vector2(1.57031, 1.35417)
-texture = ExtResource("7_272bh")
-
 [node name="Townsquare" type="Sprite2D" parent="."]
-position = Vector2(-355, -550)
-scale = Vector2(1.58958, 1.6)
+position = Vector2(3330, 660)
+scale = Vector2(2.92708, 2.84444)
 texture = ExtResource("8_5vw27")
-
-[node name="Nutjob" type="Sprite2D" parent="."]
-position = Vector2(850, -570)
-scale = Vector2(1.73333, 1.64306)
-texture = ExtResource("10_ycdy4")
-
-[node name="DoctorAndSheriff" type="Sprite2D" parent="."]
-position = Vector2(70.0002, -750)
-scale = Vector2(1.5526, 1.45903)
-texture = ExtResource("11_w48qg")
-
-[node name="Mailman" type="Sprite2D" parent="."]
-position = Vector2(1160, 490)
-scale = Vector2(1.44167, 1.63194)
-texture = ExtResource("12_vivmo")
