@@ -1,17 +1,20 @@
 [gd_scene load_steps=3 format=3 uid="uid://coc7biftqup55"]
 
-[ext_resource type="Texture2D" uid="uid://bav7lrqoof5g3" path="res://check.png" id="1_sdap6"]
+[ext_resource type="Texture2D" uid="uid://0ebe4qpwbmw4" path="res://characters/sheriff (2).png" id="1_sdap6"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_70ge6"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_sdap6"]
+radius = 31.5
+height = 88.2
 
-[node name="rigit" type="RigidBody2D"]
-gravity_scale = 0.0
+[node name="rigit" type="CharacterBody2D"]
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.1, 0.1)
+[node name="Sheriff(2)" type="Sprite2D" parent="."]
+position = Vector2(473.5, 554.5)
+scale = Vector2(0.673889, 0.541667)
 texture = ExtResource("1_sdap6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(386, 654)
 scale = Vector2(10, 10)
-shape = SubResource("CapsuleShape2D_70ge6")
+shape = SubResource("CapsuleShape2D_sdap6")
 debug_color = Color(0.928477, 3.11887e-05, 0.664508, 0.42)

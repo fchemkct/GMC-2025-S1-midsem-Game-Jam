@@ -2,17 +2,15 @@
 
 [ext_resource type="Script" uid="uid://btge5igcwubvy" path="res://main.gd" id="1_5vw27"]
 [ext_resource type="PackedScene" uid="uid://bnrqduc4ah6q4" path="res://player.tscn" id="3_1bvp3"]
+[ext_resource type="Script" uid="uid://c2hi7pbdvyjc6" path="res://npc.gd" id="4_7mycd"]
 [ext_resource type="PackedScene" uid="uid://coc7biftqup55" path="res://Npc.tscn" id="4_lquwl"]
 [ext_resource type="Texture2D" uid="uid://be8r43boghfw7" path="res://terrain sprites/background.png" id="6_272bh"]
 [ext_resource type="Texture2D" uid="uid://dtgafkat0nr3g" path="res://terrain sprites/astrologist_and_botanist.png" id="7_5vw27"]
-[ext_resource type="PackedScene" uid="uid://bap1s3otm2h7f" path="res://dialogue2.tscn" id="8_5vw27"]
 
 [node name="Node2D" type="Node2D"]
 position = Vector2(464, 400)
 scale = Vector2(0.1, 0.1)
 script = ExtResource("1_5vw27")
-
-[node name="CharactersDialogue" parent="." instance=ExtResource("8_5vw27")]
 
 [node name="Player" parent="." instance=ExtResource("3_1bvp3")]
 z_index = 1
@@ -21,17 +19,26 @@ disable_mode = 2
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 zoom = Vector2(5, 5)
+limit_left = 0
+limit_top = 0
+limit_right = 1000
+limit_bottom = 700
 
 [node name="Npc" parent="." instance=ExtResource("4_lquwl")]
 z_index = 1
 position = Vector2(254, 101)
 disable_mode = 2
+input_pickable = true
+script = ExtResource("4_7mycd")
 
 [node name="Background" type="Sprite2D" parent="."]
-position = Vector2(410, -170)
+z_index = -3
+position = Vector2(400, -230)
 scale = Vector2(2.1, 2.1)
 texture = ExtResource("6_272bh")
+metadata/_edit_lock_ = true
 
 [node name="AstrologistAndBotanist" type="Sprite2D" parent="."]
-position = Vector2(1903, -1714)
+z_index = -2
+position = Vector2(2110, -1230)
 texture = ExtResource("7_5vw27")
