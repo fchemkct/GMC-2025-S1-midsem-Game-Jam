@@ -26,13 +26,27 @@ func walk(delta: float):
 		velocity.y += 1
 	if Input.is_action_pressed("move_up"):
 		velocity.y -= 1
-
+	
 	if velocity.length() > 0:
 		velocity = velocity.normalized() * speed
 		$AnimatedSprite2D.play()
 	else:
 		$AnimatedSprite2D.stop()
+
+	if velocity.x != 0:
+		$AnimatedSprite2D.animation = "right"
+		$AnimatedSprite2D.flip_v = false
+		# See the note below about the following boolean assignment.
+		$AnimatedSprite2D.flip_h = velocity.x < 0
 		
+	elif velocity.y != 0:
+		##$AnimatedSprite2D.animation = "front"
+		if velocity.y >= 0:
+			$AnimatedSprite2D.animation = "front"
+		elif velocity.y < 0:
+			$AnimatedSprite2D.animation = "back"
+	
+			
 	position += velocity * delta
 	# Use move_and_slide() to handle physics-based movement and collisions
 	velocity = move_and_slide()

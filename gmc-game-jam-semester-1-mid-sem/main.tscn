@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://btge5igcwubvy" path="res://main.gd" id="1_5vw27"]
 [ext_resource type="PackedScene" uid="uid://bnrqduc4ah6q4" path="res://player.tscn" id="3_1bvp3"]
-[ext_resource type="Script" uid="uid://c2hi7pbdvyjc6" path="res://npc.gd" id="4_7mycd"]
+[ext_resource type="Script" path="res://npc.gd" id="4_7mycd"]
 [ext_resource type="PackedScene" uid="uid://coc7biftqup55" path="res://Npc.tscn" id="4_lquwl"]
 [ext_resource type="Texture2D" uid="uid://be8r43boghfw7" path="res://terrain sprites/background.png" id="6_272bh"]
 [ext_resource type="Texture2D" uid="uid://b3lole0xhp1lr" path="res://terrain sprites/townsquare.png" id="8_5vw27"]
@@ -25,7 +25,6 @@ limit_right = 10000
 limit_bottom = 750
 
 [node name="Npc" parent="." instance=ExtResource("4_lquwl")]
-visible = false
 z_index = 1
 position = Vector2(254, 101)
 disable_mode = 2
