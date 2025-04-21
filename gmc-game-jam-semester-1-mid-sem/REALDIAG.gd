@@ -12,7 +12,7 @@ var spell_on = false
 func _ready():
 	dlines = dialogue_gdscript.new()
 	$choices.hide()
-	
+	$spellcast1.hide()
 	show()
 	display_next_line()
 
@@ -21,27 +21,32 @@ func display_next_line():
 		if (!dlines.lines[current_line].contains("#")):
 			$Textlabel.text = dlines.lines[current_line]
 			current_line += 1
+			print("no # found, normal text")
 		elif dlines.lines[current_line].contains("#speaker"):
 			var end = dlines.lines[current_line].find("#")
 			var speaker = end + 9
 			$"Node2D/Name panel/label text".text = dlines.lines[current_line].substr(speaker)
 			$Textlabel.text = dlines.lines[current_line].substr(0,end)
 			current_line += 1
+			print("speaker #")
 		elif dlines.lines[current_line].contains("#choices"):
 			print("# parsed through")
 			choice_on = true
 			$choices.show()
 			current_line += 1
+	
 		elif dlines.lines[current_line].contains("#spellcasts"):
 			print("# da whimsical spell casturrrgh")
-			pass
+			await get_tree().create_timer(0.5).timeout 
 			spell_on = true
-			get_tree().change_scene_to_file("res://spellcast_1.tscn")
+			$spellcast1.show()
+			##$spellcast1.set_process(true)
+			##get_tree().change_scene_to_file("res://spellcast_1.tscn")
 			##$choices.show()
 			##current_line += 1
 	else:
 		_dialogueEnd()
-		emit_signal("dialogue_finished")  # Optional: use this to trigger spellcast, etc.
+		##emit_signal("dialogue_finished")  # Optional: use this to trigger spellcast, etc.
 		##get_tree().change_scene_to_file("res://spellcast_1.tscn")
 
 func _input(event):
