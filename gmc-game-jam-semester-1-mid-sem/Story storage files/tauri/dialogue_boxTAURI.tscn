@@ -1,11 +1,10 @@
-[gd_scene load_steps=12 format=3 uid="uid://b4yr52cv5ojvv"]
+[gd_scene load_steps=11 format=3 uid="uid://b4yr52cv5ojvv"]
 
 [ext_resource type="Script" uid="uid://btp5ejus0fe0t" path="res://REALDIAG.gd" id="1_sbu81"]
 [ext_resource type="Script" uid="uid://dxp2pscov5kf0" path="res://Story storage files/tauri/tauri_dialogue_file.gd" id="2_278cl"]
 [ext_resource type="Texture2D" uid="uid://4tn3ef6rmx0s" path="res://textbox.png" id="2_vrh81"]
 [ext_resource type="Script" uid="uid://ch6vhc6h4ihma" path="res://choice_2.gd" id="3_278cl"]
-[ext_resource type="Script" uid="uid://cus5x380wrld2" path="res://Story storage files/tauri/tauri_after_spell.gd" id="5_278cl"]
-[ext_resource type="PackedScene" uid="uid://vasns7g8jhy4" path="res://spellcast_1.tscn" id="6_mtbiu"]
+[ext_resource type="Script" path="res://Story storage files/tauri/tauri_after_spell.gd" id="5_278cl"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_if77y"]
 font_size = 150
@@ -140,11 +139,5 @@ offset_bottom = 23.0
 text = "Choice 1"
 metadata/_edit_use_anchors_ = true
 
-[node name="spellcast1" parent="." instance=ExtResource("6_mtbiu")]
-visible = false
-position = Vector2(940, 712)
-
 [connection signal="pressed" from="choices/choice2" to="choices/choice2" method="_on_pressed"]
 [connection signal="pressed" from="choices/choice 1" to="choices/choice 1" method="_on_pressed"]
-
-[editable path="spellcast1"]
