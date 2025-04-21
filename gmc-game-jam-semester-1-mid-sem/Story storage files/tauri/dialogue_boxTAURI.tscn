@@ -56,8 +56,10 @@ theme_override_font_sizes/font_size = 2
 text = "
 "
 label_settings = SubResource("LabelSettings_if77y")
+autowrap_mode = 3
 
 [node name="choices" type="Node2D" parent="."]
+visible = false
 position = Vector2(177, 361)
 scale = Vector2(2, 2)
 
@@ -105,6 +107,32 @@ metadata/_edit_use_anchors_ = true
 
 [node name="label text" type="Label" parent="choices/choice 1"]
 visible = false
+layout_mode = 0
+offset_right = 65.0
+offset_bottom = 23.0
+text = "Choice 1"
+metadata/_edit_use_anchors_ = true
+
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2(56, -21)
+
+[node name="Name panel" type="Control" parent="Node2D"]
+layout_mode = 3
+anchors_preset = 0
+offset_top = 101.0
+offset_right = 8.0
+offset_bottom = 109.0
+scale = Vector2(2, 2)
+metadata/_edit_use_anchors_ = true
+
+[node name="panel" type="Panel" parent="Node2D/Name panel"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(4, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="label text" type="Label" parent="Node2D/Name panel"]
 layout_mode = 0
 offset_right = 65.0
 offset_bottom = 23.0

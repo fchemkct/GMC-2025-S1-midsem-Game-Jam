@@ -60,6 +60,7 @@ autowrap_mode = 3
 clip_text = true
 
 [node name="choices" type="Node2D" parent="."]
+visible = false
 position = Vector2(177, 361)
 scale = Vector2(2, 2)
 
