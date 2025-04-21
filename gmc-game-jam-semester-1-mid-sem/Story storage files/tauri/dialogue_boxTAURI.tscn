@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://4tn3ef6rmx0s" path="res://textbox.png" id="2_vrh81"]
 [ext_resource type="Script" uid="uid://ch6vhc6h4ihma" path="res://choice_2.gd" id="3_278cl"]
 [ext_resource type="Script" uid="uid://cus5x380wrld2" path="res://Story storage files/tauri/tauri_after_spell.gd" id="5_278cl"]
-[ext_resource type="PackedScene" uid="uid://cue50bbisnn0k" path="res://spellcast_1.tscn" id="6_mtbiu"]
+[ext_resource type="PackedScene" uid="uid://cue50bbisnn0k" path="res://spellcast_script/spellcast_1.tscn" id="6_mtbiu"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_if77y"]
 font_size = 150

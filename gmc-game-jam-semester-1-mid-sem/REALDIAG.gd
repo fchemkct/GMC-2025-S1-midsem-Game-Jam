@@ -12,7 +12,9 @@ var spell_on = false
 func _ready():
 	dlines = dialogue_gdscript.new()
 	$choices.hide()
-	if $SpellCast:
+	if get_node_or_null("$choice2"):
+		$choice2.hide()
+	if get_node_or_null("$SpellCast"):
 		$SpellCast.hide()
 	show()
 	display_next_line()
@@ -34,6 +36,11 @@ func display_next_line():
 			print("# parsed through")
 			choice_on = true
 			$choices.show()
+			current_line += 1
+		elif dlines.lines[current_line].contains("#choice2"):
+			print("# 2 parsed through")
+			choice_on = true
+			$choice2.show()
 			current_line += 1
 	
 		elif dlines.lines[current_line].contains("#spellcasts"):
