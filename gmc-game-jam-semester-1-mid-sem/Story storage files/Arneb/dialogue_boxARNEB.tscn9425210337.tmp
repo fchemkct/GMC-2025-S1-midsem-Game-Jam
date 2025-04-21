@@ -1,0 +1,156 @@
+[gd_scene load_steps=13 format=3 uid="uid://fsu0rcqg5rd6"]
+
+[ext_resource type="Script" uid="uid://btp5ejus0fe0t" path="res://REALDIAG.gd" id="1_0mhcm"]
+[ext_resource type="Script" uid="uid://bke4o4js0x7lw" path="res://Story storage files/Arneb/arneb.gd" id="2_dqwy5"]
+[ext_resource type="Texture2D" uid="uid://4tn3ef6rmx0s" path="res://textbox.png" id="3_br026"]
+[ext_resource type="Script" uid="uid://ch6vhc6h4ihma" path="res://choice_2.gd" id="4_yhfni"]
+[ext_resource type="Script" uid="uid://cus5x380wrld2" path="res://Story storage files/tauri/tauri_after_spell.gd" id="5_mkyig"]
+[ext_resource type="PackedScene" uid="uid://b1ti3cjpodw6a" path="res://spellcast_script/spellcast_4.tscn" id="6_0mhcm"]
+[ext_resource type="PackedScene" uid="uid://bc3tj6og1aek7" path="res://spellcast_script/spellcast_5.tscn" id="7_dqwy5"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_fthp3"]
+font_size = 150
+font_color = Color(0, 0, 0, 0.898039)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3oyv4"]
+bg_color = Color(0.0240928, 0.696945, 0.602947, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gi2ia"]
+bg_color = Color(0.960366, 0.293826, 0.714084, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_macfk"]
+bg_color = Color(0.53528, 0.654675, 0.212876, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s1pmf"]
+bg_color = Color(0.73111, 0.573056, 0.268446, 1)
+
+[node name="DialogueBox" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -18.0
+offset_bottom = 5.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0mhcm")
+dialogue_gdscript = ExtResource("2_dqwy5")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+visibility_layer = 65
+z_index = -1
+layout_mode = 0
+offset_left = 24.0
+offset_top = 28.0
+offset_right = 18448.0
+offset_bottom = 5140.0
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("3_br026")
+
+[node name="Textlabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 201.0
+offset_top = 164.0
+offset_right = 4481.0
+offset_bottom = 1036.0
+scale = Vector2(0.35, 0.25)
+theme_override_font_sizes/font_size = 2
+text = "
+"
+label_settings = SubResource("LabelSettings_fthp3")
+autowrap_mode = 3
+
+[node name="choices" type="Node2D" parent="."]
+visible = false
+position = Vector2(177, 361)
+scale = Vector2(2, 2)
+
+[node name="choice2" type="Button" parent="choices"]
+offset_left = 634.0
+offset_top = 101.0
+offset_right = 642.0
+offset_bottom = 109.0
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_3oyv4")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_gi2ia")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_macfk")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_s1pmf")
+script = ExtResource("4_yhfni")
+dialogue_gdscript = ExtResource("5_mkyig")
+
+[node name="panel" type="Panel" parent="choices/choice2"]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(4, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="label text" type="Label" parent="choices/choice2"]
+visible = false
+layout_mode = 0
+offset_right = 65.0
+offset_bottom = 23.0
+text = "Choice 2"
+metadata/_edit_use_anchors_ = true
+
+[node name="choice 1" type="Button" parent="choices"]
+offset_top = 101.0
+offset_bottom = 101.0
+script = ExtResource("4_yhfni")
+dialogue_gdscript = ExtResource("5_mkyig")
+
+[node name="panel" type="Panel" parent="choices/choice 1"]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(4, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="label text" type="Label" parent="choices/choice 1"]
+visible = false
+layout_mode = 0
+offset_right = 65.0
+offset_bottom = 23.0
+text = "Choice 1"
+metadata/_edit_use_anchors_ = true
+
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2(56, -21)
+
+[node name="Name panel" type="Control" parent="Node2D"]
+layout_mode = 3
+anchors_preset = 0
+offset_top = 101.0
+offset_right = 8.0
+offset_bottom = 109.0
+scale = Vector2(2, 2)
+metadata/_edit_use_anchors_ = true
+
+[node name="panel" type="Panel" parent="Node2D/Name panel"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(4, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="label text" type="Label" parent="Node2D/Name panel"]
+layout_mode = 0
+offset_right = 65.0
+offset_bottom = 23.0
+text = "Choice 1"
+metadata/_edit_use_anchors_ = true
+
+[node name="SpellCast" type="Node2D" parent="."]
+visible = false
+
+[node name="spellcast4" parent="SpellCast" instance=ExtResource("6_0mhcm")]
+
+[node name="spellcast5" parent="SpellCast" instance=ExtResource("7_dqwy5")]
+visible = false
+
+[connection signal="pressed" from="choices/choice2" to="choices/choice2" method="_on_pressed"]
+[connection signal="pressed" from="choices/choice 1" to="choices/choice 1" method="_on_pressed"]
+
+[editable path="SpellCast/spellcast4"]
+[editable path="SpellCast/spellcast5"]

@@ -5,10 +5,11 @@ var drawn_points: Array[Vector2] = []
 var is_drawing := false
 var mouse_pos: Vector2 = Vector2.ZERO
 var guide_progress := 0.0
-
+var spell5 = false
 @onready var label = $Label
 
 func _ready():
+	hide()
 	var path_node = $sptrace5  # Adjust the path as needed
 	var curve = path_node.curve
 	for i in range(curve.get_point_count()):
@@ -90,12 +91,12 @@ func paths_match(original: Array[Vector2], drawn: Array[Vector2], tolerance := 2
 			match_count += 1
 
 	var match_ratio = float(match_count) / original.size()
-	return match_ratio > 0.8  # 80% match required
+	return match_ratio > 0.4  # 80% match required
 
 		
 func _unhandled_input(event):
 	if event is InputEventKey and event.pressed and event.keycode == KEY_SPACE:
-		if $CallBack.dialogue.spell_on:
+		if $CallBack.dialogue.spell_on && spell5:
 			compare_trace_to_original()
 	else:
 		return

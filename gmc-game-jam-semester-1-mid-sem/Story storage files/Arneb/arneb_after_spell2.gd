@@ -1,0 +1,31 @@
+extends Control
+
+@export var lines: Array[String] = [
+"…Arneb, I understand if you may be scared. #speaker:Orion",
+"But you can tell us anything. Are you sure you didn’t go out at all?",
+"I… #speaker:Arneb",
+"Silence looms over them, until finally: #speaker:Narrator",
+"Lacaille tends to go on night walks, because there’s a good viewpoint nearby town for charting the stars. #speaker:Arneb",
+"So I figured that she’d be back soon…",
+"…And when she wasn’t, you went out to find her? #speaker:Orion",
+"A frown appears on Arneb’s expression, as if she was having difficulty remembering. #speaker:Narrator",
+"There’s an odd feeling in your chest. Something doesn’t seem right.",
+"…Yes. I went out to check on her, I think. #speaker:Arneb",
+"You tried to reconcile, so you brought the bottle of whiskey you got from Sadal with you? #speaker:Orion",
+"I… I think so? #speaker:Arneb",
+"That would explain why your memory appears to be fuzzy. Perhaps you walked back with Lacaille or left early, after sharing a drink. #speaker:Orion",
+"And that’s when the culprit struck.",
+"The reminder of a culprit seems to shock Arneb back to her senses. #speaker:Narrator",
+"Wait, you think that someone— #speaker:Arneb",
+"You may not have been there earlier at town hall, but the sheriff entrusted me to find the truth. #speaker:Orion",
+"Which is why I’m here to figure out if it was an accident… or a more nefarious scheme.",
+"Detective… #speaker:Arneb",
+"Could you show me the bottle that you shared with Lacaille last night? Perhaps it’ll tell us something useful. #speaker:Orion",
+"A wave of magic crawls through the air. Not by your hand, but Orion’s. #speaker:Narrator",
+"Arneb goes to fetch the bottle for a second, before pausing in her tracks.",
+"She turns back to Orion with a confused look on her face, mixed with an inkling of horror.",
+"…I can’t remember where I put it. #speaker:Arneb",
+"…I see. #speaker:Orion",
+"Saying he won’t disturb her any longer, Orion excuses himself, deep in thought. #speaker:Narrator",
+
+]
