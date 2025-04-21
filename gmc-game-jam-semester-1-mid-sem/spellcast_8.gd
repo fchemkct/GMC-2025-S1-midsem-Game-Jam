@@ -7,14 +7,14 @@ var mouse_pos: Vector2 = Vector2.ZERO
 var guide_progress := 0.0
 
 var tries := 0
-const MAX_TRIES := 1
+const MAX_TRIES := 2
 var success := false
 
 func _ready():
 	var path_node = $sptrace8  # Adjust the path as needed
 	var curve = path_node.curve
 	for i in range(curve.get_point_count()):
-		original_path.append(path_node.to_global(curve.get_point_position(i)))
+		original_path.append(curve.get_point_position(i) * 1) #MULTIPLY THE SCALE FACTOR OF THE PATH
 	set_process(true)
 
 func _input(event):
@@ -23,10 +23,10 @@ func _input(event):
 			is_drawing = event.pressed
 			if is_drawing:
 				drawn_points.clear()
-				drawn_points.append(get_global_mouse_position())
+				drawn_points.append(get_local_mouse_position())
 				
 	elif event is InputEventMouseMotion:
-		mouse_pos = get_global_mouse_position()  # <-- Track mouse always
+		mouse_pos = get_local_mouse_position()  # <-- Track mouse always
 		if is_drawing:
 			drawn_points.append(mouse_pos)
 		queue_redraw() 
@@ -61,7 +61,7 @@ func _draw():
 
 		# Draw the animated guidance circle
 		draw_circle(pos, 13, Color(1, 1, 1, 1))  # white guide
-
+ 
 
 	draw_circle(mouse_pos, 8, Color(0, 0.6, 1, 0.4))  # Light blue guide circle
 	draw_circle(mouse_pos, 3, Color(0, 0.6, 1, 1))     # Inner dot for clarity

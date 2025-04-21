@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://dnsgs8wer0w68"]
+[gd_scene load_steps=6 format=3 uid="uid://dnsgs8wer0w68"]
 
 [ext_resource type="Script" uid="uid://dnayn5cqmc2wc" path="res://spellcast_6.gd" id="1_aq2p6"]
 [ext_resource type="Texture2D" uid="uid://cgqopkq4qkf6s" path="res://Spellcasts/5E8DDD52-659D-43A6-AEE9-80ACF219A483.jpg" id="1_gvkhb"]
+[ext_resource type="Texture2D" uid="uid://dy2i6c5407xij" path="res://terrain sprites/border.png" id="3_10ui1"]
 
 [sub_resource type="Curve2D" id="Curve2D_gvkhb"]
 _data = {
@@ -11,24 +12,37 @@ point_count = 16
 
 [sub_resource type="LabelSettings" id="LabelSettings_aq2p6"]
 font_size = 100
-font_color = Color(0, 0, 0, 0.937255)
 
 [node name="spellcast6" type="Node2D"]
-position = Vector2(244, 461)
+position = Vector2(1384, 631)
 script = ExtResource("1_aq2p6")
 
 [node name="sppattern6" type="Sprite2D" parent="."]
-position = Vector2(-10, 7)
+z_index = -1
+position = Vector2(26, -105)
+scale = Vector2(1.95032, 1.39811)
 texture = ExtResource("1_gvkhb")
 
 [node name="sptrace6" type="Path2D" parent="."]
+position = Vector2(62.4801, -113.834)
+scale = Vector2(1.99669, 1.39389)
 curve = SubResource("Curve2D_gvkhb")
 
 [node name="Label" type="Label" parent="."]
-offset_left = -214.0
-offset_top = -451.0
-offset_right = 702.0
-offset_bottom = -314.0
+offset_left = -1251.0
+offset_top = -519.0
+offset_right = -335.0
+offset_bottom = -382.0
 text = "Cast your spell!"
 label_settings = SubResource("LabelSettings_aq2p6")
 metadata/_edit_use_anchors_ = true
+
+[node name="Border" type="TextureRect" parent="."]
+z_index = -5
+offset_left = -1503.0
+offset_top = -677.0
+offset_right = 176.0
+offset_bottom = 1057.0
+scale = Vector2(1.26778, 0.695)
+texture = ExtResource("3_10ui1")
+expand_mode = 4

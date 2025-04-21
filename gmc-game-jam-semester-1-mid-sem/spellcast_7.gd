@@ -13,7 +13,7 @@ func _ready():
 	var path_node = $sptrace7  # Adjust the path as needed
 	var curve = path_node.curve
 	for i in range(curve.get_point_count()):
-		original_path.append(curve.get_point_position(i) * 1) #MULTIPLY THE SCALE FACTOR OF THE PATH
+		original_path.append(curve.get_point_position(i) * 1.2) #MULTIPLY THE SCALE FACTOR OF THE PATH
 	set_process(true)
 
 

@@ -58,6 +58,7 @@ func _draw():
 		var pos = original_path[index].lerp(original_path[next_index], t)
 
 		# Draw the animated guidance circle
+		print("hii")
 		draw_circle(pos, 13, Color(1, 1, 1, 1))  # white guide
 
 

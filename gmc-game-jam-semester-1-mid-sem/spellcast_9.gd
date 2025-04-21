@@ -14,7 +14,7 @@ func _ready():
 	var path_node = $sptrace9  # Adjust the path as needed
 	var curve = path_node.curve
 	for i in range(curve.get_point_count()):
-		original_path.append(path_node.to_global(curve.get_point_position(i)))
+		original_path.append(curve.get_point_position(i) * 1.3) #MULTIPLY THE SCALE FACTOR OF THE PATH
 	set_process(true)
 
 
@@ -25,10 +25,10 @@ func _input(event):
 			is_drawing = event.pressed
 			if is_drawing:
 				drawn_points.clear()
-				drawn_points.append(get_global_mouse_position())
+				drawn_points.append(get_local_mouse_position())
 				
 	elif event is InputEventMouseMotion:
-		mouse_pos = get_global_mouse_position()  # <-- Track mouse always
+		mouse_pos = get_local_mouse_position()  # <-- Track mouse always
 		if is_drawing:
 			drawn_points.append(mouse_pos)
 		queue_redraw() 
@@ -41,7 +41,7 @@ func _input(event):
 func _process(delta):
 	# Animate the ghost guide along the original path
 	if original_path.size() >= 2:
-		guide_progress += delta * 0.8  # adjust speed 
+		guide_progress += delta * 0.5  # adjust speed 
 		if guide_progress > 1.0:
 			guide_progress = 0.0
 		queue_redraw()

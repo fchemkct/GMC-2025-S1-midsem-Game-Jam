@@ -1,34 +1,47 @@
-[gd_scene load_steps=5 format=3 uid="uid://chplanakn8om5"]
+[gd_scene load_steps=6 format=3 uid="uid://chplanakn8om5"]
 
 [ext_resource type="Texture2D" uid="uid://nhbkexs6r2yn" path="res://Spellcasts/798AECB1-FF30-48B6-AC02-38D390F29C3B.jpg" id="1_4ipnu"]
 [ext_resource type="Script" uid="uid://388ccnunt2bv" path="res://spellcast_8.gd" id="1_gvfkc"]
-
-[sub_resource type="Curve2D" id="Curve2D_4ipnu"]
-_data = {
-"points": PackedVector2Array(0, 0, 0, 0, -258, -102, 0, 0, 0, 0, 260, -314, 0, 0, 0, 0, 204, 80, 0, 0, 0, 0, 98, 136, 0, 0, 0, 0, 8, 174, 0, 0, 0, 0, -112, 212, 0, 0, 0, 0, -178, 248, 0, 0, 0, 0, -262, 278, 0, 0, 0, 0, -272, -104)
-}
-point_count = 9
+[ext_resource type="Texture2D" uid="uid://dy2i6c5407xij" path="res://terrain sprites/border.png" id="3_gp81x"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ssefq"]
 font_size = 100
-font_color = Color(0, 0, 0, 0.937255)
+
+[sub_resource type="Curve2D" id="Curve2D_gp81x"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 111, -599, 0, 0, 0, 0, -117, -535, 0, 0, 0, 0, -341, -465, 0, 0, 0, 0, -507, -415, 0, 0, 0, 0, -661, -347, 0, 0, 0, 0, -793, -279, 0, 0, 0, 0, -801, -187, 0, 0, 0, 0, -805, -21, 0, 0, 0, 0, -821, 161, 0, 0, 0, 0, -787, 197, 0, 0, 0, 0, -595, 133, 0, 0, 0, 0, -419, 123, 0, 0, 0, 0, -151, 17, 0, 0, 0, 0, -9, -17, 0, 0, 0, 0, -1, -219, 0, 0, 0, 0, 61, -381, 0, 0, 0, 0, 117, -595)
+}
+point_count = 17
 
 [node name="speallcast8" type="Node2D"]
-position = Vector2(310, 550)
+position = Vector2(1672, 790)
 script = ExtResource("1_gvfkc")
 
 [node name="sppattern8" type="Sprite2D" parent="."]
-position = Vector2(6, -15)
+z_index = -1
+position = Vector2(-344, -186)
+scale = Vector2(1.66667, 1.3617)
 texture = ExtResource("1_4ipnu")
 
-[node name="Path2D" type="Path2D" parent="."]
-curve = SubResource("Curve2D_4ipnu")
-
 [node name="Label" type="Label" parent="."]
-offset_left = -287.0
-offset_top = -512.0
-offset_right = 629.0
-offset_bottom = -375.0
+offset_left = -1511.0
+offset_top = -690.0
+offset_right = -595.0
+offset_bottom = -553.0
 text = "Cast your spell!"
 label_settings = SubResource("LabelSettings_ssefq")
 metadata/_edit_use_anchors_ = true
+
+[node name="Border" type="TextureRect" parent="."]
+z_index = -5
+offset_left = -1791.0
+offset_top = -847.0
+offset_right = -112.0
+offset_bottom = 887.0
+scale = Vector2(1.26778, 0.695)
+texture = ExtResource("3_gp81x")
+expand_mode = 4
+metadata/_edit_lock_ = true
+
+[node name="sptrace8" type="Path2D" parent="."]
+curve = SubResource("Curve2D_gp81x")
