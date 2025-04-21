@@ -3,18 +3,18 @@
 [ext_resource type="Texture2D" uid="uid://0ebe4qpwbmw4" path="res://characters/sheriff (2).png" id="1_sdap6"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_sdap6"]
-radius = 31.5
-height = 88.2
+radius = 26.9
+height = 96.0
 
 [node name="rigit" type="CharacterBody2D"]
 
 [node name="Sheriff(2)" type="Sprite2D" parent="."]
-position = Vector2(473.5, 554.5)
-scale = Vector2(0.673889, 0.541667)
+position = Vector2(600, 409.5)
+scale = Vector2(0.814444, 0.702778)
 texture = ExtResource("1_sdap6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(386, 654)
+position = Vector2(488, 522)
 scale = Vector2(10, 10)
 shape = SubResource("CapsuleShape2D_sdap6")
 debug_color = Color(0.928477, 3.11887e-05, 0.664508, 0.42)

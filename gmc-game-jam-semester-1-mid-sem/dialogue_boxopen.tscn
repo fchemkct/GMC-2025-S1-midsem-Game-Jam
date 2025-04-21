@@ -1,9 +1,13 @@
-[gd_scene load_steps=9 format=3 uid="uid://b3d1sqc41wlqc"]
+[gd_scene load_steps=10 format=3 uid="uid://b3d1sqc41wlqc"]
 
-[ext_resource type="Script" uid="uid://btp5ejus0fe0t" path="res://REALDIAG.gd" id="1_senjy"]
-[ext_resource type="Texture2D" uid="uid://4tn3ef6rmx0s" path="res://textbox.png" id="2_if77y"]
-[ext_resource type="Script" uid="uid://ch6vhc6h4ihma" path="res://choice_2.gd" id="2_n23yb"]
-[ext_resource type="Script" uid="uid://tgjbuy27md4k" path="res://choice_1.gd" id="3_0nste"]
+[ext_resource type="Script" uid="uid://btp5ejus0fe0t" path="res://REALDIAG.gd" id="1_p6cs5"]
+[ext_resource type="Texture2D" uid="uid://4tn3ef6rmx0s" path="res://textbox.png" id="2_8vwo1"]
+[ext_resource type="Script" uid="uid://ch6vhc6h4ihma" path="res://choice_2.gd" id="3_wpc62"]
+[ext_resource type="Script" uid="uid://tgjbuy27md4k" path="res://choice_1.gd" id="4_1ijdk"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_if77y"]
+font_size = 150
+font_color = Color(0, 0, 0, 0.898039)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n23yb"]
 bg_color = Color(0.0240928, 0.696945, 0.602947, 1)
@@ -22,14 +26,18 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
-script = ExtResource("1_senjy")
+script = ExtResource("1_p6cs5")
 
 [node name="TextureRect" type="TextureRect" parent="."]
+visibility_layer = 65
+z_index = -1
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = -3419.0
+offset_top = -4252.0
+offset_right = 21997.0
+offset_bottom = 3724.0
 scale = Vector2(0.25, 0.25)
-texture = ExtResource("2_if77y")
+texture = ExtResource("2_8vwo1")
 
 [node name="Panel" type="Panel" parent="."]
 visible = false
@@ -40,11 +48,14 @@ scale = Vector2(18.12, 1)
 
 [node name="Textlabel" type="Label" parent="."]
 layout_mode = 0
-offset_left = 31.0
-offset_top = 40.0
-offset_right = 71.0
-offset_bottom = 63.0
+offset_left = -3232.0
+offset_top = -3990.0
+offset_right = 2597.0
+offset_bottom = -2820.0
 theme_override_font_sizes/font_size = 2
+text = "
+"
+label_settings = SubResource("LabelSettings_if77y")
 
 [node name="choices" type="Node2D" parent="."]
 
@@ -57,7 +68,7 @@ theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_n23yb")
 theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_0nste")
 theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_if77y")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_351bv")
-script = ExtResource("2_n23yb")
+script = ExtResource("3_wpc62")
 
 [node name="panel" type="Panel" parent="choices/choice2"]
 visible = false
@@ -78,7 +89,7 @@ metadata/_edit_use_anchors_ = true
 [node name="choice 1" type="Button" parent="choices"]
 offset_top = 101.0
 offset_bottom = 101.0
-script = ExtResource("3_0nste")
+script = ExtResource("4_1ijdk")
 
 [node name="panel" type="Panel" parent="choices/choice 1"]
 visible = false

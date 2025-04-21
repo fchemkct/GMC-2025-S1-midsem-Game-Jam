@@ -1,7 +1,7 @@
 extends Control
 
 @export var lines: Array[String] = [
-	"Welcome to the world of Godot.",
+	"You watch as Tauri and Orion discuss matters of the corpse.",
 	"This is a simple dialogue box.",
 	"Now go forth, and cast some spells!",
 	"#choices",
@@ -29,6 +29,7 @@ func display_next_line():
 	else:
 		hide()
 		emit_signal("dialogue_finished")  # Optional: use this to trigger spellcast, etc.
+		get_tree().change_scene_to_file("res://spellcast_1.tscn")
 
 func _input(event):
 	if event.is_action_pressed("ui_accept") && !choice_on:  # Press Enter/Space/etc

@@ -10,14 +10,14 @@ _data = {
 point_count = 29
 
 [node name="spellcast1" type="Node2D"]
+position = Vector2(3, -4)
 script = ExtResource("1_qhkq0")
 
 [node name="sppattern1" type="Sprite2D" parent="."]
 z_index = -1
-position = Vector2(3, 3)
-scale = Vector2(0.459578, 0.505087)
 texture = ExtResource("1_bk32q")
 
 [node name="sptrace1" type="Path2D" parent="."]
+scale = Vector2(2.1, 2.1)
 curve = SubResource("Curve2D_bk32q")
 metadata/_edit_group_ = true

@@ -1,25 +1,27 @@
-[gd_scene load_steps=4 format=3 uid="uid://bl3uhtnb6p7es"]
+[gd_scene load_steps=4 format=3 uid="uid://bmabqjkdmj1ky"]
 
-[ext_resource type="Texture2D" uid="uid://b3lole0xhp1lr" path="res://terrain sprites/townsquare.png" id="1_cn2h4"]
+[ext_resource type="Texture2D" uid="uid://b3lole0xhp1lr" path="res://terrain sprites/townsquare.png" id="1_ck15l"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cn2h4"]
-size = Vector2(1972.5, 1098)
+size = Vector2(1271.73, 626.2)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cn2h4"]
 radius = 125.0
-height = 1116.0
+height = 693.6
 
 [node name="StaticBody2D" type="StaticBody2D"]
+position = Vector2(2460, 310)
+scale = Vector2(2.5, 2.5)
 
 [node name="Townsquare" type="Sprite2D" parent="."]
 position = Vector2(-355, -550)
-scale = Vector2(1.59, 1.6)
-texture = ExtResource("1_cn2h4")
+texture = ExtResource("1_ck15l")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-3071, -1541)
+position = Vector2(-2058.14, -1168)
+scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_cn2h4")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
-position = Vector2(-3337, -491)
+position = Vector2(-2222.4, -504)
 shape = SubResource("CapsuleShape2D_cn2h4")
