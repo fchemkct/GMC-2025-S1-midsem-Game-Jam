@@ -1,14 +1,17 @@
-[gd_scene load_steps=10 format=3 uid="uid://c7eyhk77f14cp"]
+[gd_scene load_steps=13 format=3 uid="uid://c7eyhk77f14cp"]
 
 [ext_resource type="Script" uid="uid://btge5igcwubvy" path="res://main.gd" id="1_5vw27"]
 [ext_resource type="PackedScene" uid="uid://bnrqduc4ah6q4" path="res://player.tscn" id="3_1bvp3"]
-[ext_resource type="Script" path="res://npc.gd" id="4_7mycd"]
+[ext_resource type="Script" uid="uid://c2hi7pbdvyjc6" path="res://npc.gd" id="4_7mycd"]
 [ext_resource type="PackedScene" uid="uid://coc7biftqup55" path="res://Npc.tscn" id="4_lquwl"]
-[ext_resource type="PackedScene" path="res://Botanist.tscn" id="5_5vw27"]
-[ext_resource type="PackedScene" path="res://mailman.tscn" id="6_4c57u"]
+[ext_resource type="PackedScene" uid="uid://dhrs6br2egqtd" path="res://Botanist.tscn" id="5_5vw27"]
+[ext_resource type="PackedScene" uid="uid://bq5vsf0nbq5hd" path="res://mailman.tscn" id="6_4c57u"]
 [ext_resource type="PackedScene" uid="uid://bmabqjkdmj1ky" path="res://townhouseOPENING.tscn" id="6_5vw27"]
 [ext_resource type="Texture2D" uid="uid://be8r43boghfw7" path="res://terrain sprites/background.png" id="6_272bh"]
-[ext_resource type="PackedScene" path="res://doctor.tscn" id="6_kek77"]
+[ext_resource type="PackedScene" uid="uid://bhkintuyxvamh" path="res://doctor.tscn" id="6_kek77"]
+[ext_resource type="PackedScene" uid="uid://drs7r18k2tk86" path="res://nutjob.tscn" id="8_efxa6"]
+[ext_resource type="PackedScene" uid="uid://blti3j6sfrehl" path="res://coffinastrologist.tscn" id="11_dg77c"]
+[ext_resource type="PackedScene" uid="uid://cmobt3tbacu2d" path="res://tavern.tscn" id="12_dg77c"]
 
 [node name="Node2D" type="Node2D"]
 position = Vector2(462, 400)
@@ -17,11 +20,11 @@ script = ExtResource("1_5vw27")
 
 [node name="Player" parent="." instance=ExtResource("3_1bvp3")]
 z_index = 1
-position = Vector2(909.999, -1300)
+position = Vector2(-2050, 1260)
 disable_mode = 2
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
-zoom = Vector2(4, 3)
+zoom = Vector2(2, 2)
 limit_left = 0
 limit_top = 0
 limit_right = 1000
@@ -29,22 +32,26 @@ limit_bottom = 750
 
 [node name="Npc" parent="." instance=ExtResource("4_lquwl")]
 z_index = 1
-position = Vector2(-1910, -590)
+position = Vector2(-2040, -810)
 disable_mode = 2
 input_pickable = true
 script = ExtResource("4_7mycd")
 
 [node name="botanist" parent="." instance=ExtResource("5_5vw27")]
 z_index = 1
-position = Vector2(-99.9999, -70)
+position = Vector2(-170, -110)
 
 [node name="mailman" parent="." instance=ExtResource("6_4c57u")]
 z_index = 1
-position = Vector2(-1910, 560)
+position = Vector2(-2040, 6.10352e-05)
 
 [node name="doctor" parent="." instance=ExtResource("6_kek77")]
 z_index = 1
-position = Vector2(-840, 500)
+position = Vector2(-920, -310)
+
+[node name="nutjob" parent="." instance=ExtResource("8_efxa6")]
+z_index = 1
+position = Vector2(310, 390)
 
 [node name="Background" type="Sprite2D" parent="."]
 z_index = -3
@@ -53,5 +60,12 @@ scale = Vector2(2.1, 2.1)
 texture = ExtResource("6_272bh")
 metadata/_edit_lock_ = true
 
-[node name="StaticBody2D" parent="." instance=ExtResource("6_5vw27")]
+[node name="house" parent="." instance=ExtResource("6_5vw27")]
 position = Vector2(2980, 1760)
+
+[node name="coffin" parent="." instance=ExtResource("11_dg77c")]
+position = Vector2(-1400, 710)
+
+[node name="tavern" parent="." instance=ExtResource("12_dg77c")]
+z_index = 1
+position = Vector2(-520, 500)

@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://cmobt3tbacu2d"]
+
+[ext_resource type="Texture2D" uid="uid://swmnlgs4hrvj" path="res://characters/characters/tavern_owner.png" id="1_4xy5q"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4xy5q"]
+radius = 152.0
+height = 928.0
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+
+[node name="TavernOwner" type="Sprite2D" parent="."]
+position = Vector2(7.62939e-06, 0)
+scale = Vector2(0.596667, 0.562222)
+texture = ExtResource("1_4xy5q")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-33, -34)
+shape = SubResource("CapsuleShape2D_4xy5q")
