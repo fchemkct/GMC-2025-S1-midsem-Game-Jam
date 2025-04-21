@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://ctlvurl3kobjf"]
 
-[ext_resource type="Script" path="res://demos/11. timed options/timed_options.gd" id="1_g0ote"]
-[ext_resource type="Script" path="res://demos/11. timed options/timed_options_dialogue.gd" id="2_gqlp8"]
+[ext_resource type="Script" uid="uid://crcgcskqqcpbv" path="res://addons/demos/11. timed options/timed_options.gd" id="1_g0ote"]
+[ext_resource type="Script" uid="uid://eh3kjpse0emk" path="res://addons/demos/11. timed options/timed_options_dialogue.gd" id="2_gqlp8"]
 
 [node name="TimedOptions" type="VBoxContainer"]
 anchors_preset = 15

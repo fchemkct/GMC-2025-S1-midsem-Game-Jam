@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://b0gsgxefiut4g"]
 
-[ext_resource type="Script" path="res://demos/10. dynamic save and load/dynamic_save_load.gd" id="1_75aob"]
-[ext_resource type="Script" path="res://demos/10. dynamic save and load/dynamic_save_dialogue.gd" id="2_lqhmn"]
+[ext_resource type="Script" uid="uid://dyxcys6qdimn5" path="res://addons/demos/10. dynamic save and load/dynamic_save_load.gd" id="1_75aob"]
+[ext_resource type="Script" uid="uid://qjjapmjb5f8s" path="res://addons/demos/10. dynamic save and load/dynamic_save_dialogue.gd" id="2_lqhmn"]
 
 [node name="DynamicSaveLoad" type="Control"]
 layout_mode = 3

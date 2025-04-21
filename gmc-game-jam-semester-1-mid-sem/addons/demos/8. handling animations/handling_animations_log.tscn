@@ -1,7 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://cc22y2sa14se6"]
+[gd_scene load_steps=3 format=3 uid="uid://djujyea67gj55"]
 
-[ext_resource type="Script" path="res://demos/7. handling input/handling_input_log.gd" id="1_4r4r1"]
-[ext_resource type="Script" path="res://demos/7. handling input/handling_input_dialogue.gd" id="2_ti25x"]
+[ext_resource type="Script" uid="uid://dx5fyjd6lflhp" path="res://addons/demos/8. handling animations/handling_animations_log.gd" id="1_0567n"]
+[ext_resource type="Script" uid="uid://cvl6b3ttts3h5" path="res://addons/demos/8. handling animations/handling_animations_dialogue.gd" id="2_4ky6k"]
 
 [node name="DialogueEngineDemoVBoxContainer" type="VBoxContainer"]
 anchors_preset = 15
@@ -9,8 +9,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_4r4r1")
-dialogue_gdscript = ExtResource("2_ti25x")
+script = ExtResource("1_0567n")
+dialogue_gdscript = ExtResource("2_4ky6k")
 
 [node name="DialogueEngineDemoQuickStartPanelContainer" type="PanelContainer" parent="."]
 layout_mode = 2
@@ -24,3 +24,6 @@ horizontal_alignment = 1
 layout_mode = 2
 text = "Log:"
 fit_content = true
+
+[node name="LogAnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../LogRichTextLabel")

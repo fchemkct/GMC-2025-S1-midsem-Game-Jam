@@ -1,10 +1,10 @@
-[gd_scene load_steps=11 format=3 uid="uid://b4yr52cv5ojvv"]
+[gd_scene load_steps=11 format=3 uid="uid://c5gymfcgkuabo"]
 
-[ext_resource type="Script" uid="uid://btp5ejus0fe0t" path="res://REALDIAG.gd" id="1_sbu81"]
-[ext_resource type="Script" uid="uid://dxp2pscov5kf0" path="res://Story storage files/tauri/tauri_dialogue_file.gd" id="2_278cl"]
-[ext_resource type="Texture2D" uid="uid://4tn3ef6rmx0s" path="res://textbox.png" id="2_vrh81"]
-[ext_resource type="Script" uid="uid://ch6vhc6h4ihma" path="res://choice_2.gd" id="3_278cl"]
-[ext_resource type="Script" uid="uid://cus5x380wrld2" path="res://Story storage files/tauri/tauri_choice.gd" id="5_278cl"]
+[ext_resource type="Script" uid="uid://btp5ejus0fe0t" path="res://REALDIAG.gd" id="1_plxud"]
+[ext_resource type="Script" uid="uid://dugffapbsw40n" path="res://Story storage files/opening/opening_1.gd" id="2_plxud"]
+[ext_resource type="Texture2D" uid="uid://4tn3ef6rmx0s" path="res://textbox.png" id="3_2t0ed"]
+[ext_resource type="Script" uid="uid://ch6vhc6h4ihma" path="res://choice_2.gd" id="4_5wtye"]
+[ext_resource type="Script" uid="uid://cus5x380wrld2" path="res://Story storage files/tauri/tauri_after_spell.gd" id="5_2wm5i"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_if77y"]
 font_size = 150
@@ -31,8 +31,8 @@ offset_right = -18.0
 offset_bottom = 5.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_sbu81")
-dialogue_gdscript = ExtResource("2_278cl")
+script = ExtResource("1_plxud")
+dialogue_gdscript = ExtResource("2_plxud")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 visibility_layer = 65
@@ -43,7 +43,7 @@ offset_top = 28.0
 offset_right = 18448.0
 offset_bottom = 5140.0
 scale = Vector2(0.1, 0.1)
-texture = ExtResource("2_vrh81")
+texture = ExtResource("3_2t0ed")
 
 [node name="Textlabel" type="Label" parent="."]
 layout_mode = 0
@@ -52,10 +52,12 @@ offset_top = 164.0
 offset_right = 4481.0
 offset_bottom = 1036.0
 scale = Vector2(0.35, 0.25)
-theme_override_font_sizes/font_size = 2
+theme_override_font_sizes/font_size = 1
 text = "
 "
 label_settings = SubResource("LabelSettings_if77y")
+autowrap_mode = 3
+clip_text = true
 
 [node name="choices" type="Node2D" parent="."]
 position = Vector2(177, 361)
@@ -66,12 +68,14 @@ offset_left = 634.0
 offset_top = 101.0
 offset_right = 642.0
 offset_bottom = 109.0
+scale = Vector2(2, 2)
+size_flags_stretch_ratio = 0.0
 theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_n23yb")
 theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_0nste")
 theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_if77y")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_351bv")
-script = ExtResource("3_278cl")
-dialogue_gdscript = ExtResource("5_278cl")
+script = ExtResource("4_5wtye")
+dialogue_gdscript = ExtResource("5_2wm5i")
 metadata/_edit_use_anchors_ = true
 
 [node name="panel" type="Panel" parent="choices/choice2"]
@@ -93,8 +97,9 @@ metadata/_edit_use_anchors_ = true
 [node name="choice 1" type="Button" parent="choices"]
 offset_top = 101.0
 offset_bottom = 101.0
-script = ExtResource("3_278cl")
-dialogue_gdscript = ExtResource("5_278cl")
+scale = Vector2(2, 2)
+script = ExtResource("4_5wtye")
+dialogue_gdscript = ExtResource("5_2wm5i")
 metadata/_edit_use_anchors_ = true
 
 [node name="panel" type="Panel" parent="choices/choice 1"]
@@ -107,6 +112,32 @@ metadata/_edit_use_anchors_ = true
 
 [node name="label text" type="Label" parent="choices/choice 1"]
 visible = false
+layout_mode = 0
+offset_right = 65.0
+offset_bottom = 23.0
+text = "Choice 1"
+metadata/_edit_use_anchors_ = true
+
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2(56, -21)
+
+[node name="Name panel" type="Control" parent="Node2D"]
+layout_mode = 3
+anchors_preset = 0
+offset_top = 101.0
+offset_right = 8.0
+offset_bottom = 109.0
+scale = Vector2(2, 2)
+metadata/_edit_use_anchors_ = true
+
+[node name="panel" type="Panel" parent="Node2D/Name panel"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(4, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="label text" type="Label" parent="Node2D/Name panel"]
 layout_mode = 0
 offset_right = 65.0
 offset_bottom = 23.0

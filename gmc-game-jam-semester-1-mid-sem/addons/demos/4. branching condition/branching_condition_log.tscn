@@ -1,7 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://bl1ul621fkvxw"]
+[gd_scene load_steps=3 format=3 uid="uid://bl1d3ktmm0s7f"]
 
-[ext_resource type="Script" uid="uid://d3pwpjxo75fxe" path="res://demos/1. simple dialogue/simple_log.gd" id="1_km05v"]
-[ext_resource type="Script" uid="uid://cfmbr4lv2dbjw" path="res://demos/1. simple dialogue/simple_dialogue.gd" id="2_clmvy"]
+[ext_resource type="Script" uid="uid://cf3cevthk7lda" path="res://addons/demos/4. branching condition/branching_condition_log.gd" id="1_7x7u2"]
+[ext_resource type="Script" uid="uid://dwsxveusqveqv" path="res://addons/demos/4. branching condition/branching_condition_dialogue.gd" id="2_yhcl2"]
 
 [node name="DialogueEngineDemoVBoxContainer" type="VBoxContainer"]
 anchors_preset = 15
@@ -9,8 +9,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_km05v")
-dialogue_gdscript = ExtResource("2_clmvy")
+script = ExtResource("1_7x7u2")
+dialogue_gdscript = ExtResource("2_yhcl2")
 
 [node name="DialogueEngineDemoQuickStartPanelContainer" type="PanelContainer" parent="."]
 layout_mode = 2

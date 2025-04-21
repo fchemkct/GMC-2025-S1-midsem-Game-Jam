@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://djkxscwuw617h"]
 
-[ext_resource type="Script" uid="uid://ceikmlu2b5qk0" path="res://demos/9. characters dialogue/characters_dialogue.gd" id="1_8cs7o"]
-[ext_resource type="Script" uid="uid://bcfjmobm0hjac" path="res://demos/9. characters dialogue/dialogue.gd" id="2_7nqnc"]
+[ext_resource type="Script" uid="uid://ceikmlu2b5qk0" path="res://addons/demos/9. characters dialogue/characters_dialogue.gd" id="1_8cs7o"]
+[ext_resource type="Script" uid="uid://bcfjmobm0hjac" path="res://addons/demos/9. characters dialogue/dialogue.gd" id="2_7nqnc"]
 [ext_resource type="Texture2D" uid="uid://dkckjqii40ly1" path="res://icon.svg" id="3_buhne"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hqwn4"]
