@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://blti3j6sfrehl"]
+
+[ext_resource type="Texture2D" uid="uid://s13oomnv0c3b" path="res://characters/characters/astrologist.png" id="1_i2kc8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i2kc8"]
+size = Vector2(1466.61, 794.791)
+
+[node name="Area2D" type="Area2D"]
+
+[node name="Astrologist" type="Sprite2D" parent="."]
+position = Vector2(11, -11)
+scale = Vector2(0.615556, 0.623889)
+texture = ExtResource("1_i2kc8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Astrologist"]
+position = Vector2(64.9819, -76.9368)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_i2kc8")

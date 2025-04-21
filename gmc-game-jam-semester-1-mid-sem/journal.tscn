@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://dspnv5ms5ihdm"]
+
+[ext_resource type="Texture2D" uid="uid://d2c3pp1hee6e6" path="res://assets/journal.png" id="1_julo4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_julo4"]
+size = Vector2(315, 328)
+
+[node name="Area2D" type="Area2D"]
+
+[node name="Journal" type="Sprite2D" parent="."]
+position = Vector2(2447, -2598)
+scale = Vector2(1.58594, 1.63194)
+texture = ExtResource("1_julo4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(97.5, -19)
+shape = SubResource("RectangleShape2D_julo4")

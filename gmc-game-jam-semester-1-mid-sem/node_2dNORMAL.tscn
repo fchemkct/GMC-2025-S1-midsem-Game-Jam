@@ -1,21 +1,27 @@
-[gd_scene load_steps=17 format=3 uid="uid://n5slb2dfjkua"]
+[gd_scene load_steps=23 format=3 uid="uid://n5slb2dfjkua"]
 
 [ext_resource type="PackedScene" uid="uid://bnrqduc4ah6q4" path="res://player.tscn" id="1_txw6s"]
-[ext_resource type="Script" path="res://normalscene.gd" id="1_yj753"]
+[ext_resource type="Script" uid="uid://d2ykvokqc5v54" path="res://normalscene.gd" id="1_yj753"]
 [ext_resource type="PackedScene" uid="uid://coc7biftqup55" path="res://Npc.tscn" id="2_cejpv"]
-[ext_resource type="PackedScene" path="res://Botanist.tscn" id="2_gj118"]
-[ext_resource type="PackedScene" path="res://doctor.tscn" id="3_g80de"]
-[ext_resource type="Script" path="res://npc.gd" id="3_gj118"]
+[ext_resource type="PackedScene" uid="uid://dhrs6br2egqtd" path="res://Botanist.tscn" id="2_gj118"]
+[ext_resource type="PackedScene" uid="uid://bhkintuyxvamh" path="res://doctor.tscn" id="3_g80de"]
+[ext_resource type="Script" uid="uid://c2hi7pbdvyjc6" path="res://npc.gd" id="3_gj118"]
 [ext_resource type="Texture2D" uid="uid://be8r43boghfw7" path="res://terrain sprites/background.png" id="4_g80de"]
-[ext_resource type="PackedScene" path="res://mailman.tscn" id="4_mo42o"]
-[ext_resource type="PackedScene" path="res://astro_andbotanist.tscn" id="5_mo42o"]
-[ext_resource type="PackedScene" path="res://orion_house.tscn" id="6_cejpv"]
+[ext_resource type="PackedScene" uid="uid://bq5vsf0nbq5hd" path="res://mailman.tscn" id="4_mo42o"]
+[ext_resource type="PackedScene" uid="uid://ckfq0d2ievmte" path="res://astro_andbotanist.tscn" id="5_mo42o"]
+[ext_resource type="PackedScene" uid="uid://dyhsa7tqwf3wn" path="res://gardening_book.tscn" id="5_yj753"]
+[ext_resource type="PackedScene" uid="uid://chkv487d7fx7l" path="res://orion_house.tscn" id="6_cejpv"]
+[ext_resource type="PackedScene" uid="uid://dspnv5ms5ihdm" path="res://journal.tscn" id="6_lm85a"]
 [ext_resource type="PackedScene" uid="uid://cb6qp8aiuo216" path="res://tavernhouse.tscn" id="7_txw6s"]
+[ext_resource type="PackedScene" uid="uid://hspaev627dif" path="res://pesticide.tscn" id="7_u6en8"]
+[ext_resource type="PackedScene" uid="uid://bfsxy58x00ood" path="res://mail.tscn" id="8_0g7p0"]
 [ext_resource type="PackedScene" uid="uid://bl3uhtnb6p7es" path="res://townhouse_house.tscn" id="8_txw6s"]
-[ext_resource type="PackedScene" path="res://nutjob_house.tscn" id="9_txw6s"]
-[ext_resource type="PackedScene" path="res://doctorandsherrif.tscn" id="10_0g7p0"]
+[ext_resource type="PackedScene" uid="uid://dqsdwf3pijiyi" path="res://nutjob_house.tscn" id="9_txw6s"]
+[ext_resource type="PackedScene" uid="uid://drs7r18k2tk86" path="res://nutjob.tscn" id="9_u0smt"]
+[ext_resource type="PackedScene" uid="uid://3tyic821r1j0" path="res://doctorandsherrif.tscn" id="10_0g7p0"]
 [ext_resource type="PackedScene" uid="uid://cfjq3bvg5aqm8" path="res://mailmanhouse.tscn" id="11_u0smt"]
 [ext_resource type="PackedScene" uid="uid://b4yr52cv5ojvv" path="res://Story storage files/tauri/dialogue_boxTAURI.tscn" id="12_cejpv"]
+[ext_resource type="PackedScene" uid="uid://cmobt3tbacu2d" path="res://tavern.tscn" id="21_iwoec"]
 
 [node name="Normal" type="Node2D"]
 scale = Vector2(0.1, 0.1)
@@ -40,7 +46,23 @@ position = Vector2(-520, 2590)
 
 [node name="doctor" parent="." instance=ExtResource("3_g80de")]
 z_index = 2
-position = Vector2(-1190, -1710)
+position = Vector2(-1170, -1880)
+
+[node name="gardening_Book" parent="." instance=ExtResource("5_yj753")]
+z_index = 2
+position = Vector2(-3400, 2380)
+
+[node name="journal" parent="." instance=ExtResource("6_lm85a")]
+z_index = 2
+position = Vector2(-2890, 2930)
+
+[node name="pesticide" parent="." instance=ExtResource("7_u6en8")]
+z_index = 2
+position = Vector2(-2390, 2800)
+
+[node name="mail" parent="." instance=ExtResource("8_0g7p0")]
+z_index = 2
+position = Vector2(-2690, 2480)
 
 [node name="mailman" parent="." instance=ExtResource("4_mo42o")]
 z_index = 2
@@ -55,13 +77,14 @@ metadata/_edit_lock_ = true
 
 [node name="Npc" parent="." instance=ExtResource("2_cejpv")]
 z_index = 2
-position = Vector2(254, 101)
+position = Vector2(990, -2350)
 disable_mode = 2
 input_pickable = true
 script = ExtResource("3_gj118")
 
 [node name="astroandbotaniststatic" parent="." instance=ExtResource("5_mo42o")]
 position = Vector2(-1190, -350)
+metadata/_edit_lock_ = true
 
 [node name="orion_house" parent="." instance=ExtResource("6_cejpv")]
 
@@ -82,6 +105,15 @@ offset_left = 1900.0
 offset_top = -1550.0
 offset_right = 1900.0
 offset_bottom = -380.0
+
+[node name="tavern" parent="." instance=ExtResource("21_iwoec")]
+z_index = 2
+position = Vector2(1650, 560)
+scale = Vector2(1, 1)
+
+[node name="nutjob" parent="." instance=ExtResource("9_u0smt")]
+position = Vector2(2990, -2020)
+scale = Vector2(1, 1)
 
 [editable path="DialogueBox"]
 [editable path="DialogueBox/spellcast1"]
