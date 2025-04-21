@@ -1,7 +1,7 @@
 extends CharacterBody2D
 signal inRange
 
-@export var speed = 800
+var speed = 800
 var screenSize
 var canTalk = false; ##determines if player is in range to talk to another npc
 ##@onready var dialogue = $"../CharactersDialogue"
@@ -12,6 +12,7 @@ func _ready():
 	
 func _process(delta: float):
 	walk(delta)
+	
 	##dialogue.show()
 	#pass
 
@@ -54,20 +55,17 @@ func walk(delta: float):
 	
 
 
-
-	
-
-"""
-func _on_body_entered(body) -> void:
+func _on_area_2d_body_entered(body: Node2D) -> void:
 	##hide()
 	##inRange.emit()
 	canTalk = true
 	
 	print("enter:cantalk bool is: " + str(canTalk))
-	 # Replace with function body.
+	 # Replace with function body. # Replace with function body.
 
-func _on_body_exited(body) -> void:
+
+func _on_area_2d_body_exited(body: Node2D) -> void:
 	canTalk = false
 	print("exit:cantalk bool is: " + str(canTalk))
 	 # Replace with function body.
-"""
+ # Replace with function body.

@@ -12,7 +12,7 @@ position = Vector2(11, -11)
 scale = Vector2(0.615556, 0.623889)
 texture = ExtResource("1_i2kc8")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Astrologist"]
-position = Vector2(64.9819, -76.9368)
-scale = Vector2(1, 1)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(51, -59)
+scale = Vector2(0.615556, 0.623889)
 shape = SubResource("RectangleShape2D_i2kc8")

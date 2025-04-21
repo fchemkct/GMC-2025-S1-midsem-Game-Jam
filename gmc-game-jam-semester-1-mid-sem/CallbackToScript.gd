@@ -6,8 +6,8 @@ extends Control
 var clines = null
 
 func _ready():
-	dialogue = get_parent().get_node("/root/DialogueBox") ##add normal after /root/ later
-	SpellCast = get_parent().get_node("/root/DialogueBox/SpellCast")
+	dialogue = $"../../.." ##add normal after /root/ later
+	SpellCast = $"../.." ##get_parent().get_node("/root/normal/tavern/Control/DialogueBox")
 	clines = dialogue_gdscript.new()
 	SpellCast.hide()
 	

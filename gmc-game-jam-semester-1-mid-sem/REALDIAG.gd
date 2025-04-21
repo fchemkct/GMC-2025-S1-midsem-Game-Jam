@@ -7,9 +7,10 @@ var dlines = null
 var current_line = 0
 var choice_on = false
 var spell_on = false
-
+@onready var SpellCast = $SpellCast
 
 func _ready():
+	
 	dlines = dialogue_gdscript.new()
 	$choices.hide()
 	if get_node_or_null("$choice2"):
@@ -17,7 +18,7 @@ func _ready():
 	if get_node_or_null("$SpellCast"):
 		$SpellCast.hide()
 	show()
-	display_next_line()
+	##display_next_line()
 
 func display_next_line():
 	if (current_line < dlines.lines.size()):
