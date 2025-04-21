@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://qn6qwbwufnkh"]
+[gd_scene load_steps=5 format=3 uid="uid://qn6qwbwufnkh"]
 
 [ext_resource type="Script" uid="uid://ds6mxbpw18oym" path="res://spellcast_3.gd" id="1_bc43a"]
 [ext_resource type="Texture2D" uid="uid://clsq1wiuummw1" path="res://Spellcasts/16D70FA0-5D59-42EF-A6D1-7C0DE618606B.jpg" id="1_o7u27"]
@@ -9,14 +9,31 @@ _data = {
 }
 point_count = 40
 
+[sub_resource type="LabelSettings" id="LabelSettings_bc43a"]
+font_size = 100
+font_color = Color(0, 0, 0, 0.937255)
+
 [node name="spellcast3" type="Node2D"]
-rotation = -0.0766078
+position = Vector2(462, 633)
+rotation = 0.0628319
 script = ExtResource("1_bc43a")
+metadata/_edit_horizontal_guides_ = [-377.0, -422.0]
 
 [node name="sppattern3" type="Sprite2D" parent="."]
 position = Vector2(-1.5328, 6.90294)
-rotation = 0.199444
+rotation = 0.0628319
 texture = ExtResource("1_o7u27")
 
 [node name="sptrace3" type="Path2D" parent="."]
+rotation = -0.162316
 curve = SubResource("Curve2D_o7u27")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -281.0
+offset_top = -602.0
+offset_right = 448.0
+offset_bottom = -465.0
+rotation = 0.0628319
+text = "Cast your spell!"
+label_settings = SubResource("LabelSettings_bc43a")
+metadata/_edit_use_anchors_ = true

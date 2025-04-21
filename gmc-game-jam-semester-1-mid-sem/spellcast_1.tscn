@@ -31,6 +31,6 @@ offset_left = -464.0
 offset_top = -486.0
 offset_right = 452.0
 offset_bottom = -349.0
-text = "Follow the pattern!"
+text = "Cast your spell!"
 label_settings = SubResource("LabelSettings_mlggw")
 metadata/_edit_use_anchors_ = true

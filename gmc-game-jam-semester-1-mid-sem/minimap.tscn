@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://cyy5envltj1tx"]
+
+[ext_resource type="Texture2D" uid="uid://bt8a3671pqtse" path="res://terrain sprites/full_map.png" id="1_yfyr0"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureRect" type="TextureRect" parent="Control"]
+layout_mode = 1
+offset_right = 6175.0
+offset_bottom = 4680.0
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_yfyr0")

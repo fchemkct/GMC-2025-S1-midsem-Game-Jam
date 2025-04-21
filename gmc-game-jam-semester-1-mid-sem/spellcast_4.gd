@@ -6,17 +6,15 @@ var is_drawing := false
 var mouse_pos: Vector2 = Vector2.ZERO
 var guide_progress := 0.0
 
-var tries := 0
-const MAX_TRIES := 3
-var success := false
+
+@onready var label = $Label
 
 func _ready():
 	var path_node = $sptrace4  # Adjust the path as needed
 	var curve = path_node.curve
 	for i in range(curve.get_point_count()):
-		original_path.append(path_node.to_global(curve.get_point_position(i)))
+		original_path.append(curve.get_point_position(i) * 1) #MULTIPLY THE SCALE FACTOR OF THE PATH
 	set_process(true)
-
 
 
 func _input(event):
@@ -25,10 +23,10 @@ func _input(event):
 			is_drawing = event.pressed
 			if is_drawing:
 				drawn_points.clear()
-				drawn_points.append(get_global_mouse_position())
+				drawn_points.append(get_local_mouse_position())
 				
 	elif event is InputEventMouseMotion:
-		mouse_pos = get_global_mouse_position()  # <-- Track mouse always
+		mouse_pos = get_local_mouse_position()  # <-- Track mouse always
 		if is_drawing:
 			drawn_points.append(mouse_pos)
 		queue_redraw() 
@@ -45,8 +43,6 @@ func _process(delta):
 		if guide_progress > 1.0:
 			guide_progress = 0.0
 		queue_redraw()
-
-
 
 func _draw():
 	
@@ -73,9 +69,9 @@ func _draw():
 func compare_trace_to_original():
 	if paths_match(original_path, drawn_points):
 		print("✅ Traced accurately!")
-		success = true
+		label.text = "You have passed the test! Well done!"
 	else:
-		print("❌ Try again, not close enough.")
+		label.text = "You failed the test. Try again."
 		
 
 # Core matching logic
@@ -100,15 +96,4 @@ func paths_match(original: Array[Vector2], drawn: Array[Vector2], tolerance := 2
 		
 func _unhandled_input(event):
 	if event is InputEventKey and event.pressed and event.keycode == KEY_SPACE:
-		if success:
-			return  # Already succeeded
-		if tries >= MAX_TRIES:
-			print("❌ You've used all attempts!") #JUST DELETE THIS 
-			return
-
-		tries += 1
 		compare_trace_to_original()
-
-		if tries >= MAX_TRIES and not success:
-			print("❌ Game over. No more tries.") 
-			#ADD IN THE DIALOGUES AND MOVE ON

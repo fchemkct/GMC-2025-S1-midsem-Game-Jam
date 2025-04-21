@@ -103,6 +103,7 @@ theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_0nste")
 theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_if77y")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_351bv")
 script = ExtResource("3_wpc62")
+dialogue_gdscript = ExtResource("4_1ijdk")
 
 [node name="panel" type="Panel" parent="choices/choice2"]
 visible = false

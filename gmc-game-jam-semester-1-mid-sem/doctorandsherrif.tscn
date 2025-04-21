@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://cysmyj14iturx" path="res://terrain sprites/doctor_and_sheriff.png" id="1_s1yrv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s1yrv"]
-size = Vector2(3112, 1192.63)
+size = Vector2(3078, 1048.16)
 
 [node name="StaticBody2D" type="StaticBody2D"]
 
@@ -13,5 +13,5 @@ scale = Vector2(1.553, 1.459)
 texture = ExtResource("1_s1yrv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-109, -2425.69)
+position = Vector2(-102, -2460.08)
 shape = SubResource("RectangleShape2D_s1yrv")

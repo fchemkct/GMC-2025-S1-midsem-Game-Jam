@@ -14,9 +14,11 @@ font_size = 100
 font_color = Color(0, 0, 0, 0.937255)
 
 [node name="spellcast2" type="Node2D"]
+position = Vector2(395, 480)
 script = ExtResource("1_q2bld")
 
 [node name="sppattern2" type="Sprite2D" parent="."]
+z_index = -1
 position = Vector2(-8, 12)
 texture = ExtResource("1_akath")
 
@@ -28,6 +30,6 @@ offset_left = -294.0
 offset_top = -631.0
 offset_right = 267.0
 offset_bottom = -494.0
-text = "qdqddqdqd"
+text = "Cast your spell!"
 label_settings = SubResource("LabelSettings_q2bld")
 metadata/_edit_use_anchors_ = true
