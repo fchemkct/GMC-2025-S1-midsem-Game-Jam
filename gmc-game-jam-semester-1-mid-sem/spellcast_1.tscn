@@ -10,7 +10,7 @@ _data = {
 point_count = 29
 
 [node name="spellcast1" type="Node2D"]
-position = Vector2(3, -4)
+position = Vector2(936, 514)
 script = ExtResource("1_qhkq0")
 
 [node name="sppattern1" type="Sprite2D" parent="."]

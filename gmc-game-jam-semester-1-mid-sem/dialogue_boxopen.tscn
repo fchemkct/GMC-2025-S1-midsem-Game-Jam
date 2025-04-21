@@ -1,9 +1,43 @@
-[gd_scene load_steps=10 format=3 uid="uid://b3d1sqc41wlqc"]
+[gd_scene load_steps=10 format=3 uid="uid://2quamuk8od5w"]
 
-[ext_resource type="Script" uid="uid://btp5ejus0fe0t" path="res://REALDIAG.gd" id="1_p6cs5"]
 [ext_resource type="Texture2D" uid="uid://4tn3ef6rmx0s" path="res://textbox.png" id="2_8vwo1"]
 [ext_resource type="Script" uid="uid://ch6vhc6h4ihma" path="res://choice_2.gd" id="3_wpc62"]
 [ext_resource type="Script" uid="uid://tgjbuy27md4k" path="res://choice_1.gd" id="4_1ijdk"]
+
+[sub_resource type="GDScript" id="GDScript_8r0bt"]
+script/source = "extends Control
+
+##@export var lines: Array[String] = [\"hello\",]
+@export var story_storage : GDScript = null	##this is where we drag the script
+var Story_file = null
+
+var current_line = 0
+var choice_on = false
+func _ready():
+	Story_file = story_storage.new()
+	$choices.hide()
+	
+	show()
+	display_next_line()
+
+func display_next_line():
+	if (current_line < Story_file.lines.size()) && (!Story_file.lines[current_line].contains(\"#\")):
+		$Textlabel.text = Story_file.lines[current_line]
+		current_line += 1
+	elif (current_line < Story_file.lines.size()) && Story_file.lines[current_line].contains(\"#choices\"):
+		print(\"# parsed through\")
+		choice_on = true
+		$choices.show()
+		current_line += 1
+	else:
+		hide()
+		emit_signal(\"dialogue_finished\")  # Optional: use this to trigger spellcast, etc.
+		##get_tree().change_scene_to_file(\"res://spellcast_1.tscn\")
+
+func _input(event):
+	if event.is_action_pressed(\"ui_accept\") && !choice_on:  # Press Enter/Space/etc
+		display_next_line()
+"
 
 [sub_resource type="LabelSettings" id="LabelSettings_if77y"]
 font_size = 150
@@ -26,7 +60,7 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
-script = ExtResource("1_p6cs5")
+script = SubResource("GDScript_8r0bt")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 visibility_layer = 65

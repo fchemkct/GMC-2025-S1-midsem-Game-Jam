@@ -1,9 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://b4yr52cv5ojvv"]
+[gd_scene load_steps=11 format=3 uid="uid://chw1h3t1rvog0"]
 
-[ext_resource type="Script" uid="uid://btp5ejus0fe0t" path="res://REALDIAG.gd" id="1_sbu81"]
-[ext_resource type="Script" uid="uid://dxp2pscov5kf0" path="res://Story storage files/tauri/tauri_dialogue_file.gd" id="2_278cl"]
-[ext_resource type="Texture2D" uid="uid://4tn3ef6rmx0s" path="res://textbox.png" id="2_vrh81"]
-[ext_resource type="Script" uid="uid://ch6vhc6h4ihma" path="res://choice_2.gd" id="3_278cl"]
+[ext_resource type="Script" uid="uid://btp5ejus0fe0t" path="res://REALDIAG.gd" id="1_mlvia"]
+[ext_resource type="Texture2D" uid="uid://4tn3ef6rmx0s" path="res://textbox.png" id="2_kre1p"]
+[ext_resource type="Script" uid="uid://ch6vhc6h4ihma" path="res://choice_2.gd" id="3_0ugcs"]
+[ext_resource type="Script" uid="uid://tgjbuy27md4k" path="res://choice_1.gd" id="4_lupyn"]
+
+[sub_resource type="GDScript" id="GDScript_mlvia"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_if77y"]
 font_size = 150
@@ -23,42 +25,44 @@ bg_color = Color(0.73111, 0.573056, 0.268446, 1)
 
 [node name="DialogueBox" type="Control"]
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_right = -18.0
-offset_bottom = 5.0
-grow_horizontal = 2
-grow_vertical = 2
-script = ExtResource("1_sbu81")
-dialogue_gdscript = ExtResource("2_278cl")
+anchors_preset = 0
+offset_left = -3461.0
+offset_top = -11154.0
+offset_right = 2368.0
+offset_bottom = -9984.0
+script = ExtResource("1_mlvia")
+dialogue_gdscript = SubResource("GDScript_mlvia")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 visibility_layer = 65
 z_index = -1
 layout_mode = 0
-offset_left = 24.0
-offset_top = 28.0
-offset_right = 18448.0
-offset_bottom = 5140.0
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("2_vrh81")
+offset_left = -523.0
+offset_top = -350.0
+offset_right = 17901.0
+offset_bottom = 4762.0
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_kre1p")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(18.12, 1)
 
 [node name="Textlabel" type="Label" parent="."]
 layout_mode = 0
-offset_left = 201.0
-offset_top = 164.0
-offset_right = 4481.0
-offset_bottom = 1036.0
-scale = Vector2(0.35, 0.25)
+offset_left = -287.0
+offset_top = -228.0
+offset_right = 3993.0
+offset_bottom = 644.0
 theme_override_font_sizes/font_size = 2
 text = "
 "
 label_settings = SubResource("LabelSettings_if77y")
 
 [node name="choices" type="Node2D" parent="."]
-position = Vector2(177, 361)
-scale = Vector2(2, 2)
+position = Vector2(951, 348)
 
 [node name="choice2" type="Button" parent="choices"]
 offset_left = 634.0
@@ -69,11 +73,10 @@ theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_n23yb")
 theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_0nste")
 theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_if77y")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_351bv")
-script = ExtResource("3_278cl")
+script = ExtResource("3_0ugcs")
 metadata/_edit_use_anchors_ = true
 
 [node name="panel" type="Panel" parent="choices/choice2"]
-visible = false
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
@@ -90,11 +93,10 @@ metadata/_edit_use_anchors_ = true
 [node name="choice 1" type="Button" parent="choices"]
 offset_top = 101.0
 offset_bottom = 101.0
-script = ExtResource("3_278cl")
+script = ExtResource("4_lupyn")
 metadata/_edit_use_anchors_ = true
 
 [node name="panel" type="Panel" parent="choices/choice 1"]
-visible = false
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
@@ -109,4 +111,3 @@ text = "Choice 1"
 metadata/_edit_use_anchors_ = true
 
 [connection signal="pressed" from="choices/choice2" to="choices/choice2" method="_on_pressed"]
-[connection signal="pressed" from="choices/choice 1" to="choices/choice 1" method="_on_pressed"]

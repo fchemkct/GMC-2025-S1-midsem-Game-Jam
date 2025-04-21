@@ -1,35 +1,40 @@
 extends Control
 
-@export var lines: Array[String] = [
-	"You watch as Tauri and Orion discuss matters of the corpse.",
-	"This is a simple dialogue box.",
-	"Now go forth, and cast some spells!",
-	"#choices",
-	"abc", 
-	"e",
-]
+##@export var lines: Array[String] = ["hello",]
+@export var dialogue_gdscript : GDScript = null 	##this is where we drag the script
+var dlines = null
 
 var current_line = 0
 var choice_on = false
+var spell_on = false
+
 func _ready():
+	dlines = dialogue_gdscript.new()
 	$choices.hide()
 	
 	show()
 	display_next_line()
 
 func display_next_line():
-	if (current_line < lines.size()) && (!lines[current_line].contains("#")):
-		$Textlabel.text = lines[current_line]
+	if (current_line < dlines.lines.size()) && (!dlines.lines[current_line].contains("#")):
+		$Textlabel.text = dlines.lines[current_line]
 		current_line += 1
-	elif (current_line < lines.size()) && lines[current_line].contains("#choices"):
+	elif (current_line < dlines.lines.size()) && dlines.lines[current_line].contains("#choices"):
 		print("# parsed through")
 		choice_on = true
 		$choices.show()
 		current_line += 1
+	elif (current_line < dlines.lines.size()) && dlines.lines[current_line].contains("#spellcasts"):
+		print("# da whimsical spell casturrrgh")
+		pass
+		spell_on = true
+		get_tree().change_scene_to_file("res://spellcast_1.tscn")
+		##$choices.show()
+		##current_line += 1
 	else:
 		hide()
 		emit_signal("dialogue_finished")  # Optional: use this to trigger spellcast, etc.
-		get_tree().change_scene_to_file("res://spellcast_1.tscn")
+		##get_tree().change_scene_to_file("res://spellcast_1.tscn")
 
 func _input(event):
 	if event.is_action_pressed("ui_accept") && !choice_on:  # Press Enter/Space/etc
