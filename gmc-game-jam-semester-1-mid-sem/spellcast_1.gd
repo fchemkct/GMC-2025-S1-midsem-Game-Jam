@@ -97,5 +97,5 @@ func _unhandled_input(event):
 	if event is InputEventKey and event.pressed and event.keycode == KEY_SPACE:
 		if $CallBack.dialogue.spell_on:
 			compare_trace_to_original()
-		else:
-			return
+	else:
+		return

@@ -140,12 +140,14 @@ offset_bottom = 23.0
 text = "Choice 1"
 metadata/_edit_use_anchors_ = true
 
-[node name="spellcast1" parent="." instance=ExtResource("6_mtbiu")]
+[node name="SpellCast" type="Node2D" parent="."]
 
-[node name="CallBack" parent="spellcast1" index="4"]
+[node name="spellcast1" parent="SpellCast" instance=ExtResource("6_mtbiu")]
+
+[node name="CallBack" parent="SpellCast/spellcast1" index="4"]
 dialogue_gdscript = ExtResource("5_278cl")
 
 [connection signal="pressed" from="choices/choice2" to="choices/choice2" method="_on_pressed"]
 [connection signal="pressed" from="choices/choice 1" to="choices/choice 1" method="_on_pressed"]
 
-[editable path="spellcast1"]
+[editable path="SpellCast/spellcast1"]

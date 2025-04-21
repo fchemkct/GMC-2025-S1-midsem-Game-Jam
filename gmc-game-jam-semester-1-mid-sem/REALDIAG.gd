@@ -12,7 +12,8 @@ var spell_on = false
 func _ready():
 	dlines = dialogue_gdscript.new()
 	$choices.hide()
-	$spellcast1.hide()
+	if $SpellCast:
+		$SpellCast.hide()
 	show()
 	display_next_line()
 
@@ -39,7 +40,7 @@ func display_next_line():
 			print("# da whimsical spell casturrrgh")
 			await get_tree().create_timer(0.5).timeout 
 			spell_on = true
-			$spellcast1.show()
+			$SpellCast.show()
 			##$spellcast1.set_process(true)
 			##get_tree().change_scene_to_file("res://spellcast_1.tscn")
 			##$choices.show()
