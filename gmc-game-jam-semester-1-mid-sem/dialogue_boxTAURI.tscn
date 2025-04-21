@@ -1,9 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://b4yr52cv5ojvv"]
+[gd_scene load_steps=11 format=3 uid="uid://b4yr52cv5ojvv"]
 
 [ext_resource type="Script" uid="uid://btp5ejus0fe0t" path="res://REALDIAG.gd" id="1_sbu81"]
 [ext_resource type="Script" uid="uid://dxp2pscov5kf0" path="res://Story storage files/tauri/tauri_dialogue_file.gd" id="2_278cl"]
 [ext_resource type="Texture2D" uid="uid://4tn3ef6rmx0s" path="res://textbox.png" id="2_vrh81"]
 [ext_resource type="Script" uid="uid://ch6vhc6h4ihma" path="res://choice_2.gd" id="3_278cl"]
+[ext_resource type="Script" uid="uid://cus5x380wrld2" path="res://Story storage files/tauri/tauri_choice.gd" id="5_278cl"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_if77y"]
 font_size = 150
@@ -70,6 +71,7 @@ theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_0nste")
 theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_if77y")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_351bv")
 script = ExtResource("3_278cl")
+dialogue_gdscript = ExtResource("5_278cl")
 metadata/_edit_use_anchors_ = true
 
 [node name="panel" type="Panel" parent="choices/choice2"]
@@ -81,6 +83,7 @@ scale = Vector2(4, 1)
 metadata/_edit_use_anchors_ = true
 
 [node name="label text" type="Label" parent="choices/choice2"]
+visible = false
 layout_mode = 0
 offset_right = 65.0
 offset_bottom = 23.0
@@ -91,6 +94,7 @@ metadata/_edit_use_anchors_ = true
 offset_top = 101.0
 offset_bottom = 101.0
 script = ExtResource("3_278cl")
+dialogue_gdscript = ExtResource("5_278cl")
 metadata/_edit_use_anchors_ = true
 
 [node name="panel" type="Panel" parent="choices/choice 1"]
@@ -102,6 +106,7 @@ scale = Vector2(4, 1)
 metadata/_edit_use_anchors_ = true
 
 [node name="label text" type="Label" parent="choices/choice 1"]
+visible = false
 layout_mode = 0
 offset_right = 65.0
 offset_bottom = 23.0

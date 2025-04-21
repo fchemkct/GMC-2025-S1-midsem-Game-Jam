@@ -8,7 +8,7 @@ func _ready():
 	clines = dialogue_gdscript.new()
 	$"..".hide()
 	var button = Button.new()
-	button.text = $"label text"
+	button.text = $"label text".text
 	button.pressed.connect(_on_pressed)
 	add_child(button)
 
