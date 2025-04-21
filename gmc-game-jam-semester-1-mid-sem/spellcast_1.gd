@@ -6,6 +6,7 @@ var is_drawing := false
 var mouse_pos: Vector2 = Vector2.ZERO
 var guide_progress := 0.0
 
+
 @onready var label = $Label
 
 func _ready():
@@ -67,8 +68,8 @@ func _draw():
 # Call this to compare paths
 func compare_trace_to_original():
 	if paths_match(original_path, drawn_points):
+		print("✅ Traced accurately!")
 		label.text = "You have passed the test! Well done!"
-		$CallBack.ReturnToDialogue()
 	else:
 		label.text = "You failed the test. Try again."
 		
@@ -95,7 +96,4 @@ func paths_match(original: Array[Vector2], drawn: Array[Vector2], tolerance := 2
 		
 func _unhandled_input(event):
 	if event is InputEventKey and event.pressed and event.keycode == KEY_SPACE:
-		if $CallBack.dialogue.spell_on:
-			compare_trace_to_original()
-		else:
-			return
+		compare_trace_to_original()
