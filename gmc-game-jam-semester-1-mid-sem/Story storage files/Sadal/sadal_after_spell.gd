@@ -1,0 +1,30 @@
+extends Control
+
+@export var lines: Array[String] = [
+	"Is there something else about their relationship that I should know about? #speaker:Orion",
+	"Well… #speaker:Sadal",
+	"Recently, they had a fight.",
+	"I’m not sure what it was about, but it made Lacaille avoid Arneb for a while. She’d come to the tavern more often for meals and linger in town at night.",
+	"It was probably just to clear her head, since she’s a thoughtful girl.",
+	"…And it was probably why the incident happened at night. #speaker:Orion",
+	"Yes… Lacaille was at the tavern in the evening yesterday. #speaker:Sadal",
+	"And I’d only see Arneb in the afternoons.",
+	"Did Arneb behave strangely at all? #speaker:Orion",
+	"No, not exactly. #speaker:Sadal",
+	"The only strange thing about their fight was how long it lasted.",
+	"It’d normally be over in a day or so. Arneb would buy Lacaille’s favourite pie or a drink to share, and that’d be that.",
+	"But even after Arneb bought a bottle a few days ago, their fight persisted. Maybe they hadn’t had the chance to open it, yet…",
+	"Orion’s gaze lights up. #speaker:Narrator",
+	"What kind of alcohol did she buy? #speaker:Orion",
+	"A sweet whisky; Lacaille liked sweet things. #speaker:Sadal",
+	"Would you say that it had a strong taste? One that could cover the scent of medicines? #speaker:Orion",
+	"The strange question makes Sadal’s brow furrow, but the haze of the spell you casted seems to intensify. #speaker:Narrator",
+	"…Yes. It was a flavorful drink. #speaker:Sadal",
+	"Did she demonstrate any odd behaviour? #speaker:Orion",
+	"She… She seemed to be checking her pockets a lot for her coin pouch. Perhaps the fight scattered her mind. #speaker:Sadal",
+	"Thank you, Sadal. All of this was incredibly helpful. #speaker:Orion",
+	"You have a hunch of where Orion wants to go, next. You follow his lead as he makes a beeline to the south-west of the town. #speaker:Narrator",
+	"We need to meet Arneb to confirm if she may have had a part in the mystery. #speaker:Orion",
+	"My intuition says that the incident may not have happened on purpose; but to get to the truth, we’ll need to cast stronger spells this time.",
+
+]
