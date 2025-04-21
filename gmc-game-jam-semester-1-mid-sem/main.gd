@@ -1,35 +1,20 @@
 extends Node
 
 """
-# Declare your nodes or groups
-@onready var dialogue = $CharactersDialogue
-@onready var player = $Player
-@onready var spellcast = $spellcast1
+@onready var fade_rect = $FadeLayer/FadeRect
+@onready var tween = create_tween()
 
-func _ready():
-	# Add nodes to groups
-	dialogue.add_to_group("ui")
-	player.add_to_group("ui")
-	spellcast.add_to_group("spellcast")
+func fade_and_switch_scene(scene_path: String):
+	# Fade to black
+	tween = create_tween()
+	tween.tween_property(fade_rect, "modulate:a", 1.0, 1.0)  # Fade alpha to 1 over 1 second
+	await tween.finished
+
+	# Now switch scene
+	get_tree().change_scene_to_file(scene_path)
 	
-	# Initially, hide everything but the dialogue and player
-	set_group_visibility("ui", true)       # Show dialogue and player
-	set_group_visibility("spellcast", false)  # Hide spellcast
-	dialogue.connect("dialogue_finished", Callable(self, "_on_dialogue_finished"))
- 
-
-# 🔔 This function is called when the dialogue is finished
-func _on_dialogue_finished():
-	show_spellcast()
-
-# Function to set visibility of nodes in a group
-func set_group_visibility(group_name: String, visible: bool):
-	for node in get_tree().get_nodes_in_group(group_name):
-		node.visible = visible
-
-# Function to switch to the spellcast scene
-func show_spellcast():
-	set_group_visibility("ui", false)       # Hide dialogue and player
-	set_group_visibility("spellcast", true)  # Show spellcast
+	
+##ADD THIS TO THE END OF THE DIALOGUE NOT HERE !!!!!!!
+fade_and_switch_scene("res://scenes/YourNextScene.tscn")
 	
 """

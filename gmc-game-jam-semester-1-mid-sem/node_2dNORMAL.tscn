@@ -109,11 +109,9 @@ offset_bottom = -380.0
 [node name="tavern" parent="." instance=ExtResource("21_iwoec")]
 z_index = 2
 position = Vector2(1650, 560)
-scale = Vector2(1, 1)
 
 [node name="nutjob" parent="." instance=ExtResource("9_u0smt")]
 position = Vector2(2990, -2020)
-scale = Vector2(1, 1)
 
 [editable path="DialogueBox"]
-[editable path="DialogueBox/spellcast1"]
+[editable path="DialogueBox/SpellCast/spellcast1"]
