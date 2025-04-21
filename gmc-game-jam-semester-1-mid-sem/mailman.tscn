@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://bq5vsf0nbq5hd"]
+
+[ext_resource type="Texture2D" uid="uid://h1thb3nqx33o" path="res://characters/characters/mailman.png" id="1_ftmwj"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ftmwj"]
+radius = 165.0
+height = 884.0
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+
+[node name="Mailman" type="Sprite2D" parent="."]
+position = Vector2(-6.00003, 16)
+scale = Vector2(0.594444, 0.52)
+texture = ExtResource("1_ftmwj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-8, -14)
+shape = SubResource("CapsuleShape2D_ftmwj")

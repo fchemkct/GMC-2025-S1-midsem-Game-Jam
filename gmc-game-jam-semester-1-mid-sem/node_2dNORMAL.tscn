@@ -1,9 +1,12 @@
-[gd_scene load_steps=13 format=3 uid="uid://n5slb2dfjkua"]
+[gd_scene load_steps=16 format=3 uid="uid://n5slb2dfjkua"]
 
 [ext_resource type="PackedScene" uid="uid://bnrqduc4ah6q4" path="res://player.tscn" id="1_txw6s"]
 [ext_resource type="PackedScene" uid="uid://coc7biftqup55" path="res://Npc.tscn" id="2_cejpv"]
+[ext_resource type="PackedScene" uid="uid://dhrs6br2egqtd" path="res://Botanist.tscn" id="2_gj118"]
+[ext_resource type="PackedScene" uid="uid://bhkintuyxvamh" path="res://doctor.tscn" id="3_g80de"]
 [ext_resource type="Script" uid="uid://c2hi7pbdvyjc6" path="res://npc.gd" id="3_gj118"]
 [ext_resource type="Texture2D" uid="uid://be8r43boghfw7" path="res://terrain sprites/background.png" id="4_g80de"]
+[ext_resource type="PackedScene" uid="uid://bq5vsf0nbq5hd" path="res://mailman.tscn" id="4_mo42o"]
 [ext_resource type="PackedScene" uid="uid://ckfq0d2ievmte" path="res://astro_andbotanist.tscn" id="5_mo42o"]
 [ext_resource type="PackedScene" uid="uid://chkv487d7fx7l" path="res://orion_house.tscn" id="6_cejpv"]
 [ext_resource type="PackedScene" uid="uid://cb6qp8aiuo216" path="res://tavernhouse.tscn" id="7_txw6s"]
@@ -11,7 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://dqsdwf3pijiyi" path="res://nutjob_house.tscn" id="9_txw6s"]
 [ext_resource type="PackedScene" uid="uid://3tyic821r1j0" path="res://doctorandsherrif.tscn" id="10_0g7p0"]
 [ext_resource type="PackedScene" uid="uid://cfjq3bvg5aqm8" path="res://mailmanhouse.tscn" id="11_u0smt"]
-[ext_resource type="PackedScene" uid="uid://8onhl41m7b35" path="res://dialogue_boxTAURI.tscn" id="12_cejpv"]
+[ext_resource type="PackedScene" uid="uid://b4yr52cv5ojvv" path="res://dialogue_boxTAURI.tscn" id="12_cejpv"]
 
 [node name="Node2D" type="Node2D"]
 scale = Vector2(0.1, 0.1)
@@ -23,11 +26,22 @@ disable_mode = 2
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(0, 30)
-zoom = Vector2(5, 5)
+zoom = Vector2(3, 3)
 limit_left = -435
 limit_top = -390
 limit_right = 560
 limit_bottom = 360
+
+[node name="botanist" parent="." instance=ExtResource("2_gj118")]
+z_index = 2
+position = Vector2(-520, 2590)
+
+[node name="doctor" parent="." instance=ExtResource("3_g80de")]
+position = Vector2(-1190, -1710)
+scale = Vector2(1, 1)
+
+[node name="mailman" parent="." instance=ExtResource("4_mo42o")]
+position = Vector2(4170, 2640)
 
 [node name="Npc" parent="." instance=ExtResource("2_cejpv")]
 z_index = 1
@@ -44,11 +58,12 @@ texture = ExtResource("4_g80de")
 metadata/_edit_lock_ = true
 
 [node name="astroandbotaniststatic" parent="." instance=ExtResource("5_mo42o")]
-position = Vector2(-860.432, -24.5405)
+position = Vector2(-1190, -350)
 
 [node name="orion_house" parent="." instance=ExtResource("6_cejpv")]
 
 [node name="tavernhouse" parent="." instance=ExtResource("7_txw6s")]
+metadata/_edit_lock_ = true
 
 [node name="townsquare" parent="." instance=ExtResource("8_txw6s")]
 
@@ -60,5 +75,7 @@ position = Vector2(-860.432, -24.5405)
 
 [node name="DialogueBox" parent="." instance=ExtResource("12_cejpv")]
 z_index = 1
-offset_top = -2960.0
-offset_bottom = -1790.0
+offset_left = 1900.0
+offset_top = -1550.0
+offset_right = 1900.0
+offset_bottom = -380.0

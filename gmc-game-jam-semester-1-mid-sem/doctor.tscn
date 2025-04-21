@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://bhkintuyxvamh"]
+
+[ext_resource type="Texture2D" uid="uid://dk32xnjr7fdxm" path="res://characters/characters/doctor.png" id="1_s17ls"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3ok8u"]
+radius = 218.0
+height = 1250.0
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+position = Vector2(-38, -15)
+
+[node name="Doctor" type="Sprite2D" parent="."]
+position = Vector2(38, -1.52588e-05)
+scale = Vector2(0.7675, 0.751944)
+texture = ExtResource("1_s17ls")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(78, 0)
+shape = SubResource("CapsuleShape2D_3ok8u")

@@ -1,7 +1,7 @@
 extends Button
 @onready var dialogue = $"../.."
 
-@export var dialogue_gdscript : GDScript = null 	##this is where we drag the script
+@export var dialogue_gdscript : GDScript = null  ##this is where we drag the script
 var clines = null
 
 func _ready():

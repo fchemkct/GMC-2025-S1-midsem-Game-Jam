@@ -1,16 +1,20 @@
-[gd_scene load_steps=4 format=3 uid="uid://vasns7g8jhy4"]
+[gd_scene load_steps=5 format=3 uid="uid://vasns7g8jhy4"]
 
 [ext_resource type="Texture2D" uid="uid://b5gmr6jvwjljt" path="res://Spellcasts/2868A0A4-A468-4E37-8ADB-6FD95B91C9A3.jpg" id="1_bk32q"]
 [ext_resource type="Script" uid="uid://d17gca3pctoce" path="res://spellcast_1.gd" id="1_qhkq0"]
 
 [sub_resource type="Curve2D" id="Curve2D_bk32q"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, -207, 95, 0, 0, 0, 0, -199, 145, 0, 0, 0, 0, -160, 134, 0, 0, 0, 0, -110, 131, 0, 0, 0, 0, -74, 124, 0, 0, 0, 0, -97, 96, 0, 0, 0, 0, -121, 73, 0, 0, 0, 0, -140, 28, 0, 0, 0, 0, -142, -23, 0, 0, 0, 0, -132, -77, 0, 0, 0, 0, -98, -109, 0, 0, 0, 0, -41, -139, 0, 0, 0, 0, 7, -150, 0, 0, 0, 0, 45, -142, 0, 0, 0, 0, 108, -120, 0, 0, 0, 0, 154, -89, 0, 0, 0, 0, 177, -58, 0, 0, 0, 0, 177, -11, 0, 0, 0, 0, 161, 33, 0, 0, 0, 0, 131, 72, 0, 0, 0, 0, 98, 91, 0, 0, 0, 0, 76, 113, 0, 0, 0, 0, 61, 126, 0, 0, 0, 0, 84, 126, 0, 0, 0, 0, 112, 128, 0, 0, 0, 0, 153, 132, 0, 0, 0, 0, 177, 130, 0, 0, 0, 0, 200, 130, 0, 0, 0, 0, 200, 101)
+"points": PackedVector2Array(0, 0, 0, 0, -206.667, 86.1905, 0, 0, 0, 0, -205.714, 132.857, 0, 0, 0, 0, -80.9524, 124.762, 0, 0, 0, 0, -124.286, 71.9048, 0, 0, 0, 0, -152.857, 36.6667, 0, 0, 0, 0, -152.857, -15.7143, 0, 0, 0, 0, -137.619, -50.9524, 0, 0, 0, 0, -112.857, -97.1429, 0, 0, 0, 0, -38.0952, -135.238, 0, 0, 0, 0, 20.9524, -143.333, 0, 0, 0, 0, 92.381, -132.857, 0, 0, 0, 0, 129.048, -116.667, 0, 0, 0, 0, 161.905, -89.0476, 0, 0, 0, 0, 185.238, -26.1905, 0, 0, 0, 0, 166.667, 23.8095, 0, 0, 0, 0, 133.333, 66.6667, 0, 0, 0, 0, 68.5714, 115.238, 0, 0, 0, 0, 131.429, 120.952, 0, 0, 0, 0, 201.429, 118.095, 0, 0, 0, 0, 204.762, 71.9048)
 }
-point_count = 29
+point_count = 20
+
+[sub_resource type="LabelSettings" id="LabelSettings_mlggw"]
+font_size = 100
+font_color = Color(0, 0, 0, 0.937255)
 
 [node name="spellcast1" type="Node2D"]
-position = Vector2(936, 514)
+position = Vector2(486, 473)
 script = ExtResource("1_qhkq0")
 
 [node name="sppattern1" type="Sprite2D" parent="."]
@@ -21,3 +25,12 @@ texture = ExtResource("1_bk32q")
 scale = Vector2(2.1, 2.1)
 curve = SubResource("Curve2D_bk32q")
 metadata/_edit_group_ = true
+
+[node name="Label" type="Label" parent="."]
+offset_left = -464.0
+offset_top = -486.0
+offset_right = 452.0
+offset_bottom = -349.0
+text = "Follow the pattern!"
+label_settings = SubResource("LabelSettings_mlggw")
+metadata/_edit_use_anchors_ = true

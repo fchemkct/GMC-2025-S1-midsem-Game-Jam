@@ -1,11 +1,14 @@
-[gd_scene load_steps=8 format=3 uid="uid://c7eyhk77f14cp"]
+[gd_scene load_steps=11 format=3 uid="uid://c7eyhk77f14cp"]
 
 [ext_resource type="Script" uid="uid://btge5igcwubvy" path="res://main.gd" id="1_5vw27"]
 [ext_resource type="PackedScene" uid="uid://bnrqduc4ah6q4" path="res://player.tscn" id="3_1bvp3"]
-[ext_resource type="Script" path="res://npc.gd" id="4_7mycd"]
+[ext_resource type="Script" uid="uid://c2hi7pbdvyjc6" path="res://npc.gd" id="4_7mycd"]
 [ext_resource type="PackedScene" uid="uid://coc7biftqup55" path="res://Npc.tscn" id="4_lquwl"]
+[ext_resource type="PackedScene" uid="uid://dhrs6br2egqtd" path="res://Botanist.tscn" id="5_5vw27"]
+[ext_resource type="PackedScene" uid="uid://bq5vsf0nbq5hd" path="res://mailman.tscn" id="6_4c57u"]
 [ext_resource type="PackedScene" uid="uid://bmabqjkdmj1ky" path="res://townhouseOPENING.tscn" id="6_5vw27"]
 [ext_resource type="Texture2D" uid="uid://be8r43boghfw7" path="res://terrain sprites/background.png" id="6_272bh"]
+[ext_resource type="PackedScene" uid="uid://bhkintuyxvamh" path="res://doctor.tscn" id="6_kek77"]
 [ext_resource type="PackedScene" uid="uid://2quamuk8od5w" path="res://dialogue_boxopen.tscn" id="7_272bh"]
 
 [node name="Node2D" type="Node2D"]
@@ -31,6 +34,18 @@ position = Vector2(-1910, -590)
 disable_mode = 2
 input_pickable = true
 script = ExtResource("4_7mycd")
+
+[node name="botanist" parent="." instance=ExtResource("5_5vw27")]
+z_index = 1
+position = Vector2(-99.9999, -70)
+
+[node name="mailman" parent="." instance=ExtResource("6_4c57u")]
+z_index = 1
+position = Vector2(-1910, 560)
+
+[node name="doctor" parent="." instance=ExtResource("6_kek77")]
+z_index = 1
+position = Vector2(-840, 500)
 
 [node name="Background" type="Sprite2D" parent="."]
 z_index = -3

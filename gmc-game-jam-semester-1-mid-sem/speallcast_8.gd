@@ -7,7 +7,7 @@ var mouse_pos: Vector2 = Vector2.ZERO
 var guide_progress := 0.0
 
 var tries := 0
-const MAX_TRIES := 3
+const MAX_TRIES := 1
 var success := false
 
 func _ready():
