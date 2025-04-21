@@ -5,7 +5,7 @@ extends Control
 var clines = null
 
 func _ready():
-	dialogue = get_parent().get_node("/root/DialogueBox")
+	dialogue = get_parent().get_node("/root/Normal/DialogueBox")
 	clines = dialogue_gdscript.new()
 	$"..".hide()
 	
