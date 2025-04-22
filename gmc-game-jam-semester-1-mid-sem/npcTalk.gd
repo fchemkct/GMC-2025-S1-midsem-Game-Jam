@@ -5,8 +5,8 @@ var isTalk = false
 @onready var id = $NameTag.text
 
 func  _input(event):
-	if event.is_action_pressed("dialogue") && NpcTalkOrder.inRange && NpcTalkOrder.canTalk == id:
-		print("sadal")
+	if event.is_action_pressed("dialogue") && NpcTalkOrder.dialogueTrue() && NpcTalkOrder.canTalk == id:
+		print("npc is yapping")
 		_talk()
 
 func _talk():
