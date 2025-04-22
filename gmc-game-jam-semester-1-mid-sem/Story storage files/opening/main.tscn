@@ -294,28 +294,6 @@ layout_mode = 1
 
 [node name="label text" parent="opening/Control/DialogueBox/Node2D/Name panel" index="1"]
 visible = false
-layout_mode = 3
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = 480.0
-offset_top = -3560.0
-offset_right = 520.0
-offset_bottom = -3520.0
-grow_horizontal = 2
-
-[node name="CanvasLayer" type="CanvasLayer" parent="opening/Control"]
-scale = Vector2(0.3, 0.3)
-transform = Transform2D(0.3, 0, 0, 0.3, 0, 0)
-
-[node name="DialogueBox" parent="opening/Control/CanvasLayer" instance=ExtResource("12_v8p35")]
-offset_left = 1753.33
-offset_top = 83.3333
-offset_right = 2543.33
-offset_bottom = 426.333
-
-[node name="label text" parent="opening/Control/CanvasLayer/DialogueBox/Node2D/Name panel" index="1"]
-visible = false
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("17_cojvf")
