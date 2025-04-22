@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://d07xoy34n6ap1" path="res://main.gd" id="1_o3mya"]
 [ext_resource type="PackedScene" uid="uid://bnrqduc4ah6q4" path="res://player.tscn" id="2_x68gl"]
-[ext_resource type="PackedScene" path="res://Npc.tscn" id="3_1m6vu"]
+[ext_resource type="PackedScene" uid="uid://km67prk0b6h" path="res://Npc.tscn" id="3_1m6vu"]
 [ext_resource type="Script" uid="uid://c2hi7pbdvyjc6" path="res://npc.gd" id="4_x1p1m"]
 [ext_resource type="PackedScene" uid="uid://bnkhxhler4qmi" path="res://Story storage files/gien/mailman.tscn" id="5_f8kkc"]
 [ext_resource type="PackedScene" uid="uid://cobti6h5lbw1" path="res://doctor.tscn" id="6_cojvf"]

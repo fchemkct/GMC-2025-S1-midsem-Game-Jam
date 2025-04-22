@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=3 uid="uid://km67prk0b6h"]
+
+[ext_resource type="Texture2D" uid="uid://0ebe4qpwbmw4" path="res://characters/sheriff (2).png" id="1_sdap6"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_sdap6"]
+radius = 26.9
+height = 96.0
+
+[node name="rigit" type="CharacterBody2D"]
+
+[node name="Sheriff(2)" type="Sprite2D" parent="."]
+position = Vector2(600, 409.5)
+scale = Vector2(0.814444, 0.702778)
+texture = ExtResource("1_sdap6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(488, 522)
+scale = Vector2(10, 10)
+shape = SubResource("CapsuleShape2D_sdap6")
+debug_color = Color(0.928477, 3.11887e-05, 0.664508, 0.42)
+
+[node name="NameTag" type="Label" parent="."]
+offset_left = -145.0
+offset_top = -637.0
+offset_right = 116.0
+offset_bottom = -360.0
+theme_override_font_sizes/font_size = 100
+text = "Sheriff
+"
+horizontal_alignment = 1

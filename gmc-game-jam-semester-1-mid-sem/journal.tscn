@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://dspnv5ms5ihdm"]
 
 [ext_resource type="Texture2D" uid="uid://d2c3pp1hee6e6" path="res://assets/journal.png" id="1_julo4"]
-[ext_resource type="PackedScene" uid="uid://bg3co7mgg345c" path="res://dialogue_boxJOURNAL.tscn" id="2_13d0y"]
+[ext_resource type="PackedScene" path="res://dialogue_boxJOURNAL.tscn" id="2_13d0y"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_julo4"]
 size = Vector2(315, 328)
@@ -27,6 +27,7 @@ text = "journal"
 horizontal_alignment = 1
 
 [node name="Control" type="Control" parent="."]
+visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0

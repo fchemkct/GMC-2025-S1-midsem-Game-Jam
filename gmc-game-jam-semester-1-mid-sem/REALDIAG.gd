@@ -5,13 +5,12 @@ extends Control
 var dlines = null
 
 var current_line = 0
-var choice_on = false
-var spell_on = false
-signal dialogue_finished
 
 
 func _ready():
-	
+	hide()
+	await get_tree().create_timer(0.5).timeout 
+	show()
 	dlines = dialogue_gdscript.new()
 	$choices.hide()
 	if get_node_or_null("$choice2"):
@@ -19,7 +18,7 @@ func _ready():
 	if get_node_or_null("$SpellCast"):
 		var SpellCast = $SpellCast
 		$SpellCast.hide()
-	hide()
+	
 	##display_next_line()
 
 func display_next_line():
@@ -72,14 +71,13 @@ func display_next_line():
 		 
 		##get_tree().change_scene_to_file("res://spellcast_1.tscn")
 
-"""
-func _input(event):		##might merge this with npc's input
-	if event.is_action_pressed("ui_accept") && !choice_on && !spell_on:  # Press Enter/Space/etc
-		display_next_line()
-"""
+#func _input(event):		##might merge this with npc's input
+#	if event.is_action_pressed("ui_accept") :  # Press Enter/Space/etc
+#		display_next_line()
+
 		
 func _dialogueEnd():
-	##hide()
+	hide()
 	print("dialogue ended")
 	
 func start_dialogue():

@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://dyhsa7tqwf3wn"]
 
 [ext_resource type="Texture2D" uid="uid://xr42hkothikk" path="res://assets/gardening_book.png" id="1_me21w"]
-[ext_resource type="PackedScene" uid="uid://dppb3mh52o7kl" path="res://dialogue_boxGARDENINGBOOK.tscn" id="2_ku616"]
+[ext_resource type="PackedScene" path="res://dialogue_boxGARDENINGBOOK.tscn" id="2_ku616"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ku616"]
 size = Vector2(303, 224)
@@ -27,6 +27,7 @@ text = "gardenbook"
 horizontal_alignment = 1
 
 [node name="Control" type="Control" parent="."]
+visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0

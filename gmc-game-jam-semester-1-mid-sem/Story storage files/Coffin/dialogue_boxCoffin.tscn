@@ -205,7 +205,7 @@ metadata/_edit_use_anchors_ = true
 layout_mode = 0
 offset_right = 65.0
 offset_bottom = 23.0
-text = "Choice 1"
+text = "coffin"
 metadata/_edit_use_anchors_ = true
 
 [connection signal="pressed" from="choices/choice2" to="choices/choice2" method="_on_pressed"]

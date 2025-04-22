@@ -18,7 +18,6 @@ config/icon="res://icon.svg"
 [autoload]
 
 NpcTalkOrder="*res://NpcTalkOrder.gd"
-PlayerCollision="*res://area_2d.gd"
 
 [display]
 

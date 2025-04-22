@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://bfsxy58x00ood"]
 
 [ext_resource type="Texture2D" uid="uid://dhibo1k4aex60" path="res://assets/mail.png" id="1_2ft1i"]
-[ext_resource type="PackedScene" uid="uid://c4e1no5l314nd" path="res://dialogue_boxMAILS.tscn" id="2_7x436"]
+[ext_resource type="PackedScene" path="res://dialogue_boxMAILS.tscn" id="2_7x436"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7x436"]
 size = Vector2(571, 328)
@@ -27,6 +27,7 @@ text = "letters"
 horizontal_alignment = 1
 
 [node name="Control" type="Control" parent="."]
+visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
