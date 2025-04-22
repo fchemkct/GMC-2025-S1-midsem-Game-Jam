@@ -4,7 +4,11 @@
 [ext_resource type="Texture2D" uid="uid://qnjndh1p7rv1" path="res://characters/orion animations/orion_walk.png" id="2_i3pqv"]
 [ext_resource type="Texture2D" uid="uid://cpsegeo8ubtdb" path="res://characters/orion animations/orion_walk_back.png" id="2_sweqy"]
 [ext_resource type="Texture2D" uid="uid://cirjqwil0hxkn" path="res://characters/orion animations/orion_walk_right.png" id="4_2hs0m"]
-[ext_resource type="Script" uid="uid://dl7d5qivrj7h" path="res://area_2d.gd" id="6_2hs0m"]
+[ext_resource type="Script" path="res://area_2d.gd" id="6_2hs0m"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rgmpb"]
+radius = 20.0
+height = 68.4
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_u1c27"]
 atlas = ExtResource("2_sweqy")
@@ -309,13 +313,14 @@ animations = [{
 "speed": 8.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rgmpb"]
-radius = 20.0
-height = 68.4
-
 [node name="Player" type="CharacterBody2D"]
 scale = Vector2(10, 10)
 script = ExtResource("1_sweqy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.300003, 3.8)
+scale = Vector2(1.5, 1.5)
+shape = SubResource("CapsuleShape2D_rgmpb")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(-0.600014, 1.6)
