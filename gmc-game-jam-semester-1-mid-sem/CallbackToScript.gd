@@ -17,6 +17,7 @@ func ReturnToDialogue() -> void:
 	dialogue.dlines = clines
 	dialogue.current_line = 0
 	print("return to dialogue  pressed")
+	print("return to dialogue  pressed")
 	##dialogue.spell_on = false
 	NpcTalkOrder.spellOn = false
 	dialogue.display_next_line()
