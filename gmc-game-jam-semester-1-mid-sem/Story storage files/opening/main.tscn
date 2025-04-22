@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://bmcuhqrpxcctd"]
+[gd_scene load_steps=19 format=3 uid="uid://bmcuhqrpxcctd"]
 
 [ext_resource type="Script" uid="uid://d07xoy34n6ap1" path="res://main.gd" id="1_o3mya"]
 [ext_resource type="PackedScene" uid="uid://bnrqduc4ah6q4" path="res://player.tscn" id="2_x68gl"]
@@ -9,11 +9,9 @@
 [ext_resource type="PackedScene" uid="uid://drs7r18k2tk86" path="res://nutjob.tscn" id="7_pytj0"]
 [ext_resource type="Texture2D" uid="uid://be8r43boghfw7" path="res://terrain sprites/background.png" id="8_hp6te"]
 [ext_resource type="PackedScene" uid="uid://bmabqjkdmj1ky" path="res://townhouseOPENING.tscn" id="9_7r764"]
-[ext_resource type="PackedScene" uid="uid://blti3j6sfrehl" path="res://coffinastrologist.tscn" id="10_ub888"]
+[ext_resource type="PackedScene" uid="uid://blti3j6sfrehl" path="res://Story storage files/Coffin/coffinastrologist.tscn" id="10_ub888"]
 [ext_resource type="PackedScene" uid="uid://cmobt3tbacu2d" path="res://Story storage files/Sadal/tavern.tscn" id="11_5w2tu"]
-[ext_resource type="Script" uid="uid://b5aqt2gv2bkku" path="res://Story storage files/opening/opening_npc_script.gd" id="12_1m6vu"]
-[ext_resource type="PackedScene" uid="uid://c5gymfcgkuabo" path="res://Story storage files/opening/dialogue_boxOPENING.tscn" id="12_v8p35"]
-[ext_resource type="Texture2D" uid="uid://swmnlgs4hrvj" path="res://characters/characters/tavern_owner.png" id="13_x1p1m"]
+[ext_resource type="PackedScene" uid="uid://bjq7sekqi0bme" path="res://Story storage files/opening/opening_npc.tscn" id="13_x68gl"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4xy5q"]
 radius = 152.0
@@ -35,10 +33,6 @@ bg_color = Color(0.53528, 0.654675, 0.212876, 1)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s1pmf"]
 bg_color = Color(0.73111, 0.573056, 0.268446, 1)
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_67qdd"]
-radius = 152.0
-height = 928.0
-
 [node name="normal" type="Node2D"]
 position = Vector2(462, 400)
 scale = Vector2(0.1, 0.1)
@@ -51,7 +45,6 @@ disable_mode = 2
 
 [node name="CollisionShape2D" parent="Player" index="0"]
 visible = true
-scale = Vector2(1.148, 0.788)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 zoom = Vector2(2, 2)
@@ -121,43 +114,10 @@ theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_gi2ia")
 theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_macfk")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_s1pmf")
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+[node name="opening" parent="." instance=ExtResource("13_x68gl")]
 z_index = 10
-script = ExtResource("12_1m6vu")
-
-[node name="TavernOwner" type="Sprite2D" parent="CharacterBody2D"]
-visible = false
-position = Vector2(7.62939e-06, 0)
-scale = Vector2(0.596667, 0.562222)
-texture = ExtResource("13_x1p1m")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
-visible = false
-position = Vector2(-33, -34)
-shape = SubResource("CapsuleShape2D_67qdd")
-
-[node name="NameTag" type="Label" parent="CharacterBody2D"]
-offset_left = -145.0
-offset_top = -637.0
-offset_right = 116.0
-offset_bottom = -360.0
-theme_override_font_sizes/font_size = 100
-text = "Opening"
-horizontal_alignment = 1
-metadata/_edit_use_anchors_ = true
-
-[node name="Control" type="Control" parent="CharacterBody2D"]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-metadata/_edit_use_anchors_ = true
-
-[node name="DialogueBox" parent="CharacterBody2D/Control" instance=ExtResource("12_v8p35")]
-layout_mode = 1
 
 [editable path="Player"]
 [editable path="tavern"]
 [editable path="tavern/Control/DialogueBox"]
 [editable path="tavern/Control/DialogueBox/SpellCast/spellcast3"]
-[editable path="CharacterBody2D/Control/DialogueBox"]

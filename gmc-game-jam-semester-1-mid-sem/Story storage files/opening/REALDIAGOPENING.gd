@@ -7,7 +7,6 @@ var dlines = null
 var current_line = 0
 var choice_on = false
 var spell_on = false
-@onready var SpellCast = $SpellCast
 @onready var normal_node = $"../../.."
 
 func _ready():
@@ -17,6 +16,7 @@ func _ready():
 	if get_node_or_null("$choice2"):
 		$choice2.hide()
 	if get_node_or_null("$SpellCast"):
+		var SpellCast = $SpellCast
 		$SpellCast.hide()
 	show()
 	##display_next_line()
@@ -58,6 +58,7 @@ func display_next_line():
 			var hashtag = dlines.lines[current_line].find(":")
 			var start = hashtag + 1
 			NpcTalkOrder.canTalk = dlines.lines[current_line].substr(start)
+			NpcTalkOrder.isTalking = false
 			print(NpcTalkOrder.canTalk)
 			_dialogueEnd()
 			##current_line += 1
