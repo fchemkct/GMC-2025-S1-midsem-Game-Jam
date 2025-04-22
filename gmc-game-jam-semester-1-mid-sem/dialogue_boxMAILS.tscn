@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://k80f4gddvipm"]
+[gd_scene load_steps=11 format=3 uid="uid://c4e1no5l314nd"]
 
 [ext_resource type="Script" uid="uid://btp5ejus0fe0t" path="res://REALDIAG.gd" id="1_54gqa"]
 [ext_resource type="Script" uid="uid://bxw0ac4hr0aer" path="res://LETTERSSCRIPT.gd" id="2_pge2o"]

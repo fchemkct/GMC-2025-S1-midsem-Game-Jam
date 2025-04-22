@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-@onready var dialogue = $Node2D/Control/CanvasLayer/DialogueBox
+@onready var dialogue = $Node2D/Control/DialogueBox
 @onready var id = $NameTag.text
 @onready var textbox = get_node("$../../Node2D/Control")
 

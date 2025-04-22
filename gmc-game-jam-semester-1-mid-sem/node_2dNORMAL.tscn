@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 [gd_scene load_steps=62 format=3 uid="uid://n5slb2dfjkua"]
+=======
+[gd_scene load_steps=59 format=3 uid="uid://n5slb2dfjkua"]
+>>>>>>> 0b2ae88ce677ef7b7edab69a4917bb8f14ada2f6
 
 [ext_resource type="PackedScene" uid="uid://bnrqduc4ah6q4" path="res://player.tscn" id="1_txw6s"]
 [ext_resource type="Texture2D" uid="uid://dblb7bk1f5uat" path="res://characters/characters/botanist.png" id="3_84pmw"]
@@ -6,13 +10,14 @@
 [ext_resource type="PackedScene" uid="uid://fsu0rcqg5rd6" path="res://Story storage files/Arneb/dialogue_boxARNEB.tscn" id="4_tsh4l"]
 [ext_resource type="PackedScene" uid="uid://bd7wmjh1sguxv" path="res://astro_andbotanist.tscn" id="5_mo42o"]
 [ext_resource type="Texture2D" uid="uid://dk32xnjr7fdxm" path="res://characters/characters/doctor.png" id="5_tsh4l"]
+[ext_resource type="PackedScene" uid="uid://chkv487d7fx7l" path="res://orion_house.tscn" id="6_cejpv"]
 [ext_resource type="Texture2D" uid="uid://xr42hkothikk" path="res://assets/gardening_book.png" id="7_n1whf"]
 [ext_resource type="PackedScene" uid="uid://cb6qp8aiuo216" path="res://tavernhouse.tscn" id="7_txw6s"]
 [ext_resource type="PackedScene" uid="uid://dppb3mh52o7kl" path="res://dialogue_boxGARDENINGBOOK.tscn" id="8_6akxl"]
 [ext_resource type="Texture2D" uid="uid://h1thb3nqx33o" path="res://characters/characters/mailman.png" id="8_83adm"]
 [ext_resource type="Texture2D" uid="uid://dhibo1k4aex60" path="res://assets/mail.png" id="8_kpmq8"]
 [ext_resource type="PackedScene" uid="uid://bl3uhtnb6p7es" path="res://townhouse_house.tscn" id="8_txw6s"]
-[ext_resource type="PackedScene" uid="uid://k80f4gddvipm" path="res://dialogue_boxMAILS.tscn" id="9_forea"]
+[ext_resource type="PackedScene" uid="uid://c4e1no5l314nd" path="res://dialogue_boxMAILS.tscn" id="9_forea"]
 [ext_resource type="Texture2D" uid="uid://d2c3pp1hee6e6" path="res://assets/journal.png" id="9_i57lt"]
 [ext_resource type="PackedScene" uid="uid://dqsdwf3pijiyi" path="res://nutjob_house.tscn" id="9_txw6s"]
 [ext_resource type="PackedScene" uid="uid://drs7r18k2tk86" path="res://nutjob.tscn" id="9_u0smt"]
@@ -22,9 +27,12 @@
 [ext_resource type="PackedScene" uid="uid://cfjq3bvg5aqm8" path="res://mailmanhouse.tscn" id="11_u0smt"]
 [ext_resource type="PackedScene" uid="uid://b4yr52cv5ojvv" path="res://Story storage files/tauri/dialogue_boxTAURI.tscn" id="12_cejpv"]
 [ext_resource type="PackedScene" uid="uid://3fwjjlmymsiq" path="res://dialogue_boxPESTICIDE.tscn" id="12_gjiaj"]
+<<<<<<< HEAD
 [ext_resource type="Texture2D" uid="uid://bywkc4q724o2l" path="res://terrain sprites/orion.png" id="19_h10pc"]
 [ext_resource type="PackedScene" uid="uid://cds2hyt0hymfy" path="res://dialogue_boxGARDENORION.tscn" id="20_hcrkx"]
 [ext_resource type="Script" uid="uid://v4j3skuer80j" path="res://REALDIAGCUT.gd" id="21_hcrkx"]
+=======
+>>>>>>> 0b2ae88ce677ef7b7edab69a4917bb8f14ada2f6
 [ext_resource type="PackedScene" uid="uid://cyy5envltj1tx" path="res://minimap.tscn" id="23_hyq37"]
 [ext_resource type="Texture2D" uid="uid://0ebe4qpwbmw4" path="res://characters/sheriff (2).png" id="24_83adm"]
 [ext_resource type="Texture2D" uid="uid://s13oomnv0c3b" path="res://characters/characters/astrologist.png" id="24_saqfl"]
@@ -70,9 +78,12 @@ size = Vector2(571, 328)
 radius = 165.0
 height = 884.0
 
+<<<<<<< HEAD
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e3aky"]
 size = Vector2(1541, 1285.5)
 
+=======
+>>>>>>> 0b2ae88ce677ef7b7edab69a4917bb8f14ada2f6
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4xy5q"]
 radius = 152.0
 height = 928.0
@@ -384,6 +395,7 @@ metadata/_edit_lock_ = true
 position = Vector2(-1190, -350)
 disable_mode = 2
 
+<<<<<<< HEAD
 [node name="orion_house" type="CharacterBody2D" parent="."]
 disable_mode = 2
 collision_layer = 271
@@ -424,6 +436,12 @@ metadata/_edit_use_anchors_ = true
 [node name="DialogueBox" parent="orion_house/Node2D/Control/CanvasLayer" instance=ExtResource("20_hcrkx")]
 script = ExtResource("21_hcrkx")
 dialogue_gdscript = null
+=======
+[node name="orion_house" parent="." instance=ExtResource("6_cejpv")]
+disable_mode = 2
+collision_layer = 271
+collision_mask = 15
+>>>>>>> 0b2ae88ce677ef7b7edab69a4917bb8f14ada2f6
 
 [node name="tavernhouse" parent="." instance=ExtResource("7_txw6s")]
 position = Vector2(-280, 90)
