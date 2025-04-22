@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-@onready var dialogue = $Node2D/Control/DialogueBox
+@onready var dialogue = $Node2D/Control/CanvasLayer/DialogueBox
 @onready var id = $NameTag.text
 @onready var textbox = get_node("$../../Node2D/Control")
 
@@ -15,7 +15,7 @@ func  _input(event):
 
 func _talk():
 	print("talked")
-	$"Node2D/Control".show()
+	$"Node2D/Control/CanvasLayer".show()
 	dialogue.display_next_line()
 	
 

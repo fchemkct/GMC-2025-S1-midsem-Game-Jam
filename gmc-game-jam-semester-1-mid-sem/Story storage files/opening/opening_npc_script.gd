@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-@onready var dialogue = $Control/DialogueBox
+@onready var dialogue = $Control/CanvasLayer/DialogueBox
 @onready var id = $NameTag.text
 
 func _ready() -> void:
