@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://chkv487d7fx7l"]
+[gd_scene load_steps=4 format=3 uid="uid://chkv487d7fx7l"]
 
 [ext_resource type="Texture2D" uid="uid://bywkc4q724o2l" path="res://terrain sprites/orion.png" id="1_e3aky"]
+[ext_resource type="PackedScene" uid="uid://cds2hyt0hymfy" path="res://dialogue_boxGARDENORION.tscn" id="2_247hw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e3aky"]
 size = Vector2(1541, 1285.5)
@@ -26,3 +27,13 @@ theme_override_font_sizes/font_size = 100
 text = "orionhouse"
 horizontal_alignment = 1
 metadata/_edit_use_anchors_ = true
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+metadata/_edit_use_anchors_ = true
+
+[node name="DialogueBox" parent="Control" instance=ExtResource("2_247hw")]
+layout_mode = 1
