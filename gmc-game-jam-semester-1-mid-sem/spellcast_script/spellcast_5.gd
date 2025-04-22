@@ -39,7 +39,7 @@ func _input(event):
 func _process(delta):
 	# Animate the ghost guide along the original path
 	if original_path.size() >= 2:
-		guide_progress += delta * 0.8  # adjust speed 
+		guide_progress += delta * 0.6  # adjust speed 
 		if guide_progress > 1.0:
 			guide_progress = 0.0
 		queue_redraw()

@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://5bn31exe6chm" path="res://Story storage files/gien/gien.gd" id="2_4iw2p"]
 [ext_resource type="Texture2D" uid="uid://4tn3ef6rmx0s" path="res://textbox.png" id="3_0cwrh"]
 [ext_resource type="Script" uid="uid://ch6vhc6h4ihma" path="res://choice_2.gd" id="4_glrkc"]
-[ext_resource type="Script" uid="uid://cus5x380wrld2" path="res://Story storage files/tauri/tauri_after_spell.gd" id="5_nxplx"]
+[ext_resource type="Script" path="res://Story storage files/tauri/tauri_after_spell.gd" id="5_nxplx"]
 [ext_resource type="PackedScene" uid="uid://f4c1hs2x7h6l" path="res://spellcast_script/spellcast_2.tscn" id="6_4iw2p"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_fthp3"]
@@ -24,6 +24,7 @@ bg_color = Color(0.53528, 0.654675, 0.212876, 1)
 bg_color = Color(0.73111, 0.573056, 0.268446, 1)
 
 [node name="DialogueBox" type="Control"]
+z_index = 2
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0

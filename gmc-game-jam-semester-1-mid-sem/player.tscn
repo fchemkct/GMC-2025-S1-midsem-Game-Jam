@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://qnjndh1p7rv1" path="res://characters/orion animations/orion_walk.png" id="2_i3pqv"]
 [ext_resource type="Texture2D" uid="uid://cpsegeo8ubtdb" path="res://characters/orion animations/orion_walk_back.png" id="2_sweqy"]
 [ext_resource type="Texture2D" uid="uid://cirjqwil0hxkn" path="res://characters/orion animations/orion_walk_right.png" id="4_2hs0m"]
-[ext_resource type="Script" path="res://area_2d.gd" id="6_2hs0m"]
+[ext_resource type="Script" uid="uid://dl7d5qivrj7h" path="res://area_2d.gd" id="6_2hs0m"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_u1c27"]
 atlas = ExtResource("2_sweqy")

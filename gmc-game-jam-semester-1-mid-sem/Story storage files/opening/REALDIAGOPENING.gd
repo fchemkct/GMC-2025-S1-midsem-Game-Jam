@@ -8,8 +8,7 @@ var current_line = 0
 var choice_on = false
 var spell_on = false
 @onready var SpellCast = $SpellCast
-signal dialogue_finished
-
+@onready var normal_node = $".."
 
 func _ready():
 	
@@ -58,7 +57,8 @@ func display_next_line():
 	else:
 		_dialogueEnd()
 		emit_signal("dialogue_finished")  # Optional: use this to trigger spellcast, etc.
-		 
+		##ADD THIS TO THE END OF THE DIALOGUE NOT HERE !!!!!!!
+		normal_node.fade_and_switch_scene("res://scenes/NextScene.tscn")
 		##get_tree().change_scene_to_file("res://spellcast_1.tscn")
 
 func _input(event):
@@ -67,10 +67,3 @@ func _input(event):
 		
 func _dialogueEnd():
 	hide()
-	
-func start_dialogue():
-	current_line = 0
-	display_next_line()
-
-
-	

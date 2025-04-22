@@ -16,6 +16,7 @@ font_size = 93
 font_color = Color(0, 0, 0, 0.937255)
 
 [node name="spellcast1" type="Node2D"]
+z_index = 2
 position = Vector2(900, 655)
 script = ExtResource("1_qhkq0")
 

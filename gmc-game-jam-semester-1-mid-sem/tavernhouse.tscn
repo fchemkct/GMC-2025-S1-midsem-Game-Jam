@@ -6,6 +6,8 @@
 size = Vector2(2060, 1158)
 
 [node name="StaticBody2D" type="StaticBody2D"]
+collision_layer = 7
+collision_mask = 7
 
 [node name="Tavern" type="Sprite2D" parent="."]
 position = Vector2(580, -40)
@@ -13,5 +15,6 @@ scale = Vector2(1.57, 1.354)
 texture = ExtResource("1_r1c24")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visibility_layer = 3
 position = Vector2(962, -178)
 shape = SubResource("RectangleShape2D_r1c24")

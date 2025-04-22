@@ -1,6 +1,6 @@
 extends Node
 
-"""
+
 @onready var fade_rect = $FadeLayer/FadeRect
 @onready var tween = create_tween()
 
@@ -11,10 +11,8 @@ func fade_and_switch_scene(scene_path: String):
 	await tween.finished
 
 	# Now switch scene
-	get_tree().change_scene_to_file(scene_path)
+	get_tree().change_scene_to_file("res://node_2dNORMAL.tscn")
 	
 	
-##ADD THIS TO THE END OF THE DIALOGUE NOT HERE !!!!!!!
-fade_and_switch_scene("res://scenes/YourNextScene.tscn")
+
 	
-"""

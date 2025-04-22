@@ -61,7 +61,7 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 	canTalk = true
 	
 	print("enter:cantalk bool is: " + str(canTalk))
-	 # Replace with function body. # Replace with function body.
+
 
 
 func _on_area_2d_body_exited(body: Node2D) -> void:

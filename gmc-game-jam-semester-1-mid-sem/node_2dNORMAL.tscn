@@ -1,35 +1,38 @@
-[gd_scene load_steps=38 format=3 uid="uid://n5slb2dfjkua"]
+[gd_scene load_steps=41 format=3 uid="uid://n5slb2dfjkua"]
 
 [ext_resource type="PackedScene" uid="uid://bnrqduc4ah6q4" path="res://player.tscn" id="1_txw6s"]
-[ext_resource type="Script" path="res://normalscene.gd" id="1_yj753"]
+[ext_resource type="Script" uid="uid://d2ykvokqc5v54" path="res://normalscene.gd" id="1_yj753"]
 [ext_resource type="PackedScene" uid="uid://coc7biftqup55" path="res://Npc.tscn" id="2_cejpv"]
 [ext_resource type="PackedScene" uid="uid://dhepxcnxnw856" path="res://Botanist.tscn" id="2_gj118"]
-[ext_resource type="PackedScene" path="res://doctor.tscn" id="3_g80de"]
-[ext_resource type="Script" path="res://npc.gd" id="3_gj118"]
+[ext_resource type="PackedScene" uid="uid://bhkintuyxvamh" path="res://doctor.tscn" id="3_g80de"]
+[ext_resource type="Script" uid="uid://c2hi7pbdvyjc6" path="res://npc.gd" id="3_gj118"]
 [ext_resource type="Texture2D" uid="uid://be8r43boghfw7" path="res://terrain sprites/background.png" id="4_g80de"]
-[ext_resource type="PackedScene" path="res://mailman.tscn" id="4_mo42o"]
-[ext_resource type="PackedScene" path="res://astro_andbotanist.tscn" id="5_mo42o"]
+[ext_resource type="PackedScene" uid="uid://bq5vsf0nbq5hd" path="res://mailman.tscn" id="4_mo42o"]
+[ext_resource type="PackedScene" uid="uid://fsu0rcqg5rd6" path="res://Story storage files/Arneb/dialogue_boxARNEB.tscn" id="4_tsh4l"]
+[ext_resource type="PackedScene" uid="uid://ckfq0d2ievmte" path="res://astro_andbotanist.tscn" id="5_mo42o"]
 [ext_resource type="PackedScene" uid="uid://dyhsa7tqwf3wn" path="res://gardening_book.tscn" id="5_yj753"]
-[ext_resource type="PackedScene" path="res://orion_house.tscn" id="6_cejpv"]
+[ext_resource type="PackedScene" uid="uid://chkv487d7fx7l" path="res://orion_house.tscn" id="6_cejpv"]
 [ext_resource type="PackedScene" uid="uid://dspnv5ms5ihdm" path="res://journal.tscn" id="6_lm85a"]
 [ext_resource type="PackedScene" uid="uid://cb6qp8aiuo216" path="res://tavernhouse.tscn" id="7_txw6s"]
 [ext_resource type="PackedScene" uid="uid://hspaev627dif" path="res://pesticide.tscn" id="7_u6en8"]
 [ext_resource type="PackedScene" uid="uid://bfsxy58x00ood" path="res://mail.tscn" id="8_0g7p0"]
 [ext_resource type="PackedScene" uid="uid://bl3uhtnb6p7es" path="res://townhouse_house.tscn" id="8_txw6s"]
-[ext_resource type="PackedScene" path="res://nutjob_house.tscn" id="9_txw6s"]
+[ext_resource type="PackedScene" uid="uid://dqsdwf3pijiyi" path="res://nutjob_house.tscn" id="9_txw6s"]
 [ext_resource type="PackedScene" uid="uid://drs7r18k2tk86" path="res://nutjob.tscn" id="9_u0smt"]
-[ext_resource type="PackedScene" path="res://doctorandsherrif.tscn" id="10_0g7p0"]
+[ext_resource type="PackedScene" uid="uid://3tyic821r1j0" path="res://doctorandsherrif.tscn" id="10_0g7p0"]
 [ext_resource type="PackedScene" uid="uid://cfjq3bvg5aqm8" path="res://mailmanhouse.tscn" id="11_u0smt"]
 [ext_resource type="Script" uid="uid://btp5ejus0fe0t" path="res://REALDIAG.gd" id="20_6iklr"]
 [ext_resource type="Script" uid="uid://dxp2pscov5kf0" path="res://Story storage files/tauri/tauri_dialogue_file.gd" id="21_ggt0o"]
 [ext_resource type="PackedScene" uid="uid://cmobt3tbacu2d" path="res://tavern.tscn" id="21_iwoec"]
 [ext_resource type="Texture2D" uid="uid://4tn3ef6rmx0s" path="res://textbox.png" id="22_84pmw"]
 [ext_resource type="Script" uid="uid://ch6vhc6h4ihma" path="res://choice_2.gd" id="23_tsh4l"]
-[ext_resource type="Script" uid="uid://cus5x380wrld2" path="res://Story storage files/tauri/tauri_after_spell.gd" id="24_n1whf"]
+[ext_resource type="Script" path="res://Story storage files/tauri/tauri_after_spell.gd" id="24_n1whf"]
 [ext_resource type="Script" uid="uid://d17gca3pctoce" path="res://spellcast_script/spellcast_1.gd" id="25_6akxl"]
 [ext_resource type="Texture2D" uid="uid://b5gmr6jvwjljt" path="res://Spellcasts/2868A0A4-A468-4E37-8ADB-6FD95B91C9A3.jpg" id="26_i57lt"]
 [ext_resource type="Texture2D" uid="uid://dy2i6c5407xij" path="res://terrain sprites/border.png" id="27_ib2m5"]
 [ext_resource type="Script" uid="uid://drr0od33g8qxa" path="res://CallbackToScript.gd" id="28_lbful"]
+[ext_resource type="PackedScene" uid="uid://d3uu4h21hbkgb" path="res://Story storage files/Sadal/dialogue_boxSADAL.tscn" id="31_84pmw"]
+[ext_resource type="PackedScene" uid="uid://bjn3tcfqhmdon" path="res://Story storage files/gien/dialogue_boxGIEN.tscn" id="31_ggt0o"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_if77y"]
 font_size = 150
@@ -62,8 +65,8 @@ scale = Vector2(0.1, 0.1)
 script = ExtResource("1_yj753")
 
 [node name="Player" parent="." instance=ExtResource("1_txw6s")]
-z_index = 1
-position = Vector2(909.999, -1300)
+z_index = 3
+position = Vector2(909.999, -1290)
 disable_mode = 2
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
@@ -76,31 +79,222 @@ limit_bottom = 360
 
 [node name="botanist" parent="." instance=ExtResource("2_gj118")]
 z_index = 2
-position = Vector2(-520, 2590)
+position = Vector2(-1530, 2980)
+disable_mode = 2
+
+[node name="DialogueBox" parent="botanist" instance=ExtResource("4_tsh4l")]
+z_index = 2
+offset_left = 860.0
+offset_top = -630.0
+offset_right = 860.0
+offset_bottom = -625.0
 
 [node name="doctor" parent="." instance=ExtResource("3_g80de")]
 z_index = 2
 position = Vector2(-1170, -1880)
+disable_mode = 2
+
+[node name="DialogueBox" type="Control" parent="doctor"]
+unique_name_in_owner = true
+z_index = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 3070.0
+offset_top = 330.0
+offset_right = 3070.0
+offset_bottom = 1500.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("20_6iklr")
+dialogue_gdscript = ExtResource("21_ggt0o")
+
+[node name="TextureRect" type="TextureRect" parent="doctor/DialogueBox"]
+visibility_layer = 65
+z_index = -1
+layout_mode = 0
+offset_left = -5470.0
+offset_top = -1140.0
+offset_right = 12954.0
+offset_bottom = 3972.0
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("22_84pmw")
+
+[node name="Textlabel" type="Label" parent="doctor/DialogueBox"]
+layout_mode = 0
+offset_left = -5260.0
+offset_top = -1090.0
+offset_right = -979.999
+offset_bottom = -218.0
+scale = Vector2(0.35, 0.25)
+theme_override_font_sizes/font_size = 2
+text = "
+"
+label_settings = SubResource("LabelSettings_if77y")
+autowrap_mode = 3
+
+[node name="choices" type="Node2D" parent="doctor/DialogueBox"]
+visible = false
+position = Vector2(177, 361)
+scale = Vector2(2, 2)
+
+[node name="choice2" type="Button" parent="doctor/DialogueBox/choices"]
+offset_left = 634.0
+offset_top = 101.0
+offset_right = 642.0
+offset_bottom = 109.0
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_n23yb")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_0nste")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_if77y")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_351bv")
+script = ExtResource("23_tsh4l")
+dialogue_gdscript = ExtResource("24_n1whf")
+
+[node name="panel" type="Panel" parent="doctor/DialogueBox/choices/choice2"]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(4, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="label text" type="Label" parent="doctor/DialogueBox/choices/choice2"]
+visible = false
+layout_mode = 0
+offset_right = 65.0
+offset_bottom = 23.0
+text = "Choice 2"
+metadata/_edit_use_anchors_ = true
+
+[node name="choice 1" type="Button" parent="doctor/DialogueBox/choices"]
+offset_top = 101.0
+offset_bottom = 101.0
+script = ExtResource("23_tsh4l")
+dialogue_gdscript = ExtResource("24_n1whf")
+
+[node name="panel" type="Panel" parent="doctor/DialogueBox/choices/choice 1"]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(4, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="label text" type="Label" parent="doctor/DialogueBox/choices/choice 1"]
+visible = false
+layout_mode = 0
+offset_right = 65.0
+offset_bottom = 23.0
+text = "Choice 1"
+metadata/_edit_use_anchors_ = true
+
+[node name="Node2D" type="Node2D" parent="doctor/DialogueBox"]
+position = Vector2(56, -21)
+
+[node name="Name panel" type="Control" parent="doctor/DialogueBox/Node2D"]
+layout_mode = 3
+anchors_preset = 0
+offset_top = 101.0
+offset_right = 8.0
+offset_bottom = 109.0
+scale = Vector2(2, 2)
+metadata/_edit_use_anchors_ = true
+
+[node name="panel" type="Panel" parent="doctor/DialogueBox/Node2D/Name panel"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(4, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="label text" type="Label" parent="doctor/DialogueBox/Node2D/Name panel"]
+layout_mode = 0
+offset_right = 65.0
+offset_bottom = 23.0
+text = "Choice 1"
+metadata/_edit_use_anchors_ = true
+
+[node name="SpellCast" type="Node2D" parent="doctor/DialogueBox"]
+
+[node name="spellcast1" type="Node2D" parent="doctor/DialogueBox/SpellCast"]
+position = Vector2(-4580, -520)
+script = ExtResource("25_6akxl")
+
+[node name="sppattern1" type="Sprite2D" parent="doctor/DialogueBox/SpellCast/spellcast1"]
+z_index = -1
+texture = ExtResource("26_i57lt")
+
+[node name="sptrace1" type="Path2D" parent="doctor/DialogueBox/SpellCast/spellcast1"]
+scale = Vector2(2.1, 2.1)
+curve = SubResource("Curve2D_bk32q")
+metadata/_edit_group_ = true
+
+[node name="Label" type="Label" parent="doctor/DialogueBox/SpellCast/spellcast1"]
+offset_left = -815.0
+offset_top = -593.0
+offset_right = 101.0
+offset_bottom = -456.0
+text = "Cast your spell!"
+label_settings = SubResource("LabelSettings_mlggw")
+metadata/_edit_use_anchors_ = true
+
+[node name="Border" type="TextureRect" parent="doctor/DialogueBox/SpellCast/spellcast1"]
+z_index = -5
+offset_left = -1021.0
+offset_top = -711.0
+offset_right = 658.0
+offset_bottom = 1023.0
+scale = Vector2(1.26778, 0.695)
+texture = ExtResource("27_ib2m5")
+expand_mode = 4
+metadata/_edit_use_anchors_ = true
+metadata/_edit_lock_ = true
+
+[node name="CallBack" type="Control" parent="doctor/DialogueBox/SpellCast/spellcast1"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("28_lbful")
+dialogue_gdscript = ExtResource("24_n1whf")
+metadata/_edit_use_anchors_ = true
 
 [node name="gardening_Book" parent="." instance=ExtResource("5_yj753")]
 z_index = 2
 position = Vector2(-3400, 2380)
+disable_mode = 2
 
 [node name="journal" parent="." instance=ExtResource("6_lm85a")]
 z_index = 2
 position = Vector2(-2890, 2930)
+disable_mode = 2
 
 [node name="pesticide" parent="." instance=ExtResource("7_u6en8")]
 z_index = 2
 position = Vector2(-2390, 2800)
+disable_mode = 2
 
 [node name="mail" parent="." instance=ExtResource("8_0g7p0")]
 z_index = 2
 position = Vector2(-2690, 2480)
+disable_mode = 2
 
 [node name="mailman" parent="." instance=ExtResource("4_mo42o")]
 z_index = 2
-position = Vector2(4170, 2640)
+position = Vector2(4180, 2650)
+disable_mode = 2
+
+[node name="DialogueBox" parent="mailman" instance=ExtResource("31_ggt0o")]
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = -520.0
+offset_top = -1630.0
+offset_right = -520.0
+offset_bottom = -1625.0
+grow_horizontal = 1
+grow_vertical = 1
 
 [node name="Background" type="Sprite2D" parent="."]
 z_index = -3
@@ -118,192 +312,47 @@ script = ExtResource("3_gj118")
 
 [node name="astroandbotaniststatic" parent="." instance=ExtResource("5_mo42o")]
 position = Vector2(-1190, -350)
+disable_mode = 2
 metadata/_edit_lock_ = true
 
 [node name="orion_house" parent="." instance=ExtResource("6_cejpv")]
+disable_mode = 2
+collision_layer = 271
+collision_mask = 15
 
 [node name="tavernhouse" parent="." instance=ExtResource("7_txw6s")]
+disable_mode = 2
 metadata/_edit_lock_ = true
 
 [node name="townsquare" parent="." instance=ExtResource("8_txw6s")]
+z_index = -1
+disable_mode = 2
 
 [node name="nutjob_house" parent="." instance=ExtResource("9_txw6s")]
+disable_mode = 2
 
 [node name="doctorandsherrif" parent="." instance=ExtResource("10_0g7p0")]
+disable_mode = 2
 
 [node name="mailmanhouse" parent="." instance=ExtResource("11_u0smt")]
-
-[node name="DialogueBox" type="Control" parent="."]
-unique_name_in_owner = true
-z_index = 1
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 1900.0
-offset_top = -1550.0
-offset_right = 1900.0
-offset_bottom = -380.0
-grow_horizontal = 2
-grow_vertical = 2
-script = ExtResource("20_6iklr")
-dialogue_gdscript = ExtResource("21_ggt0o")
-
-[node name="TextureRect" type="TextureRect" parent="DialogueBox"]
-visibility_layer = 65
-z_index = -1
-layout_mode = 0
-offset_left = 24.0
-offset_top = 28.0
-offset_right = 18448.0
-offset_bottom = 5140.0
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("22_84pmw")
-
-[node name="Textlabel" type="Label" parent="DialogueBox"]
-layout_mode = 0
-offset_left = 201.0
-offset_top = 164.0
-offset_right = 4481.0
-offset_bottom = 1036.0
-scale = Vector2(0.35, 0.25)
-theme_override_font_sizes/font_size = 2
-text = "
-"
-label_settings = SubResource("LabelSettings_if77y")
-autowrap_mode = 3
-
-[node name="choices" type="Node2D" parent="DialogueBox"]
-visible = false
-position = Vector2(177, 361)
-scale = Vector2(2, 2)
-
-[node name="choice2" type="Button" parent="DialogueBox/choices"]
-offset_left = 634.0
-offset_top = 101.0
-offset_right = 642.0
-offset_bottom = 109.0
-theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_n23yb")
-theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_0nste")
-theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_if77y")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_351bv")
-script = ExtResource("23_tsh4l")
-dialogue_gdscript = ExtResource("24_n1whf")
-
-[node name="panel" type="Panel" parent="DialogueBox/choices/choice2"]
-visible = false
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-scale = Vector2(4, 1)
-metadata/_edit_use_anchors_ = true
-
-[node name="label text" type="Label" parent="DialogueBox/choices/choice2"]
-visible = false
-layout_mode = 0
-offset_right = 65.0
-offset_bottom = 23.0
-text = "Choice 2"
-metadata/_edit_use_anchors_ = true
-
-[node name="choice 1" type="Button" parent="DialogueBox/choices"]
-offset_top = 101.0
-offset_bottom = 101.0
-script = ExtResource("23_tsh4l")
-dialogue_gdscript = ExtResource("24_n1whf")
-
-[node name="panel" type="Panel" parent="DialogueBox/choices/choice 1"]
-visible = false
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-scale = Vector2(4, 1)
-metadata/_edit_use_anchors_ = true
-
-[node name="label text" type="Label" parent="DialogueBox/choices/choice 1"]
-visible = false
-layout_mode = 0
-offset_right = 65.0
-offset_bottom = 23.0
-text = "Choice 1"
-metadata/_edit_use_anchors_ = true
-
-[node name="Node2D" type="Node2D" parent="DialogueBox"]
-position = Vector2(56, -21)
-
-[node name="Name panel" type="Control" parent="DialogueBox/Node2D"]
-layout_mode = 3
-anchors_preset = 0
-offset_top = 101.0
-offset_right = 8.0
-offset_bottom = 109.0
-scale = Vector2(2, 2)
-metadata/_edit_use_anchors_ = true
-
-[node name="panel" type="Panel" parent="DialogueBox/Node2D/Name panel"]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-scale = Vector2(4, 1)
-metadata/_edit_use_anchors_ = true
-
-[node name="label text" type="Label" parent="DialogueBox/Node2D/Name panel"]
-layout_mode = 0
-offset_right = 65.0
-offset_bottom = 23.0
-text = "Choice 1"
-metadata/_edit_use_anchors_ = true
-
-[node name="SpellCast" type="Node2D" parent="DialogueBox"]
-
-[node name="spellcast1" type="Node2D" parent="DialogueBox/SpellCast"]
-position = Vector2(900, 655)
-script = ExtResource("25_6akxl")
-
-[node name="sppattern1" type="Sprite2D" parent="DialogueBox/SpellCast/spellcast1"]
-z_index = -1
-texture = ExtResource("26_i57lt")
-
-[node name="sptrace1" type="Path2D" parent="DialogueBox/SpellCast/spellcast1"]
-scale = Vector2(2.1, 2.1)
-curve = SubResource("Curve2D_bk32q")
-metadata/_edit_group_ = true
-
-[node name="Label" type="Label" parent="DialogueBox/SpellCast/spellcast1"]
-offset_left = -815.0
-offset_top = -593.0
-offset_right = 101.0
-offset_bottom = -456.0
-text = "Cast your spell!"
-label_settings = SubResource("LabelSettings_mlggw")
-metadata/_edit_use_anchors_ = true
-
-[node name="Border" type="TextureRect" parent="DialogueBox/SpellCast/spellcast1"]
-z_index = -5
-offset_left = -1021.0
-offset_top = -711.0
-offset_right = 658.0
-offset_bottom = 1023.0
-scale = Vector2(1.26778, 0.695)
-texture = ExtResource("27_ib2m5")
-expand_mode = 4
-metadata/_edit_use_anchors_ = true
-
-[node name="CallBack" type="Control" parent="DialogueBox/SpellCast/spellcast1"]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-script = ExtResource("28_lbful")
-dialogue_gdscript = ExtResource("24_n1whf")
-metadata/_edit_use_anchors_ = true
+z_index = -2
+disable_mode = 2
 
 [node name="tavern" parent="." instance=ExtResource("21_iwoec")]
 z_index = 2
 position = Vector2(1650, 560)
+disable_mode = 2
+
+[node name="DialogueBox" parent="tavern" instance=ExtResource("31_84pmw")]
+z_index = 4
+offset_left = -2250.0
+offset_top = -420.0
+offset_right = -2250.0
+offset_bottom = -415.0
 
 [node name="nutjob" parent="." instance=ExtResource("9_u0smt")]
 position = Vector2(2990, -2020)
+disable_mode = 2
 
-[connection signal="pressed" from="DialogueBox/choices/choice2" to="DialogueBox/choices/choice2" method="_on_pressed"]
-[connection signal="pressed" from="DialogueBox/choices/choice 1" to="DialogueBox/choices/choice 1" method="_on_pressed"]
+[connection signal="pressed" from="doctor/DialogueBox/choices/choice2" to="doctor/DialogueBox/choices/choice2" method="_on_pressed"]
+[connection signal="pressed" from="doctor/DialogueBox/choices/choice 1" to="doctor/DialogueBox/choices/choice 1" method="_on_pressed"]
