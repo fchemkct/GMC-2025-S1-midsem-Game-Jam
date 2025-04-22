@@ -7,7 +7,7 @@ var dlines = null
 var current_line = 0
 var choice_on = false
 var spell_on = false
-@onready var normal_node = $"../../../.."
+@onready var normal_node = $"../../.."
 
 func _ready():
 	

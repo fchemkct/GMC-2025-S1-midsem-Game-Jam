@@ -1,6 +1,6 @@
 [gd_scene load_steps=29 format=3 uid="uid://bmcuhqrpxcctd"]
 
-[ext_resource type="Script" uid="uid://d07xoy34n6ap1" path="res://main.gd" id="1_o3mya"]
+[ext_resource type="Script" path="res://main.gd" id="1_o3mya"]
 [ext_resource type="PackedScene" uid="uid://bnrqduc4ah6q4" path="res://player.tscn" id="2_x68gl"]
 [ext_resource type="Texture2D" uid="uid://h1thb3nqx33o" path="res://characters/characters/mailman.png" id="5_x1p1m"]
 [ext_resource type="Script" uid="uid://c103ebm4crq6q" path="res://npcTalk.gd" id="6_1m6vu"]
@@ -61,7 +61,7 @@ script = ExtResource("1_o3mya")
 
 [node name="Player" parent="." instance=ExtResource("2_x68gl")]
 z_index = 1
-position = Vector2(280, 1400)
+position = Vector2(-2050, 1260)
 disable_mode = 2
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
@@ -166,6 +166,7 @@ z_index = -3
 position = Vector2(400, -230)
 scale = Vector2(2.1, 2.1)
 texture = ExtResource("8_hp6te")
+metadata/_edit_lock_ = true
 
 [node name="house" parent="." instance=ExtResource("9_7r764")]
 position = Vector2(2980, 1760)
@@ -282,29 +283,16 @@ horizontal_alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="Control" type="Control" parent="opening"]
-visible = false
 layout_mode = 3
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = 480.0
-offset_top = -3560.0
-offset_right = 520.0
-offset_bottom = -3520.0
-grow_horizontal = 2
-size_flags_horizontal = 4
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+metadata/_edit_use_anchors_ = true
 
-[node name="CanvasLayer" type="CanvasLayer" parent="opening/Control"]
-scale = Vector2(0.3, 0.3)
-transform = Transform2D(0.3, 0, 0, 0.3, 0, 0)
+[node name="DialogueBox" parent="opening/Control" instance=ExtResource("12_v8p35")]
+layout_mode = 1
 
-[node name="DialogueBox" parent="opening/Control/CanvasLayer" instance=ExtResource("12_v8p35")]
-offset_left = 1753.33
-offset_top = 83.3333
-offset_right = 2543.33
-offset_bottom = 426.333
-
-[node name="label text" parent="opening/Control/CanvasLayer/DialogueBox/Node2D/Name panel" index="1"]
+[node name="label text" parent="opening/Control/DialogueBox/Node2D/Name panel" index="1"]
 visible = false
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
@@ -316,4 +304,4 @@ script = ExtResource("18_pytj0")
 [editable path="coffin/Node2D/Control/DialogueBox"]
 [editable path="tavern/Node2D/Control/DialogueBox"]
 [editable path="tavern/Node2D/Control/DialogueBox/SpellCast/spellcast3"]
-[editable path="opening/Control/CanvasLayer/DialogueBox"]
+[editable path="opening/Control/DialogueBox"]

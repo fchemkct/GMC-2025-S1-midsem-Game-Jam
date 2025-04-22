@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7x436"]
 size = Vector2(571, 328)
 
-[node name="CharacterBody2D3" type="CharacterBody2D"]
+[node name="CharacterBody2D" type="CharacterBody2D"]
 
 [node name="Mail" type="Sprite2D" parent="."]
 position = Vector2(2562, -2514)

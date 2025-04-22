@@ -15,7 +15,7 @@ func  _input(event):
 
 func _talk():
 	print("talked")
-	$"Node2D/Control/CanvasLayer".show()
+	$"Node2D/Control".show()
 	dialogue.display_next_line()
 	
 

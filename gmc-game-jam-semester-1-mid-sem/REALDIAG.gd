@@ -19,7 +19,6 @@ func _ready():
 		var SpellCast = null
 		$SpellCast.hide()
 	
-	
 	##display_next_line()
 
 func display_next_line():
