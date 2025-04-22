@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://bbfa4gqtaytmt" path="res://GARDENINGBOOKSCRIPT.gd" id="2_ne4pu"]
 [ext_resource type="Texture2D" uid="uid://4tn3ef6rmx0s" path="res://textbox.png" id="3_5s406"]
 [ext_resource type="Script" uid="uid://ch6vhc6h4ihma" path="res://choice_2.gd" id="4_ujw5t"]
-[ext_resource type="Script" path="res://Story storage files/tauri/tauri_after_spell.gd" id="5_vwp5u"]
+[ext_resource type="Script" uid="uid://cus5x380wrld2" path="res://Story storage files/tauri/tauri_after_spell.gd" id="5_vwp5u"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_fthp3"]
 font_size = 150

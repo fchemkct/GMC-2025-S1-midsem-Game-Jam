@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=3 uid="uid://ciywi4nakhday"]
+
+[ext_resource type="Script" uid="uid://c103ebm4crq6q" path="res://npcTalk.gd" id="1_ue7xc"]
+[ext_resource type="Texture2D" uid="uid://bymakhwwkgspa" path="res://Story storage files/exclamation.png" id="2_26wig"]
+[ext_resource type="PackedScene" uid="uid://c1gdbvdajbv33" path="res://dialogue_boxEXCLAMATION4.tscn" id="3_ue7xc"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_355fe"]
+radius = 197.0
+height = 618.0
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_ue7xc")
+
+[node name="exclamation" type="Sprite2D" parent="."]
+texture = ExtResource("2_26wig")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visibility_layer = 3
+shape = SubResource("CapsuleShape2D_355fe")
+
+[node name="NameTag" type="Label" parent="."]
+visible = false
+offset_left = 318.0
+offset_top = -689.0
+offset_right = 611.0
+offset_bottom = -412.0
+theme_override_font_sizes/font_size = 100
+text = "exclamation4"
+horizontal_alignment = 1
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="DialogueBox" parent="Control" instance=ExtResource("3_ue7xc")]
+layout_mode = 1

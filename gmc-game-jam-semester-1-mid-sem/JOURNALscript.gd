@@ -10,5 +10,6 @@ at some point in time.",
 "\"Always have faith in the pursuit of the stars, for the skies will reveal the truth of this world.\"",
 "You see notes about gardening, and a checklist of flowers that seem to be Arneb’s favourites.",
 "…You aren’t sure why, but you have a feeling that Lacaille was also trying to reconcile with Arneb.", 
-"So where did things go wrong?"
+"So where did things go wrong?",
+"end:exclamation4"
 ]

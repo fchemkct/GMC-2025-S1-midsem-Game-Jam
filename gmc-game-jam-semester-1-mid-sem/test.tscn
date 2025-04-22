@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://tgdagy4lm2u3"]
 
 [ext_resource type="PackedScene" uid="uid://bnrqduc4ah6q4" path="res://player.tscn" id="1_6uqi0"]
-[ext_resource type="PackedScene" uid="uid://coc7biftqup55" path="res://Npc.tscn" id="2_ppyta"]
+[ext_resource type="PackedScene" uid="uid://coc7biftqup55" path="res://sherrif.tscn" id="2_ppyta"]
 [ext_resource type="PackedScene" uid="uid://bap1s3otm2h7f" path="res://dialogue2.tscn" id="3_ykrsh"]
 
 [node name="Node2D" type="Node2D"]

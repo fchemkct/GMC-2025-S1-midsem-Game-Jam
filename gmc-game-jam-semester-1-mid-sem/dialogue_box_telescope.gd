@@ -6,5 +6,5 @@ extends Control
 she wasn’t using her set-up last night.",
 "Perhaps she was indeed avoiding the house.",
 "But was there a different reason?",
-"Why was their argument so much worse than the ones in the past?
-" ]
+"Why was their argument so much worse than the ones in the past?", 
+"#end:letters"]

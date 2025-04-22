@@ -9,5 +9,6 @@ extends Node
 "(Would Arneb really attempt to poison her friend, though? 
 Even if there might’ve been a hidden side to their relationship?) #speaker:Narrator",
 "When a person is not in the right state of mind, unfortunate things occur. #speaker:Orion",
-"And judging from how this was homemade, I doubt it'd be lethal." 
+"And judging from how this was homemade, I doubt it'd be lethal.",
+"end:journal" 
 ]

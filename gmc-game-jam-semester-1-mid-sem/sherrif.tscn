@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://coc7biftqup55"]
+[gd_scene load_steps=4 format=3 uid="uid://coc7biftqup55"]
 
 [ext_resource type="Texture2D" uid="uid://0ebe4qpwbmw4" path="res://characters/sheriff (2).png" id="1_sdap6"]
+[ext_resource type="PackedScene" uid="uid://b4yr52cv5ojvv" path="res://Story storage files/tauri/dialogue_boxTAURI.tscn" id="2_0egqn"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_sdap6"]
 radius = 26.9
@@ -25,6 +26,15 @@ offset_top = -637.0
 offset_right = 116.0
 offset_bottom = -360.0
 theme_override_font_sizes/font_size = 100
-text = "Sheriff
+text = "sherrif1
 "
 horizontal_alignment = 1
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="DialogueBox" parent="Control" instance=ExtResource("2_0egqn")]
+layout_mode = 1

@@ -1,23 +1,24 @@
-[gd_scene load_steps=5 format=3 uid="uid://cmobt3tbacu2d"]
+[gd_scene load_steps=5 format=3 uid="uid://b4jybkrcbnf8a"]
 
-[ext_resource type="Texture2D" uid="uid://swmnlgs4hrvj" path="res://characters/characters/tavern_owner.png" id="1_4xy5q"]
-[ext_resource type="Script" uid="uid://c103ebm4crq6q" path="res://npcTalk.gd" id="1_mrq8r"]
-[ext_resource type="PackedScene" uid="uid://d3uu4h21hbkgb" path="res://Story storage files/Sadal/dialogue_boxSADAL.tscn" id="2_k053i"]
+[ext_resource type="Script" uid="uid://c103ebm4crq6q" path="res://npcTalk.gd" id="1_mipnb"]
+[ext_resource type="Texture2D" uid="uid://bymakhwwkgspa" path="res://Story storage files/exclamation.png" id="2_ndb0u"]
+[ext_resource type="PackedScene" uid="uid://doext3y7rb0m2" path="res://dialogue_boxTELESCOPE.tscn" id="3_mipnb"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4xy5q"]
 radius = 45.0
 height = 456.0
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
-script = ExtResource("1_mrq8r")
+script = ExtResource("1_mipnb")
 
 [node name="TavernOwner" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(7.62939e-06, 0)
 scale = Vector2(0.596667, 0.562222)
-texture = ExtResource("1_4xy5q")
+texture = ExtResource("2_ndb0u")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-33, -34)
+position = Vector2(22, 1)
 shape = SubResource("CapsuleShape2D_4xy5q")
 
 [node name="NameTag" type="Label" parent="."]
@@ -26,7 +27,7 @@ offset_top = -637.0
 offset_right = 116.0
 offset_bottom = -360.0
 theme_override_font_sizes/font_size = 100
-text = "Sadal"
+text = "telescope"
 horizontal_alignment = 1
 
 [node name="Control" type="Control" parent="."]
@@ -35,5 +36,5 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="DialogueBox" parent="Control" instance=ExtResource("2_k053i")]
+[node name="DialogueBox" parent="Control" instance=ExtResource("3_mipnb")]
 layout_mode = 1

@@ -1,7 +1,7 @@
 [gd_scene load_steps=24 format=3 uid="uid://n5slb2dfjkua"]
 
 [ext_resource type="PackedScene" uid="uid://bnrqduc4ah6q4" path="res://player.tscn" id="1_txw6s"]
-[ext_resource type="PackedScene" uid="uid://coc7biftqup55" path="res://sherrif.tscn" id="2_cejpv"]
+[ext_resource type="PackedScene" uid="uid://coc7biftqup55" path="res://Npc.tscn" id="2_cejpv"]
 [ext_resource type="PackedScene" uid="uid://dhepxcnxnw856" path="res://Story storage files/Arneb/Botanist.tscn" id="2_gj118"]
 [ext_resource type="PackedScene" uid="uid://cobti6h5lbw1" path="res://doctor.tscn" id="3_g80de"]
 [ext_resource type="Script" uid="uid://c2hi7pbdvyjc6" path="res://npc.gd" id="3_gj118"]
@@ -28,6 +28,7 @@ radius = 152.0
 height = 928.0
 
 [node name="Normal" type="Node2D"]
+position = Vector2(0, -1)
 scale = Vector2(0.1, 0.1)
 
 [node name="Player" parent="." instance=ExtResource("1_txw6s")]
@@ -37,7 +38,7 @@ disable_mode = 2
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(0, 30)
-zoom = Vector2(2, 2)
+zoom = Vector2(3, 3)
 limit_left = -435
 limit_top = -390
 limit_right = 560
@@ -103,8 +104,8 @@ collision_layer = 271
 collision_mask = 15
 
 [node name="tavernhouse" parent="." instance=ExtResource("7_txw6s")]
-position = Vector2(-280, 90)
 disable_mode = 2
+metadata/_edit_lock_ = true
 
 [node name="townsquare" parent="." instance=ExtResource("8_txw6s")]
 z_index = -1
@@ -132,7 +133,7 @@ scale = Vector2(0.596667, 0.562222)
 texture = ExtResource("32_6akxl")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="tavern"]
-position = Vector2(-70, 30)
+position = Vector2(-33, -34)
 shape = SubResource("CapsuleShape2D_4xy5q")
 
 [node name="NameTag" type="Label" parent="tavern"]

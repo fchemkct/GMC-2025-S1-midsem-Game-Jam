@@ -3,7 +3,7 @@ extends Node
 
 @onready var fade_rect = $FadeLayer/FadeRect
 @onready var tween = create_tween()
-
+	
 func fade_and_switch_scene(scene_path: String):
 	# Fade to black
 	tween = create_tween()

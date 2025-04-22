@@ -5,5 +5,6 @@ extends Control
  They’re both scholars, after all. #speaker:Orion",
 "Lacaille’s seems to be mostly from the city, while Arneb has two from neighboring towns.",
 "While I believe they were close friends… sometimes proximity breeds resentment, 
-even when the other hasn’t done anything wrong."
+even when the other hasn’t done anything wrong.",
+"end:gardenbook"
  ]

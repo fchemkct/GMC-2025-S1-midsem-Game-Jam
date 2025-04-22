@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://dx8yd2cw5qrml" path="res://dialogue_box_telescope.gd" id="2_emw8e"]
 [ext_resource type="Texture2D" uid="uid://4tn3ef6rmx0s" path="res://textbox.png" id="2_qoct0"]
 [ext_resource type="Script" uid="uid://ch6vhc6h4ihma" path="res://choice_2.gd" id="3_emw8e"]
-[ext_resource type="Script" path="res://Story storage files/tauri/tauri_after_spell.gd" id="4_ecvpr"]
+[ext_resource type="Script" uid="uid://cus5x380wrld2" path="res://Story storage files/tauri/tauri_after_spell.gd" id="4_ecvpr"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_fthp3"]
 font_size = 150

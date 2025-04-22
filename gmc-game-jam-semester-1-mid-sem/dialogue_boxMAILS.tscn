@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://bxw0ac4hr0aer" path="res://LETTERSSCRIPT.gd" id="2_pge2o"]
 [ext_resource type="Texture2D" uid="uid://4tn3ef6rmx0s" path="res://textbox.png" id="2_s466p"]
 [ext_resource type="Script" uid="uid://ch6vhc6h4ihma" path="res://choice_2.gd" id="3_pge2o"]
-[ext_resource type="Script" path="res://Story storage files/tauri/tauri_after_spell.gd" id="4_onmlc"]
+[ext_resource type="Script" uid="uid://cus5x380wrld2" path="res://Story storage files/tauri/tauri_after_spell.gd" id="4_onmlc"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_fthp3"]
 font_size = 150
@@ -53,7 +53,7 @@ offset_right = 4481.0
 offset_bottom = 1036.0
 scale = Vector2(0.35, 0.25)
 theme_override_font_sizes/font_size = 2
-text = "
+text = "letters
 "
 label_settings = SubResource("LabelSettings_fthp3")
 autowrap_mode = 3
