@@ -123,10 +123,10 @@ texture = ExtResource("22_84pmw")
 
 [node name="Textlabel" type="Label" parent="doctor/DialogueBox"]
 layout_mode = 0
-offset_left = -5260.0
-offset_top = -1090.0
-offset_right = -979.999
-offset_bottom = -218.0
+offset_left = -5240.0
+offset_top = -970.0
+offset_right = -960.0
+offset_bottom = -98.0
 scale = Vector2(0.35, 0.25)
 theme_override_font_sizes/font_size = 2
 text = "
@@ -135,7 +135,6 @@ label_settings = SubResource("LabelSettings_if77y")
 autowrap_mode = 3
 
 [node name="choices" type="Node2D" parent="doctor/DialogueBox"]
-visible = false
 position = Vector2(177, 361)
 scale = Vector2(2, 2)
 
@@ -202,16 +201,28 @@ scale = Vector2(2, 2)
 metadata/_edit_use_anchors_ = true
 
 [node name="panel" type="Panel" parent="doctor/DialogueBox/Node2D/Name panel"]
-layout_mode = 0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -342.875
+anchor_top = -71.875
+anchor_right = -342.875
+anchor_bottom = -71.875
 offset_right = 40.0
 offset_bottom = 40.0
 scale = Vector2(4, 1)
 metadata/_edit_use_anchors_ = true
 
 [node name="label text" type="Label" parent="doctor/DialogueBox/Node2D/Name panel"]
-layout_mode = 0
-offset_right = 65.0
-offset_bottom = 23.0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -356.625
+anchor_top = -84.687
+anchor_right = -356.625
+anchor_bottom = -83.437
+offset_left = 140.0
+offset_top = 107.496
+offset_right = 205.0
+offset_bottom = 130.496
 text = "Choice 1"
 metadata/_edit_use_anchors_ = true
 
@@ -231,10 +242,10 @@ curve = SubResource("Curve2D_bk32q")
 metadata/_edit_group_ = true
 
 [node name="Label" type="Label" parent="doctor/DialogueBox/SpellCast/spellcast1"]
-offset_left = -815.0
-offset_top = -593.0
-offset_right = 101.0
-offset_bottom = -456.0
+offset_left = -480.0
+offset_top = -530.0
+offset_right = 436.0
+offset_bottom = -393.0
 text = "Cast your spell!"
 label_settings = SubResource("LabelSettings_mlggw")
 metadata/_edit_use_anchors_ = true
@@ -276,6 +287,7 @@ position = Vector2(-2390, 2800)
 disable_mode = 2
 
 [node name="mail" parent="." instance=ExtResource("8_0g7p0")]
+visible = false
 z_index = 2
 position = Vector2(-2690, 2480)
 disable_mode = 2

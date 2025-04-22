@@ -48,7 +48,7 @@ func walk(delta: float):
 			$AnimatedSprite2D.animation = "back"
 	
 			
-	position += velocity * delta
+	position  += velocity * delta
 	# Use move_and_slide() to handle physics-based movement and collisions
 	velocity = move_and_slide()
 	##position = position.clamp(Vector2.ZERO, screenSize)

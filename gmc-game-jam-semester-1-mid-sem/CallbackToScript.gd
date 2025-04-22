@@ -10,6 +10,7 @@ func _ready():
 	SpellCast = $"../.." ##get_parent().get_node("/root/normal/tavern/Control/DialogueBox")
 	clines = dialogue_gdscript.new()
 	SpellCast.hide()
+	#SpellCast.set_process_input(true)
 	
 
 func ReturnToDialogue() -> void:
@@ -19,4 +20,5 @@ func ReturnToDialogue() -> void:
 	dialogue.spell_on = false
 	dialogue.display_next_line()
 	SpellCast.hide()
+	#SpellCast.set_process_input(false) 
 	 # Replace with function body.

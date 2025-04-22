@@ -25,6 +25,7 @@ z_index = -1
 texture = ExtResource("1_bk32q")
 
 [node name="sptrace1" type="Path2D" parent="."]
+z_index = -4
 scale = Vector2(2.1, 2.1)
 curve = SubResource("Curve2D_bk32q")
 metadata/_edit_group_ = true

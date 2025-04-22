@@ -67,10 +67,12 @@ script = ExtResource("4_7mycd")
 [node name="mailman" parent="." instance=ExtResource("6_4c57u")]
 z_index = 1
 position = Vector2(-2040, 6.10352e-05)
+disable_mode = 2
 
 [node name="doctor" parent="." instance=ExtResource("6_kek77")]
 z_index = 1
 position = Vector2(-920, -310)
+disable_mode = 2
 
 [node name="nutjob" parent="." instance=ExtResource("8_efxa6")]
 z_index = 1
