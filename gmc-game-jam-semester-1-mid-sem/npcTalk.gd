@@ -8,7 +8,8 @@ func _ready() -> void:
 	NpcTalkOrder.canTalk = "Sadal"
 
 func  _input(event):
-	if event.is_action_pressed("dialogue")  && NpcTalkOrder.canTalk == id:
+	if event.is_action_pressed("dialogue") && NpcTalkOrder.inRange && NpcTalkOrder.canTalk == id:
+		print("sadal")
 		_talk()
 
 func _talk():
