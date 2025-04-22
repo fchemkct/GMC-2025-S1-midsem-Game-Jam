@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="GMC game jam semester 1 mid-sem"
-run/main_scene="uid://c7eyhk77f14cp"
+run/main_scene="uid://bnb6ws874m1op"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
 

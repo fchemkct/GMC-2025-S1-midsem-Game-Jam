@@ -1,6 +1,6 @@
 [gd_scene load_steps=27 format=3 uid="uid://bmcuhqrpxcctd"]
 
-[ext_resource type="Script" uid="uid://d07xoy34n6ap1" path="res://main.gd" id="1_o3mya"]
+[ext_resource type="Script" path="res://main.gd" id="1_o3mya"]
 [ext_resource type="PackedScene" uid="uid://bnrqduc4ah6q4" path="res://player.tscn" id="2_x68gl"]
 [ext_resource type="Texture2D" uid="uid://h1thb3nqx33o" path="res://characters/characters/mailman.png" id="5_x1p1m"]
 [ext_resource type="Script" uid="uid://c103ebm4crq6q" path="res://npcTalk.gd" id="6_1m6vu"]
@@ -26,7 +26,7 @@ radius = 218.0
 height = 1250.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i2kc8"]
-size = Vector2(246.931, 642.631)
+size = Vector2(1195.67, 642.631)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4xy5q"]
 radius = 152.0
@@ -61,9 +61,6 @@ script = ExtResource("1_o3mya")
 z_index = 1
 position = Vector2(-2050, 1260)
 disable_mode = 2
-
-[node name="CollisionShape2D" parent="Player" index="0"]
-visible = true
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 zoom = Vector2(2, 2)
@@ -182,7 +179,7 @@ scale = Vector2(0.615556, 0.623889)
 texture = ExtResource("11_1m6vu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="coffin"]
-position = Vector2(51, -59)
+position = Vector2(9.99989, -40)
 scale = Vector2(0.615556, 0.623889)
 shape = SubResource("RectangleShape2D_i2kc8")
 

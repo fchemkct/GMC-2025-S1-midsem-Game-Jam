@@ -7,7 +7,7 @@
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rgmpb"]
 radius = 20.0
-height = 68.4
+height = 121.574
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_u1c27"]
 atlas = ExtResource("2_sweqy")
@@ -317,7 +317,6 @@ scale = Vector2(10, 10)
 script = ExtResource("1_sweqy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
 position = Vector2(0.300003, 3.8)
 scale = Vector2(1.148, 0.788)
 shape = SubResource("CapsuleShape2D_rgmpb")

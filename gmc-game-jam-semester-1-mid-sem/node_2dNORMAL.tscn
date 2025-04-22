@@ -9,20 +9,20 @@
 [ext_resource type="PackedScene" uid="uid://chkv487d7fx7l" path="res://orion_house.tscn" id="6_cejpv"]
 [ext_resource type="Texture2D" uid="uid://xr42hkothikk" path="res://assets/gardening_book.png" id="7_n1whf"]
 [ext_resource type="PackedScene" uid="uid://cb6qp8aiuo216" path="res://tavernhouse.tscn" id="7_txw6s"]
-[ext_resource type="PackedScene" path="res://dialogue_boxGARDENINGBOOK.tscn" id="8_6akxl"]
+[ext_resource type="PackedScene" uid="uid://dppb3mh52o7kl" path="res://dialogue_boxGARDENINGBOOK.tscn" id="8_6akxl"]
 [ext_resource type="Texture2D" uid="uid://h1thb3nqx33o" path="res://characters/characters/mailman.png" id="8_83adm"]
 [ext_resource type="Texture2D" uid="uid://dhibo1k4aex60" path="res://assets/mail.png" id="8_kpmq8"]
 [ext_resource type="PackedScene" uid="uid://bl3uhtnb6p7es" path="res://townhouse_house.tscn" id="8_txw6s"]
-[ext_resource type="PackedScene" path="res://dialogue_boxMAILS.tscn" id="9_forea"]
+[ext_resource type="PackedScene" uid="uid://c4e1no5l314nd" path="res://dialogue_boxMAILS.tscn" id="9_forea"]
 [ext_resource type="Texture2D" uid="uid://d2c3pp1hee6e6" path="res://assets/journal.png" id="9_i57lt"]
-[ext_resource type="PackedScene" path="res://nutjob_house.tscn" id="9_txw6s"]
+[ext_resource type="PackedScene" uid="uid://dqsdwf3pijiyi" path="res://nutjob_house.tscn" id="9_txw6s"]
 [ext_resource type="PackedScene" uid="uid://drs7r18k2tk86" path="res://nutjob.tscn" id="9_u0smt"]
-[ext_resource type="PackedScene" path="res://doctorandsherrif.tscn" id="10_0g7p0"]
-[ext_resource type="PackedScene" path="res://dialogue_boxJOURNAL.tscn" id="10_ib2m5"]
+[ext_resource type="PackedScene" uid="uid://3tyic821r1j0" path="res://doctorandsherrif.tscn" id="10_0g7p0"]
+[ext_resource type="PackedScene" uid="uid://bg3co7mgg345c" path="res://dialogue_boxJOURNAL.tscn" id="10_ib2m5"]
 [ext_resource type="Texture2D" uid="uid://cy7a4ij6oogpq" path="res://assets/pesticide.png" id="11_lbful"]
 [ext_resource type="PackedScene" uid="uid://cfjq3bvg5aqm8" path="res://mailmanhouse.tscn" id="11_u0smt"]
 [ext_resource type="PackedScene" uid="uid://b4yr52cv5ojvv" path="res://Story storage files/tauri/dialogue_boxTAURI.tscn" id="12_cejpv"]
-[ext_resource type="PackedScene" path="res://dialogue_boxPESTICIDE.tscn" id="12_gjiaj"]
+[ext_resource type="PackedScene" uid="uid://3fwjjlmymsiq" path="res://dialogue_boxPESTICIDE.tscn" id="12_gjiaj"]
 [ext_resource type="PackedScene" uid="uid://cyy5envltj1tx" path="res://minimap.tscn" id="23_hyq37"]
 [ext_resource type="Texture2D" uid="uid://0ebe4qpwbmw4" path="res://characters/sheriff (2).png" id="24_83adm"]
 [ext_resource type="Texture2D" uid="uid://s13oomnv0c3b" path="res://characters/characters/astrologist.png" id="24_saqfl"]
@@ -153,7 +153,6 @@ texture = ExtResource("5_tsh4l")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="doctor"]
 position = Vector2(78, 0)
-scale = Vector2(1, 1)
 shape = SubResource("CapsuleShape2D_3ok8u")
 
 [node name="NameTag" type="Label" parent="doctor"]
@@ -167,7 +166,6 @@ text = "Tauri"
 horizontal_alignment = 1
 
 [node name="Node2D" type="Node2D" parent="doctor"]
-scale = Vector2(1, 1)
 
 [node name="Control" type="Control" parent="doctor/Node2D"]
 visible = false
