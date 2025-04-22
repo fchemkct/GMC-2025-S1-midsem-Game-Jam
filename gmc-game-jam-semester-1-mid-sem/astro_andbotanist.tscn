@@ -4,7 +4,7 @@
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_axvdq"]
 radius = 522.0
-height = 2198.0
+height = 1574.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_axvdq"]
 size = Vector2(1640, 1225)
@@ -21,7 +21,7 @@ scale = Vector2(1.53, 1.843)
 texture = ExtResource("1_axvdq")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-654, 2385)
+position = Vector2(-645, 2150)
 shape = SubResource("CapsuleShape2D_axvdq")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=57 format=3 uid="uid://n5slb2dfjkua"]
+[gd_scene load_steps=59 format=3 uid="uid://n5slb2dfjkua"]
 
 [ext_resource type="PackedScene" uid="uid://bnrqduc4ah6q4" path="res://player.tscn" id="1_txw6s"]
 [ext_resource type="Texture2D" uid="uid://dblb7bk1f5uat" path="res://characters/characters/botanist.png" id="3_84pmw"]
@@ -39,8 +39,10 @@
 [ext_resource type="PackedScene" uid="uid://fha2iax8ty4n" path="res://dialogue_boxexclamation3.tscn" id="37_lbful"]
 [ext_resource type="PackedScene" uid="uid://c1gdbvdajbv33" path="res://dialogue_boxEXCLAMATION4.tscn" id="38_lbful"]
 [ext_resource type="PackedScene" uid="uid://bnb6ws874m1op" path="res://EXCLAMATION5.tscn" id="39_gjiaj"]
-[ext_resource type="PackedScene" uid="uid://cfylpnohshskt" path="res://dialogue_boxEXCLAMATION5.tscn" id="39_sb33a"]
-[ext_resource type="PackedScene" path="res://dialogue_boxTELESCOPE.tscn" id="41_7nfvl"]
+[ext_resource type="PackedScene" uid="uid://co8g33jbyh4b3" path="res://dialogue_boxEXCLAMATION5.tscn" id="39_sb33a"]
+[ext_resource type="PackedScene" uid="uid://doext3y7rb0m2" path="res://dialogue_boxTELESCOPE.tscn" id="41_7nfvl"]
+[ext_resource type="AudioStream" uid="uid://2p53m3wnqtdg" path="res://31 BIDØ - Infinite 24 Bit MASTER.mp3" id="42_ml22k"]
+[ext_resource type="Script" uid="uid://wncgghf6bmav" path="res://loopmusic.gd" id="43_m1n6c"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_355fe"]
 radius = 197.0
@@ -376,7 +378,6 @@ metadata/_edit_lock_ = true
 [node name="astroandbotaniststatic" parent="." instance=ExtResource("5_mo42o")]
 position = Vector2(-1190, -350)
 disable_mode = 2
-metadata/_edit_lock_ = true
 
 [node name="orion_house" parent="." instance=ExtResource("6_cejpv")]
 disable_mode = 2
@@ -737,6 +738,10 @@ offset_bottom = 40.0
 
 [node name="DialogueBox" parent="telescope/Node2D/Control" instance=ExtResource("41_7nfvl")]
 layout_mode = 1
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("42_ml22k")
+script = ExtResource("43_m1n6c")
 
 [editable path="CanvasLayer"]
 [editable path="coffin/Node2D/Control/DialogueBox"]

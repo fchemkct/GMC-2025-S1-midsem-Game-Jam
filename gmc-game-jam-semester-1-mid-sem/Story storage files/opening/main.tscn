@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://bmcuhqrpxcctd"]
+[gd_scene load_steps=29 format=3 uid="uid://bmcuhqrpxcctd"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_o3mya"]
 [ext_resource type="PackedScene" uid="uid://bnrqduc4ah6q4" path="res://player.tscn" id="2_x68gl"]
@@ -16,6 +16,8 @@
 [ext_resource type="PackedScene" uid="uid://0p5e15bf2yxs" path="res://Story storage files/Coffin/dialogue_boxCoffin.tscn" id="12_x1p1m"]
 [ext_resource type="Texture2D" uid="uid://swmnlgs4hrvj" path="res://characters/characters/tavern_owner.png" id="13_x1p1m"]
 [ext_resource type="PackedScene" uid="uid://d3uu4h21hbkgb" path="res://Story storage files/Sadal/dialogue_boxSADAL.tscn" id="14_x1p1m"]
+[ext_resource type="AudioStream" uid="uid://2p53m3wnqtdg" path="res://31 BIDØ - Infinite 24 Bit MASTER.mp3" id="17_cojvf"]
+[ext_resource type="Script" uid="uid://wncgghf6bmav" path="res://loopmusic.gd" id="18_pytj0"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ftmwj"]
 radius = 165.0
@@ -292,6 +294,10 @@ layout_mode = 1
 
 [node name="label text" parent="opening/Control/DialogueBox/Node2D/Name panel" index="1"]
 visible = false
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("17_cojvf")
+script = ExtResource("18_pytj0")
 
 [editable path="Player"]
 [editable path="doctor/Node2D/Control/DialogueBox"]

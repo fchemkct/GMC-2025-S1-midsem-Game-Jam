@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://2p53m3wnqtdg"
+path="res://.godot/imported/31 BIDØ - Infinite 24 Bit MASTER.mp3-44de72580d5ad057dfcd05aff696e3c4.mp3str"
+
+[deps]
+
+source_file="res://31 BIDØ - Infinite 24 Bit MASTER.mp3"
+dest_files=["res://.godot/imported/31 BIDØ - Infinite 24 Bit MASTER.mp3-44de72580d5ad057dfcd05aff696e3c4.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
