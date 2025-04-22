@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://coc7biftqup55"]
 
 [ext_resource type="Texture2D" uid="uid://0ebe4qpwbmw4" path="res://characters/sheriff (2).png" id="1_sdap6"]
-[ext_resource type="PackedScene" uid="uid://b4yr52cv5ojvv" path="res://Story storage files/tauri/dialogue_boxTAURI.tscn" id="2_0egqn"]
+[ext_resource type="PackedScene" uid="uid://bpebhmsuvowff" path="res://dialogue_boxSHERRIF.tscn" id="2_0egqn"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_sdap6"]
 radius = 26.9
@@ -21,6 +21,7 @@ shape = SubResource("CapsuleShape2D_sdap6")
 debug_color = Color(0.928477, 3.11887e-05, 0.664508, 0.42)
 
 [node name="NameTag" type="Label" parent="."]
+visible = false
 offset_left = -145.0
 offset_top = -637.0
 offset_right = 116.0

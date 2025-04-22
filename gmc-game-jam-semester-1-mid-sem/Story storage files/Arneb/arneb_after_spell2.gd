@@ -27,5 +27,5 @@ extends Control
 "…I can’t remember where I put it. #speaker:Arneb",
 "…I see. #speaker:Orion",
 "Saying he won’t disturb her any longer, Orion excuses himself, deep in thought. #speaker:Narrator",
-
+"#end:Exclamation3"
 ]

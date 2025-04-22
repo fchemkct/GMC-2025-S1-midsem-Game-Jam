@@ -69,9 +69,11 @@ func _draw():
 func compare_trace_to_original():
 	if paths_match(original_path, drawn_points):
 		label.text = "You have passed the test! Well done!"
+		get_parent().get_node("spellcast7").spell7 = true
+		get_parent().get_node("spellcast7").show()
+		hide()
 		drawn_points.clear()
 		queue_redraw() 
-		is_drawing = false
 		$CallBack.ReturnToDialogue()
 	else:
 		label.text = "You failed the test. Try again."

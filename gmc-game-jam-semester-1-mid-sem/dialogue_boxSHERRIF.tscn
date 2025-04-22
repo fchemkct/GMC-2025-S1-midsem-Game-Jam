@@ -1,12 +1,14 @@
-[gd_scene load_steps=13 format=3 uid="uid://bpebhmsuvowff"]
+[gd_scene load_steps=15 format=3 uid="uid://bpebhmsuvowff"]
 
 [ext_resource type="Script" uid="uid://btp5ejus0fe0t" path="res://REALDIAG.gd" id="1_niakg"]
-[ext_resource type="Script" uid="uid://bke4o4js0x7lw" path="res://Story storage files/Arneb/arneb.gd" id="2_6stjv"]
+[ext_resource type="Script" uid="uid://bx5n2x8x8t0cv" path="res://sherrif.gd" id="2_niakg"]
 [ext_resource type="Texture2D" uid="uid://4tn3ef6rmx0s" path="res://textbox.png" id="3_swxh1"]
 [ext_resource type="Script" uid="uid://ch6vhc6h4ihma" path="res://choice_2.gd" id="4_v0hkg"]
 [ext_resource type="Script" uid="uid://cus5x380wrld2" path="res://Story storage files/tauri/tauri_after_spell.gd" id="5_watnc"]
-[ext_resource type="PackedScene" uid="uid://b1ti3cjpodw6a" path="res://spellcast_script/spellcast_4.tscn" id="6_7oswp"]
-[ext_resource type="PackedScene" uid="uid://bc3tj6og1aek7" path="res://spellcast_script/spellcast_5.tscn" id="7_rr4y1"]
+[ext_resource type="PackedScene" uid="uid://dnsgs8wer0w68" path="res://spellcast_script/spellcast_6.tscn" id="6_6stjv"]
+[ext_resource type="Script" uid="uid://3ocxofrvm0nq" path="res://sherrif_after_spell1.gd" id="7_swxh1"]
+[ext_resource type="PackedScene" uid="uid://bb03f84xf5xcc" path="res://spellcast_script/spellcast_7.tscn" id="8_v0hkg"]
+[ext_resource type="Script" uid="uid://dttlnmxq5h7n8" path="res://sherrif_after_spell2.gd" id="9_swxh1"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_fthp3"]
 font_size = 150
@@ -34,7 +36,7 @@ offset_bottom = 5.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_niakg")
-dialogue_gdscript = ExtResource("2_6stjv")
+dialogue_gdscript = ExtResource("2_niakg")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 visibility_layer = 65
@@ -143,14 +145,22 @@ metadata/_edit_use_anchors_ = true
 
 [node name="SpellCast" type="Node2D" parent="."]
 
-[node name="spellcast4" parent="SpellCast" instance=ExtResource("6_7oswp")]
+[node name="spellcast6" parent="SpellCast" instance=ExtResource("6_6stjv")]
 
-[node name="spellcast5" parent="SpellCast" instance=ExtResource("7_rr4y1")]
+[node name="CallBack" parent="SpellCast/spellcast6" index="4"]
+dialogue_gdscript = ExtResource("7_swxh1")
+
+[node name="spellcast7" parent="SpellCast" instance=ExtResource("8_v0hkg")]
 visible = false
+
+[node name="Label" parent="SpellCast/spellcast7" index="2"]
+visible = false
+
+[node name="CallBack" parent="SpellCast/spellcast7" index="4"]
+dialogue_gdscript = ExtResource("9_swxh1")
 
 [connection signal="pressed" from="choices/choice2" to="choices/choice2" method="_on_pressed"]
 [connection signal="pressed" from="choices/choice 1" to="choices/choice 1" method="_on_pressed"]
-[connection signal="hidden" from="SpellCast/spellcast4" to="SpellCast" method="_on_spellcast_4_hidden"]
 
-[editable path="SpellCast/spellcast4"]
-[editable path="SpellCast/spellcast5"]
+[editable path="SpellCast/spellcast6"]
+[editable path="SpellCast/spellcast7"]

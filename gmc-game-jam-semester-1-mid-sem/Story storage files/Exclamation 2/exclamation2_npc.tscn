@@ -7,7 +7,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i2kc8"]
 size = Vector2(1466.61, 794.791)
 
-[node name="Area2D" type="Area2D"]
+[node name="CharacterBody2D" type="CharacterBody2D"]
 script = ExtResource("1_8k7mg")
 
 [node name="Astrologist" type="Sprite2D" parent="."]

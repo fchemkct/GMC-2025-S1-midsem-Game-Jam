@@ -14,5 +14,6 @@ out to read one of them. #speaker:Narrator",
 but a new sense of clarity does enter his eyes.",
 "Orion… while I understand that Arneb is the most likely culprit, by accident or otherwise… #speaker:Sheriff",
 "My instincts are telling me that it may be something bigger than that.",
-"Perhaps it really could be an outsider? Related to the mass murder case you’ve been investigating?"
+"Perhaps it really could be an outsider? Related to the mass murder case you’ve been investigating?",
+"#spellcasts"
 ]
