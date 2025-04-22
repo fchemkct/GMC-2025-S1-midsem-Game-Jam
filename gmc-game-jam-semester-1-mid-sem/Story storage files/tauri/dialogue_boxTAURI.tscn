@@ -175,7 +175,6 @@ offset_right = 101.0
 offset_bottom = -456.0
 text = "Cast your spell!"
 label_settings = SubResource("LabelSettings_mlggw")
-metadata/_edit_use_anchors_ = true
 
 [node name="Border" type="TextureRect" parent="SpellCast/spellcast1"]
 z_index = -5
@@ -186,7 +185,6 @@ offset_bottom = 1023.0
 scale = Vector2(1.26778, 0.695)
 texture = ExtResource("8_hiqco")
 expand_mode = 4
-metadata/_edit_use_anchors_ = true
 
 [node name="CallBack" type="Control" parent="SpellCast/spellcast1"]
 layout_mode = 3
@@ -195,7 +193,6 @@ offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("9_6i24i")
 dialogue_gdscript = ExtResource("5_278cl")
-metadata/_edit_use_anchors_ = true
 
 [connection signal="pressed" from="choices/choice2" to="choices/choice2" method="_on_pressed"]
 [connection signal="pressed" from="choices/choice 1" to="choices/choice 1" method="_on_pressed"]

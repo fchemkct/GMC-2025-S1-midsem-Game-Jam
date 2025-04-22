@@ -1,0 +1,152 @@
+[gd_scene load_steps=21 format=3 uid="uid://c7eyhk77f14cp"]
+
+[ext_resource type="Script" uid="uid://btge5igcwubvy" path="res://main.gd" id="1_o3mya"]
+[ext_resource type="PackedScene" uid="uid://bnrqduc4ah6q4" path="res://player.tscn" id="2_x68gl"]
+[ext_resource type="PackedScene" uid="uid://coc7biftqup55" path="res://Npc.tscn" id="3_1m6vu"]
+[ext_resource type="Script" path="res://npc.gd" id="4_x1p1m"]
+[ext_resource type="PackedScene" uid="uid://bnkhxhler4qmi" path="res://Story storage files/gien/mailman.tscn" id="5_f8kkc"]
+[ext_resource type="PackedScene" uid="uid://cobti6h5lbw1" path="res://doctor.tscn" id="6_cojvf"]
+[ext_resource type="PackedScene" uid="uid://drs7r18k2tk86" path="res://nutjob.tscn" id="7_pytj0"]
+[ext_resource type="Texture2D" uid="uid://be8r43boghfw7" path="res://terrain sprites/background.png" id="8_hp6te"]
+[ext_resource type="PackedScene" uid="uid://bmabqjkdmj1ky" path="res://townhouseOPENING.tscn" id="9_7r764"]
+[ext_resource type="PackedScene" uid="uid://blti3j6sfrehl" path="res://coffinastrologist.tscn" id="10_ub888"]
+[ext_resource type="PackedScene" uid="uid://cmobt3tbacu2d" path="res://Story storage files/Sadal/tavern.tscn" id="11_5w2tu"]
+[ext_resource type="Script" uid="uid://b5aqt2gv2bkku" path="res://Story storage files/opening/opening_npc_script.gd" id="12_1m6vu"]
+[ext_resource type="PackedScene" uid="uid://c5gymfcgkuabo" path="res://Story storage files/opening/dialogue_boxOPENING.tscn" id="12_v8p35"]
+[ext_resource type="Texture2D" uid="uid://swmnlgs4hrvj" path="res://characters/characters/tavern_owner.png" id="13_x1p1m"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_fthp3"]
+font_size = 150
+font_color = Color(0, 0, 0, 0.898039)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3oyv4"]
+bg_color = Color(0.0240928, 0.696945, 0.602947, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gi2ia"]
+bg_color = Color(0.960366, 0.293826, 0.714084, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_macfk"]
+bg_color = Color(0.53528, 0.654675, 0.212876, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s1pmf"]
+bg_color = Color(0.73111, 0.573056, 0.268446, 1)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_67qdd"]
+radius = 152.0
+height = 928.0
+
+[node name="normal" type="Node2D"]
+position = Vector2(462, 400)
+scale = Vector2(0.1, 0.1)
+script = ExtResource("1_o3mya")
+
+[node name="Player" parent="." instance=ExtResource("2_x68gl")]
+z_index = 1
+position = Vector2(-2050, 1260)
+disable_mode = 2
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+zoom = Vector2(2, 2)
+limit_left = 0
+limit_top = 0
+limit_right = 1000
+limit_bottom = 750
+
+[node name="FadeLayer" type="CanvasLayer" parent="."]
+
+[node name="FadeRect" type="ColorRect" parent="FadeLayer"]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Npc" parent="." instance=ExtResource("3_1m6vu")]
+z_index = 1
+position = Vector2(-2040, -810)
+disable_mode = 2
+input_pickable = true
+script = ExtResource("4_x1p1m")
+
+[node name="mailman" parent="." instance=ExtResource("5_f8kkc")]
+z_index = 1
+position = Vector2(-2040, 6.10352e-05)
+disable_mode = 2
+
+[node name="doctor" parent="." instance=ExtResource("6_cojvf")]
+z_index = 1
+position = Vector2(-920, -310)
+disable_mode = 2
+
+[node name="nutjob" parent="." instance=ExtResource("7_pytj0")]
+z_index = 1
+position = Vector2(310, 390)
+
+[node name="Background" type="Sprite2D" parent="."]
+z_index = -3
+position = Vector2(400, -230)
+scale = Vector2(2.1, 2.1)
+texture = ExtResource("8_hp6te")
+metadata/_edit_lock_ = true
+
+[node name="house" parent="." instance=ExtResource("9_7r764")]
+position = Vector2(2980, 1760)
+
+[node name="coffin" parent="." instance=ExtResource("10_ub888")]
+position = Vector2(-1400, 710)
+
+[node name="tavern" parent="." instance=ExtResource("11_5w2tu")]
+z_index = 1
+position = Vector2(-520, 500)
+
+[node name="Textlabel" parent="tavern/Control/DialogueBox" index="1"]
+label_settings = SubResource("LabelSettings_fthp3")
+
+[node name="choice2" parent="tavern/Control/DialogueBox/choices" index="0"]
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_3oyv4")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_gi2ia")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_macfk")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_s1pmf")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+z_index = 10
+script = ExtResource("12_1m6vu")
+
+[node name="TavernOwner" type="Sprite2D" parent="CharacterBody2D"]
+visible = false
+position = Vector2(7.62939e-06, 0)
+scale = Vector2(0.596667, 0.562222)
+texture = ExtResource("13_x1p1m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+visible = false
+position = Vector2(-33, -34)
+shape = SubResource("CapsuleShape2D_67qdd")
+
+[node name="NameTag" type="Label" parent="CharacterBody2D"]
+offset_left = -145.0
+offset_top = -637.0
+offset_right = 116.0
+offset_bottom = -360.0
+theme_override_font_sizes/font_size = 100
+text = "Opening"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Control" type="Control" parent="CharacterBody2D"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+metadata/_edit_use_anchors_ = true
+
+[node name="DialogueBox" parent="CharacterBody2D/Control" instance=ExtResource("12_v8p35")]
+layout_mode = 1
+
+[editable path="Player"]
+[editable path="tavern"]
+[editable path="tavern/Control/DialogueBox"]
+[editable path="tavern/Control/DialogueBox/SpellCast/spellcast3"]
+[editable path="CharacterBody2D/Control/DialogueBox"]

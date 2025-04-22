@@ -1,5 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://cobti6h5lbw1"]
+[gd_scene load_steps=5 format=3 uid="uid://cobti6h5lbw1"]
 
+[ext_resource type="Script" uid="uid://c103ebm4crq6q" path="res://npcTalk.gd" id="1_jv6xp"]
 [ext_resource type="Texture2D" uid="uid://dk32xnjr7fdxm" path="res://characters/characters/doctor.png" id="1_s17ls"]
 [ext_resource type="PackedScene" uid="uid://b4yr52cv5ojvv" path="res://Story storage files/tauri/dialogue_boxTAURI.tscn" id="2_3ok8u"]
 
@@ -8,6 +9,7 @@ radius = 218.0
 height = 1250.0
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_jv6xp")
 
 [node name="Doctor" type="Sprite2D" parent="."]
 position = Vector2(38, -1.52588e-05)
@@ -29,6 +31,7 @@ text = "Tauri"
 horizontal_alignment = 1
 
 [node name="Control" type="Control" parent="."]
+visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
