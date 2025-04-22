@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://bomvib2ctkabx"]
+
+[ext_resource type="Texture2D" uid="uid://cbsrvmr1fcuff" path="res://terrain sprites/hand.png" id="1_ocl6u"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1944.0
+offset_bottom = 1118.0
+texture = ExtResource("1_ocl6u")
