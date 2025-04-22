@@ -1,0 +1,25 @@
+extends Node
+
+@export var lines: Array[String] = [
+"…The case I was sent here to focus on ‘is’ indeed a mass murder case, 
+with victims who were all unrelated, scattered across The City. #speaker:Orion",
+"I picked Lagina because their murders have moved outward to the towns, 
+and we’re strategically placed amidst it all.",
+"But to catch a mastermind who has gotten away with so much…",
+"Don’t you agree that a red herring must be planted?",
+"What? #speaker:Sheriff",
+"Say that the most likely culprits were either the mass murderer, or Arneb as a great, 
+unfortunate accident. #speaker:Orion",
+"Wouldn’t it work in our favour if the murderer believed we’d mistakenly convicted Arneb?", 
+"They'd let down their guard, giving me the chance to catch their mistakes.",
+"Due to her ties in Lagina, I believe Arneb's punishment would not be severe anyways, 
+as she’d only be convicted for manslaughter; without intention, nor excessive force.",
+"Orion plucks the sheet of paper out of the Sheriff’s hands, and smiles. #speaker:Narrator",
+"I understand that my plan seems convoluted, but I hope you can agree. #speaker:Orion",
+"By now, you’re familiar with the sensation of magic flowing through the air. #speaker:Narrator",
+"But this time… Something doesn’t feel right.",
+"Orion isn’t using his powers to make the Sheriff divulge the truth. He’s using it to get his way.",
+"You’ve never questioned the nature of Orion’s spells, until now.",
+"…Yes, of course. #speaker:Sheriff",
+"I’ll get you those documents about Arneb tomorrow.",
+]
