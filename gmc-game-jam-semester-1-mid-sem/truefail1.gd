@@ -6,25 +6,25 @@ extends Node
 "If I were to restore your energy now, how far will you push it before you’re erased from existence?",
 "Defeated, it’s all you can do is clutch onto reality as you feel your form flickering. #speaker:Narrator",
 "…Since you’re due to disappear, anyways, let me shine a light on the truth you’re so desperate to chase. #speaker:Orion",
-"#cutscence",
+"#cutscence:res://terrain sprites/moon.png",
 "The memory resurfaces as a spell falls upon your mind. #speaker:Narrator",
 	"You’d been on a stroll that night to clear your head, and was planning to apologise to 
 	Arneb once you were back with a bouquet of wildflowers.", 
 	"Only to see a figure in the distance, standing alone.",
 	"Upon closer inspection, you realised it was Orion… but his cloak was stained with blood.",
 	"You panicked and thought he’d gotten attacked, at first. But as you ran to help…",
-	"#cutscence",
+	"#cutscence:res://terrain sprites/dagger.png",
 		"You realized it was ‘Orion,’ who was standing over a body.",
 "You tried to flee, panicking — but he’d already noticed you.",
 "I only wanted to erase your memory, and send you on your way. #speaker:Orion",
-"#cutscence",
+"#cutscence:res://shield.png",
 
 "But who knew that you’d instinctively throw my spell back?",
 	"There was little I could do in that short span of time. So I figured I should make the most of this incident.", 
 	"I’ve been experimenting with what human lives can do, when spent to strengthen magic.",
 	"But I’ve never killed another magician, before.",
 	
-	"#cutscence",
+	"#cutscence:res://hand (1).png",
 	
 "Who would’ve thought that a magician’s soul would linger after death? And even be able to interact with others who wield magic? #speaker:Orion",
 "It was fun to study you while it lasted, but…",
@@ -32,7 +32,7 @@ extends Node
 "Do come to the trial tomorrow, though.",
 "I’ll let you say goodbye one last time, after I seal your powers.",
 "Perhaps I’ll even be able to absorb your magic capacity." ,
-"#cutscence",
+"#cutscence:res://bad_end.png",
 "Morning rises on the day of judgement, where you’re forced to watch as Orion frames Arneb for the murder he committed. #speaker:Narrator",
 "Orion tells a tale of two friends torn apart, and what was an unfortunate accident under the influence of alcohol and fiery emotion.", 
 "I do not claim to know exactly what happened that night… But Miss Arneb has signed a witness statement, admitting she was out on the night of Lacaille’s death, #speaker:Orion",
@@ -42,7 +42,7 @@ extends Node
 "With the intoxicated Arneb unable to help; complicit, as Lacaille was left to be found the next morning by Gien.", 
 "The townsfolk nod with dire looks. Spellcraft hangs heavily in the air. #speaker:Narrator",
 
-"#cutscence",
+"#cutscence:res://black.png",
 
 "Arneb is arrested for manslaughter and sentenced to prison. But due to the lack of concrete evidence, 
 her sentence is light, and mainly consists of exile from the town itself. #speaker:Narrator",

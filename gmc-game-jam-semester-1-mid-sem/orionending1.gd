@@ -18,6 +18,6 @@ extends Node
 "It’s a dark metal entwined with wood, stained with something that smells of iron.",
 "It’s commendable, really. But I’m afraid I’ll have to get rid of you now. #speaker:Orion",
 "Sorry for the trouble, Lacaille.",
-"#cutscence",
+"#cutscence:res://spells.png",
 "#spellcasts"
 ]
