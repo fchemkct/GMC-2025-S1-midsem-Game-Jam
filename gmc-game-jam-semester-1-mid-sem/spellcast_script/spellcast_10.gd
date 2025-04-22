@@ -100,14 +100,14 @@ func paths_match(original: Array[Vector2], drawn: Array[Vector2], tolerance := 2
 		
 func _unhandled_input(event):
 	if event is InputEventKey and event.pressed and event.keycode == KEY_SPACE:
-		if success:
-			return  # Already succeeded
-		if tries >= MAX_TRIES:
-			print("❌ You've used all attempts!") #JUST DELETE THIS 
-			return
-
-		tries += 1
-		compare_trace_to_original()
+		if NpcTalkOrder.spellOn:
+			if success:
+				return  # Already succeeded
+			if tries >= MAX_TRIES:
+				print("❌ You've used all attempts!") #JUST DELETE THIS 
+				return
+			tries += 1
+			compare_trace_to_original()
 
 		if tries >= MAX_TRIES and not success:
 			print("❌ Game over. No more tries.") 

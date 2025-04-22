@@ -16,7 +16,8 @@ func _on_pressed() -> void:
 	dialogue.dlines = clines
 	dialogue.current_line = 0
 	print("choice pressed")
-	dialogue.choice_on = false
+	##dialogue.choice_on = false
+	NpcTalkOrder.choiceOn = false
 	dialogue.display_next_line()
 	$"..".hide()
 	 # Replace with function body.

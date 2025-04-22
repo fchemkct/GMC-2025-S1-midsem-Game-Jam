@@ -17,7 +17,8 @@ func ReturnToDialogue() -> void:
 	dialogue.dlines = clines
 	dialogue.current_line = 0
 	print("return to dialogue  pressed")
-	dialogue.spell_on = false
+	##dialogue.spell_on = false
+	NpcTalkOrder.spellOn = false
 	dialogue.display_next_line()
 	SpellCast.hide()
 	#SpellCast.set_process_input(false) 
