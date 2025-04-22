@@ -1,0 +1,213 @@
+[gd_scene load_steps=16 format=3 uid="uid://co8g33jbyh4b3"]
+
+[ext_resource type="Script" uid="uid://btp5ejus0fe0t" path="res://REALDIAG.gd" id="1_8ay20"]
+[ext_resource type="Script" uid="uid://dos7mucqtnesn" path="res://Story storage files/Coffin/coffin.gd" id="2_otwi1"]
+[ext_resource type="Texture2D" uid="uid://4tn3ef6rmx0s" path="res://textbox.png" id="3_w7gd3"]
+[ext_resource type="Script" uid="uid://ch6vhc6h4ihma" path="res://choice_2.gd" id="4_82wep"]
+[ext_resource type="Script" uid="uid://7rvg8qkqckwe" path="res://nutjobscript.gd" id="5_otwi1"]
+[ext_resource type="Script" uid="uid://c74wxr8115hk3" path="res://suspicionscript.gd" id="6_otwi1"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_t3mj5"]
+font_size = 150
+font_color = Color(0, 0, 0, 0.898039)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0v1se"]
+bg_color = Color(0.0240928, 0.696945, 0.602947, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i0xc5"]
+bg_color = Color(0.960366, 0.293826, 0.714084, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iu45i"]
+bg_color = Color(0.53528, 0.654675, 0.212876, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wl5on"]
+bg_color = Color(0.73111, 0.573056, 0.268446, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_amshk"]
+bg_color = Color(0.0240928, 0.696945, 0.602947, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1lq8s"]
+bg_color = Color(0.960366, 0.293826, 0.714084, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ny6qi"]
+bg_color = Color(0.53528, 0.654675, 0.212876, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_whe40"]
+bg_color = Color(0.73111, 0.573056, 0.268446, 1)
+
+[node name="DialogueBox" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -18.0
+offset_bottom = 5.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_8ay20")
+dialogue_gdscript = ExtResource("2_otwi1")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+visibility_layer = 65
+z_index = -1
+layout_mode = 0
+offset_left = 24.0
+offset_top = 28.0
+offset_right = 18448.0
+offset_bottom = 5140.0
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("3_w7gd3")
+
+[node name="Textlabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 201.0
+offset_top = 164.0
+offset_right = 4481.0
+offset_bottom = 1036.0
+scale = Vector2(0.35, 0.25)
+theme_override_font_sizes/font_size = 2
+text = "
+"
+label_settings = SubResource("LabelSettings_t3mj5")
+autowrap_mode = 3
+
+[node name="choices" type="Node2D" parent="."]
+position = Vector2(177, 361)
+scale = Vector2(2, 2)
+
+[node name="choice2" type="Button" parent="choices"]
+offset_left = 634.0
+offset_top = 101.0
+offset_right = 642.0
+offset_bottom = 109.0
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_0v1se")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_i0xc5")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_iu45i")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_wl5on")
+script = ExtResource("4_82wep")
+dialogue_gdscript = ExtResource("5_otwi1")
+
+[node name="panel" type="Panel" parent="choices/choice2"]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(4, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="label text" type="Label" parent="choices/choice2"]
+visible = false
+layout_mode = 0
+offset_right = 65.0
+offset_bottom = 23.0
+text = "The stuff that Horo said."
+metadata/_edit_use_anchors_ = true
+
+[node name="choice 1" type="Button" parent="choices"]
+offset_top = 101.0
+offset_bottom = 101.0
+script = ExtResource("4_82wep")
+dialogue_gdscript = ExtResource("5_otwi1")
+
+[node name="panel" type="Panel" parent="choices/choice 1"]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(4, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="label text" type="Label" parent="choices/choice 1"]
+visible = false
+layout_mode = 0
+offset_right = 65.0
+offset_bottom = 23.0
+text = "Was any of it true?"
+metadata/_edit_use_anchors_ = true
+
+[node name="choice2" type="Node2D" parent="."]
+visible = false
+position = Vector2(177, 361)
+scale = Vector2(2, 2)
+
+[node name="choice3" type="Button" parent="choice2"]
+offset_left = 634.0
+offset_top = 202.0
+offset_right = 642.0
+offset_bottom = 210.0
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_amshk")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_1lq8s")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_ny6qi")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_whe40")
+script = ExtResource("4_82wep")
+dialogue_gdscript = ExtResource("6_otwi1")
+
+[node name="panel" type="Panel" parent="choice2/choice3"]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(4, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="label text" type="Label" parent="choice2/choice3"]
+visible = false
+layout_mode = 0
+offset_right = 65.0
+offset_bottom = 23.0
+text = "He mentioned…"
+metadata/_edit_use_anchors_ = true
+
+[node name="choice 4" type="Button" parent="choice2"]
+offset_top = 202.0
+offset_right = 8.0
+offset_bottom = 210.0
+script = ExtResource("4_82wep")
+dialogue_gdscript = ExtResource("6_otwi1")
+
+[node name="panel" type="Panel" parent="choice2/choice 4"]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(4, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="label text" type="Label" parent="choice2/choice 4"]
+visible = false
+layout_mode = 0
+offset_right = 65.0
+offset_bottom = 23.0
+text = "Sacrificial magic…"
+metadata/_edit_use_anchors_ = true
+
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2(56, -21)
+
+[node name="Name panel" type="Control" parent="Node2D"]
+layout_mode = 3
+anchors_preset = 0
+offset_top = 101.0
+offset_right = 8.0
+offset_bottom = 109.0
+scale = Vector2(2, 2)
+metadata/_edit_use_anchors_ = true
+
+[node name="panel" type="Panel" parent="Node2D/Name panel"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(4, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="label text" type="Label" parent="Node2D/Name panel"]
+layout_mode = 0
+offset_right = 65.0
+offset_bottom = 23.0
+text = "Choice 1"
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="choices/choice2" to="choices/choice2" method="_on_pressed"]
+[connection signal="pressed" from="choices/choice 1" to="choices/choice 1" method="_on_pressed"]
+[connection signal="pressed" from="choice2/choice3" to="choice2/choice3" method="_on_pressed"]
+[connection signal="pressed" from="choice2/choice 4" to="choice2/choice 4" method="_on_pressed"]

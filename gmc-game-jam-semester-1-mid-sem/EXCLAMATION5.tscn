@@ -1,22 +1,21 @@
-[gd_scene load_steps=5 format=3 uid="uid://blti3j6sfrehl"]
+[gd_scene load_steps=4 format=3 uid="uid://b4lsyd1tvieh7"]
 
-[ext_resource type="Script" uid="uid://c103ebm4crq6q" path="res://npcTalk.gd" id="1_5xfj5"]
-[ext_resource type="Texture2D" uid="uid://s13oomnv0c3b" path="res://characters/characters/astrologist.png" id="1_i2kc8"]
-[ext_resource type="PackedScene" uid="uid://0p5e15bf2yxs" path="res://Story storage files/Coffin/dialogue_boxCoffin.tscn" id="3_5xfj5"]
+[ext_resource type="Script" uid="uid://c103ebm4crq6q" path="res://npcTalk.gd" id="1_xcq8d"]
+[ext_resource type="Texture2D" uid="uid://bymakhwwkgspa" path="res://Story storage files/exclamation.png" id="2_e3tl0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i2kc8"]
 size = Vector2(264.801, 679.497)
 
-[node name="Area2D" type="CharacterBody2D"]
-script = ExtResource("1_5xfj5")
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_xcq8d")
 
 [node name="Astrologist" type="Sprite2D" parent="."]
 position = Vector2(11, -11)
 scale = Vector2(0.615556, 0.623889)
-texture = ExtResource("1_i2kc8")
+texture = ExtResource("2_e3tl0")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(32.5, -59)
+position = Vector2(17.5, -23)
 scale = Vector2(0.615556, 0.623889)
 shape = SubResource("RectangleShape2D_i2kc8")
 
@@ -26,7 +25,7 @@ offset_top = -637.0
 offset_right = 116.0
 offset_bottom = -360.0
 theme_override_font_sizes/font_size = 100
-text = "Coffin"
+text = "Exclamation5"
 horizontal_alignment = 1
 metadata/_edit_use_anchors_ = true
 
@@ -36,6 +35,3 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 metadata/_edit_use_anchors_ = true
-
-[node name="DialogueBox" parent="Control" instance=ExtResource("3_5xfj5")]
-layout_mode = 1
