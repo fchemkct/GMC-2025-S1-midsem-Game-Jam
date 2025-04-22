@@ -26,5 +26,5 @@ extends Control
 	"You have a hunch of where Orion wants to go, next. You follow his lead as he makes a beeline to the south-west of the town. #speaker:Narrator",
 	"We need to meet Arneb to confirm if she may have had a part in the mystery. #speaker:Orion",
 	"My intuition says that the incident may not have happened on purpose; but to get to the truth, we’ll need to cast stronger spells this time.",
-	"#end:Abc"
+	"#end:Arneb"
 ]

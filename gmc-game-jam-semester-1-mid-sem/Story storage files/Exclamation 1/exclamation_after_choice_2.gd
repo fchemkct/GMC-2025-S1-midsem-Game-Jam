@@ -10,6 +10,6 @@ extends Control
 "He seems intent on sharing something, but before he can say more, Tauri calls for him from the door of her clinic to redirect his attention.",
 "Orion smiles, giving the doctor a thankful nod, before turning back to address you.",
 "Next we should head south to find the person that discovered the corpse — Gien, the local mailman. #speaker:Orion",
-"—--------------------------------------------------------------------------------------",
+"#end:Gien",
 ##"//nutjob can either stay standing there, or fade to black and he’s now disappeared from the map altogether (the default scene).",
 ]

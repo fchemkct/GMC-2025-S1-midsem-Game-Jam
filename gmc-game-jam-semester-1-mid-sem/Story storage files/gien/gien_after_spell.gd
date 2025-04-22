@@ -25,5 +25,5 @@ extends Control
 "Thank you for the help, Gien. And do take it easy — I’m sure no one would blame you for taking the day off.",
 "It’s alright… I think I’d prefer to keep myself occupied, for now. #speaker:Gien",
 "And if I remember anything useful, I’ll be sure to let you and Sheriff Cor know!",
-
+"#end:Exclamation2",
 ]

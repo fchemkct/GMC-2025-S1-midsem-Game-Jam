@@ -19,7 +19,7 @@ func _ready():
 		$choice2.hide()
 	if get_node_or_null("$SpellCast"):
 		$SpellCast.hide()
-	show()
+	hide()
 	##display_next_line()
 
 func display_next_line():

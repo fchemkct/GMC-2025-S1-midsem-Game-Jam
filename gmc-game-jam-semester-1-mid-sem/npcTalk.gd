@@ -4,9 +4,6 @@ extends CharacterBody2D
 var isTalk = false
 @onready var id = $NameTag.text
 
-func _ready() -> void:
-	NpcTalkOrder.canTalk = "Sadal"
-
 func  _input(event):
 	if event.is_action_pressed("dialogue") && NpcTalkOrder.inRange && NpcTalkOrder.canTalk == id:
 		print("sadal")

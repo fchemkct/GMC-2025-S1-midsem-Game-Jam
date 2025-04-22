@@ -19,4 +19,5 @@ It would be best to erase suspicions of one-another as soon as possible.",
 "It’s more likely that an outsider had snuck in during the night… ",
 "Please resume your regular routines. As far as similar incidents go, the culprit wouldn’t make another move in broad daylight. ",
 "Especially when I and Sheriff Cor are actively investigating the case.",
+"#end:Coffin",
 ]

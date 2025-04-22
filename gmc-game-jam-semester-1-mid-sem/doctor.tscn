@@ -1,13 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://bhkintuyxvamh"]
+[gd_scene load_steps=4 format=3 uid="uid://cobti6h5lbw1"]
 
 [ext_resource type="Texture2D" uid="uid://dk32xnjr7fdxm" path="res://characters/characters/doctor.png" id="1_s17ls"]
+[ext_resource type="PackedScene" uid="uid://b4yr52cv5ojvv" path="res://Story storage files/tauri/dialogue_boxTAURI.tscn" id="2_3ok8u"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3ok8u"]
 radius = 218.0
 height = 1250.0
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
-position = Vector2(-38, -15)
 
 [node name="Doctor" type="Sprite2D" parent="."]
 position = Vector2(38, -1.52588e-05)
@@ -17,3 +17,22 @@ texture = ExtResource("1_s17ls")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(78, 0)
 shape = SubResource("CapsuleShape2D_3ok8u")
+
+[node name="NameTag" type="Label" parent="."]
+offset_left = -58.0
+offset_top = -788.0
+offset_right = 203.0
+offset_bottom = -511.0
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 100
+text = "Tauri"
+horizontal_alignment = 1
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="DialogueBox" parent="Control" instance=ExtResource("2_3ok8u")]
+layout_mode = 1

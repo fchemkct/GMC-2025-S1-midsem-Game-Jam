@@ -1,19 +1,19 @@
-[gd_scene load_steps=5 format=3 uid="uid://blti3j6sfrehl"]
+[gd_scene load_steps=5 format=3 uid="uid://7qdhu8f0fumd"]
 
-[ext_resource type="Script" uid="uid://c103ebm4crq6q" path="res://npcTalk.gd" id="1_5xfj5"]
-[ext_resource type="Texture2D" uid="uid://s13oomnv0c3b" path="res://characters/characters/astrologist.png" id="1_i2kc8"]
-[ext_resource type="PackedScene" uid="uid://d3uu4h21hbkgb" path="res://Story storage files/Sadal/dialogue_boxSADAL.tscn" id="2_xm76d"]
+[ext_resource type="Script" uid="uid://c103ebm4crq6q" path="res://npcTalk.gd" id="1_eoywx"]
+[ext_resource type="Texture2D" uid="uid://bav7lrqoof5g3" path="res://check.png" id="2_uwyf7"]
+[ext_resource type="PackedScene" uid="uid://ge4merxv8nt6" path="res://Story storage files/Exclamation 1/dialogue_boxEXCLAMATION.tscn" id="3_4155w"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i2kc8"]
 size = Vector2(1466.61, 794.791)
 
 [node name="Area2D" type="Area2D"]
-script = ExtResource("1_5xfj5")
+script = ExtResource("1_eoywx")
 
 [node name="Astrologist" type="Sprite2D" parent="."]
 position = Vector2(11, -11)
 scale = Vector2(0.615556, 0.623889)
-texture = ExtResource("1_i2kc8")
+texture = ExtResource("2_uwyf7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(51, -59)
@@ -21,19 +21,23 @@ scale = Vector2(0.615556, 0.623889)
 shape = SubResource("RectangleShape2D_i2kc8")
 
 [node name="NameTag" type="Label" parent="."]
+visible = false
 offset_left = -145.0
 offset_top = -637.0
 offset_right = 116.0
 offset_bottom = -360.0
 theme_override_font_sizes/font_size = 100
-text = "Coffin"
+text = "Exclamation1"
 horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+metadata/_edit_use_anchors_ = true
 
-[node name="DialogueBox" parent="Control" instance=ExtResource("2_xm76d")]
+[node name="DialogueBox" parent="Control" instance=ExtResource("3_4155w")]
 layout_mode = 1
+metadata/_edit_use_anchors_ = true

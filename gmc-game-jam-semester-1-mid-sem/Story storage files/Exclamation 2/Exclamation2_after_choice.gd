@@ -7,4 +7,5 @@ extends Control
 "There seems to be no other injuries or indications of physical force.",
 "And rather than hiding the body… the culprit may have only cared about erasing their tracks.",
 "Let’s speak to Sadal. She runs the tavern; since the death occurred at late hours, maybe she remembers who’d been out last night.",
+"#end:Sadal",
 ]

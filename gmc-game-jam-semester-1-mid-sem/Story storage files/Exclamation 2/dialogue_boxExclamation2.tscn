@@ -22,7 +22,7 @@ bg_color = Color(0.53528, 0.654675, 0.212876, 1)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_351bv"]
 bg_color = Color(0.73111, 0.573056, 0.268446, 1)
 
-[node name="DialogueBox2" type="Control"]
+[node name="DialogueBox" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -123,21 +123,18 @@ offset_top = 101.0
 offset_right = 8.0
 offset_bottom = 109.0
 scale = Vector2(2, 2)
-metadata/_edit_use_anchors_ = true
 
 [node name="panel" type="Panel" parent="Node2D/Name panel"]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 scale = Vector2(4, 1)
-metadata/_edit_use_anchors_ = true
 
 [node name="label text" type="Label" parent="Node2D/Name panel"]
 layout_mode = 0
 offset_right = 65.0
 offset_bottom = 23.0
 text = "Choice 1"
-metadata/_edit_use_anchors_ = true
 
 [connection signal="pressed" from="choices/choice2" to="choices/choice2" method="_on_pressed"]
 [connection signal="pressed" from="choices/choice 1" to="choices/choice 1" method="_on_pressed"]
