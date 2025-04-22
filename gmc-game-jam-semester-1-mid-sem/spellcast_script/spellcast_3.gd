@@ -38,7 +38,7 @@ func _input(event):
 func _process(delta):
 	# Animate the ghost guide along the original path
 	if original_path.size() >= 2:
-		guide_progress += delta * 0.5  # adjust speed 
+		guide_progress += delta * 0.1  # adjust speed 
 		if guide_progress > 1.0:
 			guide_progress = 0.0
 		queue_redraw()
@@ -68,6 +68,9 @@ func _draw():
 func compare_trace_to_original():
 	if paths_match(original_path, drawn_points):
 		label.text = "You have passed the test! Well done!"
+		drawn_points.clear()
+		queue_redraw() 
+		is_drawing = false
 		$CallBack.ReturnToDialogue()
 	else:
 		label.text = "You failed the test. Try again."
@@ -90,7 +93,7 @@ func paths_match(original: Array[Vector2], drawn: Array[Vector2], tolerance := 2
 			match_count += 1
 
 	var match_ratio = float(match_count) / original.size()
-	return match_ratio > 0.8  # 80% match required
+	return match_ratio > 0.5  # 50% match required
 
 		
 func _unhandled_input(event):

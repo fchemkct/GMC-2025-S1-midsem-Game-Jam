@@ -3,21 +3,21 @@
 [ext_resource type="PackedScene" uid="uid://bnrqduc4ah6q4" path="res://player.tscn" id="1_txw6s"]
 [ext_resource type="PackedScene" uid="uid://coc7biftqup55" path="res://Npc.tscn" id="2_cejpv"]
 [ext_resource type="PackedScene" uid="uid://dhepxcnxnw856" path="res://Botanist.tscn" id="2_gj118"]
-[ext_resource type="PackedScene" path="res://doctor.tscn" id="3_g80de"]
-[ext_resource type="Script" path="res://npc.gd" id="3_gj118"]
+[ext_resource type="PackedScene" uid="uid://bhkintuyxvamh" path="res://doctor.tscn" id="3_g80de"]
+[ext_resource type="Script" uid="uid://c2hi7pbdvyjc6" path="res://npc.gd" id="3_gj118"]
 [ext_resource type="Texture2D" uid="uid://be8r43boghfw7" path="res://terrain sprites/background.png" id="4_g80de"]
 [ext_resource type="PackedScene" uid="uid://bnkhxhler4qmi" path="res://mailman.tscn" id="4_mo42o"]
-[ext_resource type="PackedScene" path="res://astro_andbotanist.tscn" id="5_mo42o"]
+[ext_resource type="PackedScene" uid="uid://ckfq0d2ievmte" path="res://astro_andbotanist.tscn" id="5_mo42o"]
 [ext_resource type="PackedScene" uid="uid://dyhsa7tqwf3wn" path="res://gardening_book.tscn" id="5_yj753"]
-[ext_resource type="PackedScene" path="res://orion_house.tscn" id="6_cejpv"]
+[ext_resource type="PackedScene" uid="uid://chkv487d7fx7l" path="res://orion_house.tscn" id="6_cejpv"]
 [ext_resource type="PackedScene" uid="uid://dspnv5ms5ihdm" path="res://journal.tscn" id="6_lm85a"]
 [ext_resource type="PackedScene" uid="uid://cb6qp8aiuo216" path="res://tavernhouse.tscn" id="7_txw6s"]
 [ext_resource type="PackedScene" uid="uid://hspaev627dif" path="res://pesticide.tscn" id="7_u6en8"]
 [ext_resource type="PackedScene" uid="uid://bfsxy58x00ood" path="res://mail.tscn" id="8_0g7p0"]
 [ext_resource type="PackedScene" uid="uid://bl3uhtnb6p7es" path="res://townhouse_house.tscn" id="8_txw6s"]
-[ext_resource type="PackedScene" path="res://nutjob_house.tscn" id="9_txw6s"]
+[ext_resource type="PackedScene" uid="uid://dqsdwf3pijiyi" path="res://nutjob_house.tscn" id="9_txw6s"]
 [ext_resource type="PackedScene" uid="uid://drs7r18k2tk86" path="res://nutjob.tscn" id="9_u0smt"]
-[ext_resource type="PackedScene" path="res://doctorandsherrif.tscn" id="10_0g7p0"]
+[ext_resource type="PackedScene" uid="uid://3tyic821r1j0" path="res://doctorandsherrif.tscn" id="10_0g7p0"]
 [ext_resource type="PackedScene" uid="uid://cfjq3bvg5aqm8" path="res://mailmanhouse.tscn" id="11_u0smt"]
 [ext_resource type="PackedScene" uid="uid://d3uu4h21hbkgb" path="res://Story storage files/Sadal/dialogue_boxSADAL.tscn" id="31_84pmw"]
 [ext_resource type="Script" uid="uid://c103ebm4crq6q" path="res://npcTalk.gd" id="31_n1whf"]
@@ -45,7 +45,7 @@ limit_bottom = 360
 
 [node name="botanist" parent="." instance=ExtResource("2_gj118")]
 z_index = 2
-position = Vector2(-1530, 2980)
+position = Vector2(-450, 2130)
 disable_mode = 2
 
 [node name="doctor" parent="." instance=ExtResource("3_g80de")]
@@ -69,7 +69,6 @@ position = Vector2(-2390, 2800)
 disable_mode = 2
 
 [node name="mail" parent="." instance=ExtResource("8_0g7p0")]
-visible = false
 z_index = 2
 position = Vector2(-2690, 2480)
 disable_mode = 2

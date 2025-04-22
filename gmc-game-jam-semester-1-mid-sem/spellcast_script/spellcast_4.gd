@@ -38,7 +38,7 @@ func _input(event):
 func _process(delta):
 	# Animate the ghost guide along the original path
 	if original_path.size() >= 2:
-		guide_progress += delta * 0.6  # adjust speed 
+		guide_progress += delta * 0.4  # adjust speed 
 		if guide_progress > 1.0:
 			guide_progress = 0.0
 		queue_redraw()
@@ -71,6 +71,8 @@ func compare_trace_to_original():
 		get_parent().get_node("spellcast5").spell5 = true
 		get_parent().get_node("spellcast5").show()
 		hide()
+		drawn_points.clear()
+		queue_redraw() 
 		$CallBack.ReturnToDialogue()
 	else:
 		label.text = "You failed the test. Try again."
