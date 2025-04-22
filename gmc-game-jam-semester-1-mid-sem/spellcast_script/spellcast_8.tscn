@@ -1,8 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://chplanakn8om5"]
+[gd_scene load_steps=8 format=3 uid="uid://chplanakn8om5"]
 
 [ext_resource type="Texture2D" uid="uid://nhbkexs6r2yn" path="res://Spellcasts/798AECB1-FF30-48B6-AC02-38D390F29C3B.jpg" id="1_4ipnu"]
-[ext_resource type="Script" uid="uid://388ccnunt2bv" path="res://spellcast_8.gd" id="1_gvfkc"]
+[ext_resource type="Script" uid="uid://388ccnunt2bv" path="res://spellcast_script/spellcast_8.gd" id="1_gvfkc"]
 [ext_resource type="Texture2D" uid="uid://dy2i6c5407xij" path="res://terrain sprites/border.png" id="3_gp81x"]
+[ext_resource type="Script" uid="uid://drr0od33g8qxa" path="res://CallbackToScript.gd" id="4_4cphw"]
+[ext_resource type="Script" uid="uid://d2772hrlk5cf7" path="res://orionending2.gd" id="5_wowih"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ssefq"]
 font_size = 100
@@ -45,3 +47,12 @@ metadata/_edit_lock_ = true
 
 [node name="sptrace8" type="Path2D" parent="."]
 curve = SubResource("Curve2D_gp81x")
+
+[node name="CallBack" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("4_4cphw")
+dialogue_gdscript = ExtResource("5_wowih")
+metadata/_edit_use_anchors_ = true

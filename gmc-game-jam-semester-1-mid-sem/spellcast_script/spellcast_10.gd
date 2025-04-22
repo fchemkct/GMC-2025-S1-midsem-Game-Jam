@@ -72,9 +72,14 @@ func _draw():
 # Call this to compare paths
 func compare_trace_to_original():
 	if paths_match(original_path, drawn_points):
+		hide()
+		drawn_points.clear()
+		queue_redraw() 
+		$CallBacksuccess.ReturnToDialogue() 
 		print("✅ Traced accurately!")
 		success = true
 	else:
+		$CallBackfail.ReturnToDialogue() 
 		print("❌ Try again, not close enough.")
 		
 

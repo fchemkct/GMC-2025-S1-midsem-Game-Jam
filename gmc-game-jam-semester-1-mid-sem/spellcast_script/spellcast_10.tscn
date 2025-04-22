@@ -1,8 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://jqx4ixh0cgie"]
+[gd_scene load_steps=9 format=3 uid="uid://jqx4ixh0cgie"]
 
-[ext_resource type="Script" uid="uid://ct48ujm6o5w13" path="res://spellcast_10.gd" id="1_qsaqg"]
+[ext_resource type="Script" uid="uid://ct48ujm6o5w13" path="res://spellcast_script/spellcast_10.gd" id="1_qsaqg"]
 [ext_resource type="Texture2D" uid="uid://bpyjwqdt8y83f" path="res://Spellcasts/B251D25D-D51D-4014-9006-1624F25300C2.jpg" id="1_w8ejm"]
 [ext_resource type="Texture2D" uid="uid://dy2i6c5407xij" path="res://terrain sprites/border.png" id="3_chaxt"]
+[ext_resource type="Script" uid="uid://drr0od33g8qxa" path="res://CallbackToScript.gd" id="4_7ey5q"]
+[ext_resource type="Script" uid="uid://d13ushf04rqp4" path="res://trueend1.gd" id="5_bj0wv"]
+[ext_resource type="Script" uid="uid://dt8ad01swceir" path="res://truefail1.gd" id="6_5jbag"]
 
 [sub_resource type="Curve2D" id="Curve2D_qsaqg"]
 _data = {
@@ -43,3 +46,21 @@ offset_bottom = 1057.0
 scale = Vector2(1.26778, 0.695)
 texture = ExtResource("3_chaxt")
 expand_mode = 4
+
+[node name="CallBacksuccess" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("4_7ey5q")
+dialogue_gdscript = ExtResource("5_bj0wv")
+metadata/_edit_use_anchors_ = true
+
+[node name="CallBackfail" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("4_7ey5q")
+dialogue_gdscript = ExtResource("6_5jbag")
+metadata/_edit_use_anchors_ = true

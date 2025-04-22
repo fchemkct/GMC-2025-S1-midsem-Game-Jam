@@ -72,6 +72,12 @@ func _draw():
 # Call this to compare paths
 func compare_trace_to_original():
 	if paths_match(original_path, drawn_points):
+		get_parent().get_node("spellcast10").spell10 = true
+		get_parent().get_node("spellcast10").show()
+		hide()
+		drawn_points.clear()
+		queue_redraw() 
+		$CallBack.ReturnToDialogue() 
 		print("✅ Traced accurately!")
 		success = true
 	else:

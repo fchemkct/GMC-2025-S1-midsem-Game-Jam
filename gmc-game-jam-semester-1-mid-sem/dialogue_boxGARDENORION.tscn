@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://cds2hyt0hymfy"]
+[gd_scene load_steps=20 format=3 uid="uid://cds2hyt0hymfy"]
 
 [ext_resource type="Script" uid="uid://btp5ejus0fe0t" path="res://REALDIAG.gd" id="1_lc7hf"]
 [ext_resource type="Script" uid="uid://lcpp0fkubmq0" path="res://orionhousescript.gd" id="2_fksel"]
@@ -7,6 +7,9 @@
 [ext_resource type="Script" uid="uid://b50j032x5xq1d" path="res://normalend1.gd" id="5_fksel"]
 [ext_resource type="Script" uid="uid://vy7hhhuw0g7b" path="res://bossfightscript.gd" id="6_fksel"]
 [ext_resource type="Script" uid="uid://4fjwkbikkn4a" path="res://orionending1.gd" id="7_fksel"]
+[ext_resource type="PackedScene" uid="uid://chplanakn8om5" path="res://spellcast_script/spellcast_8.tscn" id="8_fwhcr"]
+[ext_resource type="PackedScene" uid="uid://b1yxlkrtdfaln" path="res://spellcast_script/spellcast_9.tscn" id="9_awnxb"]
+[ext_resource type="PackedScene" uid="uid://jqx4ixh0cgie" path="res://spellcast_script/spellcast_10.tscn" id="10_yi28o"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_1y07s"]
 font_size = 150
@@ -207,6 +210,12 @@ offset_right = 65.0
 offset_bottom = 23.0
 text = "Choice 1"
 metadata/_edit_use_anchors_ = true
+
+[node name="speallcast8" parent="." instance=ExtResource("8_fwhcr")]
+
+[node name="spellcast9" parent="." instance=ExtResource("9_awnxb")]
+
+[node name="spellcast10" parent="." instance=ExtResource("10_yi28o")]
 
 [connection signal="pressed" from="choices/choice2" to="choices/choice2" method="_on_pressed"]
 [connection signal="pressed" from="choices/choice 1" to="choices/choice 1" method="_on_pressed"]
