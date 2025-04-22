@@ -11,7 +11,7 @@
 [ext_resource type="Script" uid="uid://drr0od33g8qxa" path="res://CallbackToScript.gd" id="9_6i24i"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_if77y"]
-font_size = 150
+font_size = 400
 font_color = Color(0, 0, 0, 0.898039)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n23yb"]
