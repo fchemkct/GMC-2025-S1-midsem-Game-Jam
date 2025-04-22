@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://qnjndh1p7rv1" path="res://characters/orion animations/orion_walk.png" id="2_i3pqv"]
 [ext_resource type="Texture2D" uid="uid://cpsegeo8ubtdb" path="res://characters/orion animations/orion_walk_back.png" id="2_sweqy"]
 [ext_resource type="Texture2D" uid="uid://cirjqwil0hxkn" path="res://characters/orion animations/orion_walk_right.png" id="4_2hs0m"]
-[ext_resource type="Script" path="res://area_2d.gd" id="6_2hs0m"]
+[ext_resource type="Script" uid="uid://dl7d5qivrj7h" path="res://area_2d.gd" id="6_2hs0m"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rgmpb"]
 radius = 20.0
@@ -334,6 +334,7 @@ frame_progress = 0.366672
 script = ExtResource("6_2hs0m")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+visible = false
 position = Vector2(0.300003, 3.8)
 scale = Vector2(1.5, 1.5)
 shape = SubResource("CapsuleShape2D_rgmpb")

@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://bpjbc83oipx5n"]
+
+[ext_resource type="Texture2D" uid="uid://dxaneknhegapr" path="res://terrain sprites/handcuffs.png" id="1_028hn"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1930.0
+offset_bottom = 1144.0
+texture = ExtResource("1_028hn")

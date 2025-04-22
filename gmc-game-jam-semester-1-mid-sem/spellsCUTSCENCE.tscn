@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://bxmqfj5p84tsb"]
+
+[ext_resource type="Texture2D" uid="uid://1tb1wu16ktsj" path="res://terrain sprites/spells.png" id="1_5j4x5"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1924.0
+offset_bottom = 1076.0
+texture = ExtResource("1_5j4x5")

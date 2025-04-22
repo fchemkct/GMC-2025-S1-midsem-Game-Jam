@@ -1,5 +1,5 @@
 extends Control
-
+		   
 @onready var dialogue
 @onready var SpellCast
 @export var dialogue_gdscript : GDScript = null  ##this is where we drag the script

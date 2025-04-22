@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://cxa34om6jw4lt"]
+
+[ext_resource type="Texture2D" uid="uid://dofxivdjx0jy7" path="res://terrain sprites/dagger.png" id="1_avkgg"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1962.0
+offset_bottom = 1110.0
+texture = ExtResource("1_avkgg")

@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://urac1wtg0x4c"]
+
+[ext_resource type="Texture2D" uid="uid://bjwoit5nneytr" path="res://terrain sprites/moon.png" id="1_gyeu2"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1906.0
+offset_bottom = 1092.0
+texture = ExtResource("1_gyeu2")
