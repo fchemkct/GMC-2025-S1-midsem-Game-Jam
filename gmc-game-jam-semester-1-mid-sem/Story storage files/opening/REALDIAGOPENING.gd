@@ -69,7 +69,7 @@ func display_next_line():
 		##get_tree().change_scene_to_file("res://spellcast_1.tscn")
 
 func _input(event):
-	if event.is_action_pressed("ui_accept") && !choice_on && !spell_on:  # Press Enter/Space/etc
+	if event.is_action_pressed("dialogue") && !choice_on && !spell_on:  # Press Enter/Space/etc
 		display_next_line()
 		
 func _dialogueEnd():

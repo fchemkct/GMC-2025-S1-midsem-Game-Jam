@@ -1,4 +1,4 @@
-[gd_scene load_steps=53 format=3 uid="uid://n5slb2dfjkua"]
+[gd_scene load_steps=57 format=3 uid="uid://n5slb2dfjkua"]
 
 [ext_resource type="PackedScene" uid="uid://bnrqduc4ah6q4" path="res://player.tscn" id="1_txw6s"]
 [ext_resource type="Texture2D" uid="uid://dblb7bk1f5uat" path="res://characters/characters/botanist.png" id="3_84pmw"]
@@ -38,6 +38,9 @@
 [ext_resource type="PackedScene" uid="uid://c6abc8bg34usi" path="res://Story storage files/Exclamation 2/dialogue_boxExclamation2.tscn" id="36_ib2m5"]
 [ext_resource type="PackedScene" uid="uid://fha2iax8ty4n" path="res://dialogue_boxexclamation3.tscn" id="37_lbful"]
 [ext_resource type="PackedScene" uid="uid://c1gdbvdajbv33" path="res://dialogue_boxEXCLAMATION4.tscn" id="38_lbful"]
+[ext_resource type="PackedScene" uid="uid://bnb6ws874m1op" path="res://EXCLAMATION5.tscn" id="39_gjiaj"]
+[ext_resource type="PackedScene" uid="uid://cfylpnohshskt" path="res://dialogue_boxEXCLAMATION5.tscn" id="39_sb33a"]
+[ext_resource type="PackedScene" path="res://dialogue_boxTELESCOPE.tscn" id="41_7nfvl"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_355fe"]
 radius = 197.0
@@ -87,6 +90,10 @@ height = 618.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gjiaj"]
 size = Vector2(264.801, 679.497)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ml22k"]
+radius = 45.0
+height = 456.0
 
 [node name="Normal" type="Node2D"]
 scale = Vector2(0.1, 0.1)
@@ -684,12 +691,52 @@ text = "Exclamation5"
 horizontal_alignment = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="Control" type="Control" parent="exclamation5"]
+[node name="Node2D" type="Node2D" parent="exclamation5"]
+
+[node name="Control" type="Control" parent="exclamation5/Node2D"]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 metadata/_edit_use_anchors_ = true
+
+[node name="DialogueBox" parent="exclamation5/Node2D/Control" instance=ExtResource("39_sb33a")]
+layout_mode = 1
+
+[node name="CharacterBody2D" parent="exclamation5/Node2D/Control" instance=ExtResource("39_gjiaj")]
+
+[node name="telescope" type="CharacterBody2D" parent="."]
+script = ExtResource("31_n1whf")
+
+[node name="TavernOwner" type="Sprite2D" parent="telescope"]
+visible = false
+position = Vector2(7.62939e-06, 0)
+scale = Vector2(0.596667, 0.562222)
+texture = ExtResource("35_i57lt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="telescope"]
+position = Vector2(22, 1)
+shape = SubResource("CapsuleShape2D_ml22k")
+
+[node name="NameTag" type="Label" parent="telescope"]
+offset_left = -145.0
+offset_top = -637.0
+offset_right = 116.0
+offset_bottom = -360.0
+theme_override_font_sizes/font_size = 100
+text = "telescope"
+horizontal_alignment = 1
+
+[node name="Node2D" type="Node2D" parent="telescope"]
+
+[node name="Control" type="Control" parent="telescope/Node2D"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="DialogueBox" parent="telescope/Node2D/Control" instance=ExtResource("41_7nfvl")]
+layout_mode = 1
 
 [editable path="CanvasLayer"]
 [editable path="coffin/Node2D/Control/DialogueBox"]
