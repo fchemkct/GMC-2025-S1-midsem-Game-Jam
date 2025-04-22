@@ -1,7 +1,7 @@
 extends CharacterBody2D
 signal inRange
 
-var speed = 800
+var speed = 200
 var screenSize
 var canTalk = false; ##determines if player is in range to talk to another npc
 ##@onready var dialogue = $"../CharactersDialogue"
@@ -48,24 +48,15 @@ func walk(delta: float):
 			$AnimatedSprite2D.animation = "back"
 	
 			
-	position  += velocity * delta
+	##position  += velocity * delta
 	# Use move_and_slide() to handle physics-based movement and collisions
-	velocity = move_and_slide()
+	var collision = move_and_collide(velocity * delta)
 	##position = position.clamp(Vector2.ZERO, screenSize)
 	
-
-
-func _on_area_2d_body_entered(body: Node2D) -> void:
-	##hide()
-	##inRange.emit()
-	canTalk = true
+	if collision:
+		NpcTalkOrder.inRange = true
+		##print("enter:cantalk bool is: " + NpcTalkOrder.inRange)
+	else:
+		NpcTalkOrder.inRange = false
+		##print("exit:cantalk bool is: " + NpcTalkOrder.inRange)
 	
-	print("enter:cantalk bool is: " + str(canTalk))
-
-
-
-func _on_area_2d_body_exited(body: Node2D) -> void:
-	canTalk = false
-	print("exit:cantalk bool is: " + str(canTalk))
-	 # Replace with function body.
- # Replace with function body.
