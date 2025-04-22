@@ -20,5 +20,5 @@ extends Control
 "Tauri sighs. You can see a mix of emotions weighing her down. <i>Stress.</i> Anger. Concern. #speaker:Narrator",
 "I’ll do my best to find the truth. #speaker:Orion",
 "Take care, Orion. #speaker:Arneb",
-
+"#end:rah",
 ]

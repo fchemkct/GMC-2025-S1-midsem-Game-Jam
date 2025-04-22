@@ -13,6 +13,8 @@ func  _input(event):
 		_talk()
 
 func _talk():
+	print("talked")
+	$Control.show()
 	dialogue.display_next_line()
 	
 

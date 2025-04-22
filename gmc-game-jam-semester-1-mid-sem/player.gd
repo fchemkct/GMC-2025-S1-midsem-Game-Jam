@@ -57,6 +57,7 @@ func walk(delta: float):
 		NpcTalkOrder.inRange = true
 		##print("enter:cantalk bool is: " + NpcTalkOrder.inRange)
 	else:
+		await get_tree().create_timer(2).timeout 
 		NpcTalkOrder.inRange = false
 		##print("exit:cantalk bool is: " + NpcTalkOrder.inRange)
 	

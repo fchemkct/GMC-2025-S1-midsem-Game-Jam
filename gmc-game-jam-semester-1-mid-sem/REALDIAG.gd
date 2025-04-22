@@ -55,6 +55,13 @@ func display_next_line():
 			##get_tree().change_scene_to_file("res://spellcast_1.tscn")
 			##$choices.show()
 			##current_line += 1
+		elif dlines.lines[current_line].contains("#end"):
+			var hashtag = dlines.lines[current_line].find(":")
+			var start = hashtag + 1
+			NpcTalkOrder.canTalk = dlines.lines[current_line].substr(start)
+			print(NpcTalkOrder.canTalk)
+			_dialogueEnd()
+			##current_line += 1
 	else:
 		_dialogueEnd()
 		emit_signal("dialogue_finished")  # Optional: use this to trigger spellcast, etc.
