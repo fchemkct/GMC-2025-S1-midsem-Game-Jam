@@ -9,4 +9,5 @@ extends Node
 "Most magicians would never consider doing it.",
 "…Anyways, let's head home. I’ll need to put our findings together to present to the town tomorrow.",
 "It’s just the building on the right of the tavern.",
+"end:orionhouse"
 ]

@@ -17,5 +17,7 @@ extends Node
 "Orion smiles, drawing his wand. You realize he’d never used it to cast spells until now. #speaker:Narrator",
 "It’s a dark metal entwined with wood, stained with something that smells of iron.",
 "It’s commendable, really. But I’m afraid I’ll have to get rid of you now. #speaker:Orion",
-"Sorry for the trouble, Lacaille."
+"Sorry for the trouble, Lacaille.",
+"#cutscence",
+"#spellcasts"
 ]

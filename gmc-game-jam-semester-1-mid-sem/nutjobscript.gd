@@ -7,4 +7,5 @@ extends Node
 Horo’s been obsessed with magic.",
 "As far as I can tell, his findings are all based on rumor and speculation, though.", 
 "It’s a shame, considering how he does have artistic talent. But these runes and circles don’t do anything.",
+"#choice2",
 ]

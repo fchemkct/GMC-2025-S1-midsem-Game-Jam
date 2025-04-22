@@ -22,5 +22,5 @@ as she’d only be convicted for manslaughter; without intention, nor excessive 
 "You’ve never questioned the nature of Orion’s spells, until now.",
 "…Yes, of course. #speaker:Sheriff",
 "I’ll get you those documents about Arneb tomorrow.",
-""
+"#end:Exclamation5"
 ]
