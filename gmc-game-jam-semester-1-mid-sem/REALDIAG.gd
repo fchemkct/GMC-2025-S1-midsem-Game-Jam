@@ -7,7 +7,6 @@ var dlines = null
 var current_line = 0
 var choice_on = false
 var spell_on = false
-@onready var SpellCast = $SpellCast
 signal dialogue_finished
 
 
@@ -18,6 +17,7 @@ func _ready():
 	if get_node_or_null("$choice2"):
 		$choice2.hide()
 	if get_node_or_null("$SpellCast"):
+		var SpellCast = $SpellCast
 		$SpellCast.hide()
 	hide()
 	##display_next_line()
@@ -53,7 +53,7 @@ func display_next_line():
 			await get_tree().create_timer(0.5).timeout 
 			##spell_on = true
 			NpcTalkOrder.spellOn = true
-			$SpellCast.show()
+			##SpellCast.show()
 			##$spellcast1.set_process(true)
 			##get_tree().change_scene_to_file("res://spellcast_1.tscn")
 			##$choices.show()
@@ -62,6 +62,7 @@ func display_next_line():
 			var hashtag = dlines.lines[current_line].find(":")
 			var start = hashtag + 1
 			NpcTalkOrder.canTalk = dlines.lines[current_line].substr(start)
+			NpcTalkOrder.isTalking = false
 			print(NpcTalkOrder.canTalk)
 			_dialogueEnd()
 			##current_line += 1
@@ -78,7 +79,8 @@ func _input(event):		##might merge this with npc's input
 """
 		
 func _dialogueEnd():
-	hide()
+	##hide()
+	print("dialogue ended")
 	
 func start_dialogue():
 	current_line = 0

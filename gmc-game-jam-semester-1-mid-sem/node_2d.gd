@@ -8,7 +8,6 @@ var points = []
 var drawing = false
 
 
-
 # Handles input events (mouse or touch)
 func _input(event):
 	if event is InputEventMouseButton:

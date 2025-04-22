@@ -22,7 +22,7 @@ bg_color = Color(0.53528, 0.654675, 0.212876, 1)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_351bv"]
 bg_color = Color(0.73111, 0.573056, 0.268446, 1)
 
-[node name="DialogueBox2" type="Control"]
+[node name="DialogueBox" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0

@@ -42,4 +42,7 @@ metadata/_edit_use_anchors_ = true
 [node name="DialogueBox" parent="Control" instance=ExtResource("3_d2llk")]
 layout_mode = 1
 
+[node name="label text" parent="Control/DialogueBox/Node2D/Name panel" index="1"]
+visible = false
+
 [editable path="Control/DialogueBox"]

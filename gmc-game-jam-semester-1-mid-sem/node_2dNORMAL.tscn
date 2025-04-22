@@ -1,24 +1,27 @@
-[gd_scene load_steps=24 format=3 uid="uid://n5slb2dfjkua"]
+[gd_scene load_steps=28 format=3 uid="uid://n5slb2dfjkua"]
 
 [ext_resource type="PackedScene" uid="uid://bnrqduc4ah6q4" path="res://player.tscn" id="1_txw6s"]
-[ext_resource type="PackedScene" uid="uid://coc7biftqup55" path="res://sherrif.tscn" id="2_cejpv"]
+[ext_resource type="PackedScene" path="res://Npc.tscn" id="2_cejpv"]
 [ext_resource type="PackedScene" uid="uid://dhepxcnxnw856" path="res://Story storage files/Arneb/Botanist.tscn" id="2_gj118"]
 [ext_resource type="PackedScene" uid="uid://cobti6h5lbw1" path="res://doctor.tscn" id="3_g80de"]
 [ext_resource type="Script" uid="uid://c2hi7pbdvyjc6" path="res://npc.gd" id="3_gj118"]
 [ext_resource type="Texture2D" uid="uid://be8r43boghfw7" path="res://terrain sprites/background.png" id="4_g80de"]
 [ext_resource type="PackedScene" uid="uid://bnkhxhler4qmi" path="res://Story storage files/gien/mailman.tscn" id="4_mo42o"]
-[ext_resource type="PackedScene" uid="uid://ckfq0d2ievmte" path="res://astro_andbotanist.tscn" id="5_mo42o"]
+[ext_resource type="PackedScene" path="res://astro_andbotanist.tscn" id="5_mo42o"]
 [ext_resource type="PackedScene" uid="uid://dyhsa7tqwf3wn" path="res://gardening_book.tscn" id="5_yj753"]
-[ext_resource type="PackedScene" uid="uid://chkv487d7fx7l" path="res://orion_house.tscn" id="6_cejpv"]
+[ext_resource type="PackedScene" path="res://orion_house.tscn" id="6_cejpv"]
 [ext_resource type="PackedScene" uid="uid://dspnv5ms5ihdm" path="res://journal.tscn" id="6_lm85a"]
 [ext_resource type="PackedScene" uid="uid://cb6qp8aiuo216" path="res://tavernhouse.tscn" id="7_txw6s"]
 [ext_resource type="PackedScene" uid="uid://hspaev627dif" path="res://pesticide.tscn" id="7_u6en8"]
 [ext_resource type="PackedScene" uid="uid://bfsxy58x00ood" path="res://mail.tscn" id="8_0g7p0"]
 [ext_resource type="PackedScene" uid="uid://bl3uhtnb6p7es" path="res://townhouse_house.tscn" id="8_txw6s"]
-[ext_resource type="PackedScene" uid="uid://dqsdwf3pijiyi" path="res://nutjob_house.tscn" id="9_txw6s"]
+[ext_resource type="PackedScene" path="res://nutjob_house.tscn" id="9_txw6s"]
 [ext_resource type="PackedScene" uid="uid://drs7r18k2tk86" path="res://nutjob.tscn" id="9_u0smt"]
-[ext_resource type="PackedScene" uid="uid://3tyic821r1j0" path="res://doctorandsherrif.tscn" id="10_0g7p0"]
+[ext_resource type="PackedScene" path="res://doctorandsherrif.tscn" id="10_0g7p0"]
 [ext_resource type="PackedScene" uid="uid://cfjq3bvg5aqm8" path="res://mailmanhouse.tscn" id="11_u0smt"]
+[ext_resource type="PackedScene" uid="uid://cyy5envltj1tx" path="res://minimap.tscn" id="23_hyq37"]
+[ext_resource type="Texture2D" uid="uid://s13oomnv0c3b" path="res://characters/characters/astrologist.png" id="24_saqfl"]
+[ext_resource type="PackedScene" uid="uid://0p5e15bf2yxs" path="res://Story storage files/Coffin/dialogue_boxCoffin.tscn" id="25_83adm"]
 [ext_resource type="PackedScene" uid="uid://d3uu4h21hbkgb" path="res://Story storage files/Sadal/dialogue_boxSADAL.tscn" id="31_84pmw"]
 [ext_resource type="Script" uid="uid://c103ebm4crq6q" path="res://npcTalk.gd" id="31_n1whf"]
 [ext_resource type="Texture2D" uid="uid://swmnlgs4hrvj" path="res://characters/characters/tavern_owner.png" id="32_6akxl"]
@@ -26,6 +29,9 @@
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4xy5q"]
 radius = 152.0
 height = 928.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i2kc8"]
+size = Vector2(1466.61, 794.791)
 
 [node name="Normal" type="Node2D"]
 scale = Vector2(0.1, 0.1)
@@ -157,3 +163,59 @@ layout_mode = 1
 [node name="nutjob" parent="." instance=ExtResource("9_u0smt")]
 position = Vector2(2990, -2020)
 disable_mode = 2
+
+[node name="CanvasLayer" parent="." instance=ExtResource("23_hyq37")]
+visible = false
+
+[node name="coffin" type="CharacterBody2D" parent="."]
+z_index = 4
+position = Vector2(410, 1460)
+script = ExtResource("31_n1whf")
+
+[node name="Astrologist" type="Sprite2D" parent="coffin"]
+position = Vector2(11, -11)
+scale = Vector2(0.615556, 0.623889)
+texture = ExtResource("24_saqfl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coffin"]
+position = Vector2(51, -59)
+scale = Vector2(0.615556, 0.623889)
+shape = SubResource("RectangleShape2D_i2kc8")
+
+[node name="NameTag" type="Label" parent="coffin"]
+visible = false
+offset_left = -145.0
+offset_top = -637.0
+offset_right = 116.0
+offset_bottom = -360.0
+theme_override_font_sizes/font_size = 100
+text = "Coffin"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Control" type="Control" parent="coffin"]
+z_index = 11
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+metadata/_edit_use_anchors_ = true
+
+[node name="DialogueBox" parent="coffin/Control" instance=ExtResource("25_83adm")]
+layout_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureRect" parent="coffin/Control/DialogueBox" index="0"]
+metadata/_edit_use_anchors_ = true
+
+[node name="Textlabel" parent="coffin/Control/DialogueBox" index="1"]
+metadata/_edit_use_anchors_ = true
+
+[node name="choice2" parent="coffin/Control/DialogueBox/choices" index="0"]
+metadata/_edit_use_anchors_ = true
+
+[node name="choice 1" parent="coffin/Control/DialogueBox/choices" index="1"]
+metadata/_edit_use_anchors_ = true
+
+[editable path="CanvasLayer"]
+[editable path="coffin/Control/DialogueBox"]
