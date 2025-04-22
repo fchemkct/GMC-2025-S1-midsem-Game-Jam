@@ -37,19 +37,22 @@ func display_next_line():
 			print("speaker #")
 		elif dlines.lines[current_line].contains("#choices"):
 			print("# parsed through")
-			choice_on = true
+			##choice_on = true
+			NpcTalkOrder.choiceOn = true
 			$choices.show()
 			current_line += 1
 		elif dlines.lines[current_line].contains("#choice2"):
 			print("# 2 parsed through")
-			choice_on = true
+			##choice_on = true
+			NpcTalkOrder.choiceOn = true
 			$choice2.show()
 			current_line += 1
 	
 		elif dlines.lines[current_line].contains("#spellcasts"):
 			print("# da whimsical spell casturrrgh")
 			await get_tree().create_timer(0.5).timeout 
-			spell_on = true
+			##spell_on = true
+			NpcTalkOrder.spellOn = true
 			$SpellCast.show()
 			##$spellcast1.set_process(true)
 			##get_tree().change_scene_to_file("res://spellcast_1.tscn")
@@ -68,9 +71,11 @@ func display_next_line():
 		 
 		##get_tree().change_scene_to_file("res://spellcast_1.tscn")
 
-func _input(event):
+"""
+func _input(event):		##might merge this with npc's input
 	if event.is_action_pressed("ui_accept") && !choice_on && !spell_on:  # Press Enter/Space/etc
 		display_next_line()
+"""
 		
 func _dialogueEnd():
 	hide()

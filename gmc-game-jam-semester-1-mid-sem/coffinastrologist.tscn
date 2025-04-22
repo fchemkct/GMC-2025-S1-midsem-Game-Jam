@@ -7,7 +7,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i2kc8"]
 size = Vector2(1466.61, 794.791)
 
-[node name="Area2D" type="Area2D"]
+[node name="Area2D" type="CharacterBody2D"]
 script = ExtResource("1_5xfj5")
 
 [node name="Astrologist" type="Sprite2D" parent="."]
@@ -28,12 +28,15 @@ offset_bottom = -360.0
 theme_override_font_sizes/font_size = 100
 text = "Coffin"
 horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+metadata/_edit_use_anchors_ = true
 
 [node name="DialogueBox" parent="Control" instance=ExtResource("2_xm76d")]
 layout_mode = 1
+metadata/_edit_use_anchors_ = true

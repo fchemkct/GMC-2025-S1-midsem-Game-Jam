@@ -1,0 +1,45 @@
+[gd_scene load_steps=5 format=3 uid="uid://bjq7sekqi0bme"]
+
+[ext_resource type="Script" uid="uid://b5aqt2gv2bkku" path="res://Story storage files/opening/opening_npc_script.gd" id="1_a033w"]
+[ext_resource type="Texture2D" uid="uid://swmnlgs4hrvj" path="res://characters/characters/tavern_owner.png" id="2_bmbp7"]
+[ext_resource type="PackedScene" uid="uid://c5gymfcgkuabo" path="res://Story storage files/opening/dialogue_boxOPENING.tscn" id="3_d2llk"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_67qdd"]
+radius = 152.0
+height = 928.0
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_a033w")
+
+[node name="TavernOwner" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(7.62939e-06, 0)
+scale = Vector2(0.596667, 0.562222)
+texture = ExtResource("2_bmbp7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(-33, -34)
+shape = SubResource("CapsuleShape2D_67qdd")
+
+[node name="NameTag" type="Label" parent="."]
+offset_left = -145.0
+offset_top = -637.0
+offset_right = 116.0
+offset_bottom = -360.0
+theme_override_font_sizes/font_size = 100
+text = "Opening"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+metadata/_edit_use_anchors_ = true
+
+[node name="DialogueBox" parent="Control" instance=ExtResource("3_d2llk")]
+layout_mode = 1
+
+[editable path="Control/DialogueBox"]

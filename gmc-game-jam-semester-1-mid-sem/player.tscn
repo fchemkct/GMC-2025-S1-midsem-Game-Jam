@@ -319,7 +319,7 @@ script = ExtResource("1_sweqy")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
 position = Vector2(0.300003, 3.8)
-scale = Vector2(1.5, 1.5)
+scale = Vector2(1.148, 0.788)
 shape = SubResource("CapsuleShape2D_rgmpb")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

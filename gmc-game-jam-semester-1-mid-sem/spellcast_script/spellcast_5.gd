@@ -99,7 +99,7 @@ func paths_match(original: Array[Vector2], drawn: Array[Vector2], tolerance := 2
 		
 func _unhandled_input(event):
 	if event is InputEventKey and event.pressed and event.keycode == KEY_SPACE:
-		if $CallBack.dialogue.spell_on && spell5:
+		if NpcTalkOrder.spellOn && spell5:
 			compare_trace_to_original()
 	else:
 		return

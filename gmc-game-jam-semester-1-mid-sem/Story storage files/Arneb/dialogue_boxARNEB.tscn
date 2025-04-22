@@ -125,21 +125,18 @@ offset_top = 101.0
 offset_right = 8.0
 offset_bottom = 109.0
 scale = Vector2(2, 2)
-metadata/_edit_use_anchors_ = true
 
 [node name="panel" type="Panel" parent="Node2D/Name panel"]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 scale = Vector2(4, 1)
-metadata/_edit_use_anchors_ = true
 
 [node name="label text" type="Label" parent="Node2D/Name panel"]
 layout_mode = 0
 offset_right = 65.0
 offset_bottom = 23.0
 text = "Choice 1"
-metadata/_edit_use_anchors_ = true
 
 [node name="SpellCast" type="Node2D" parent="."]
 
