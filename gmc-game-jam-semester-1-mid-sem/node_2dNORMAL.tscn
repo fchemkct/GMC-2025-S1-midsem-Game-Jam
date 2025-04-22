@@ -1,37 +1,92 @@
-[gd_scene load_steps=28 format=3 uid="uid://n5slb2dfjkua"]
+[gd_scene load_steps=53 format=3 uid="uid://n5slb2dfjkua"]
 
 [ext_resource type="PackedScene" uid="uid://bnrqduc4ah6q4" path="res://player.tscn" id="1_txw6s"]
-[ext_resource type="PackedScene" path="res://Npc.tscn" id="2_cejpv"]
-[ext_resource type="PackedScene" uid="uid://dhepxcnxnw856" path="res://Story storage files/Arneb/Botanist.tscn" id="2_gj118"]
-[ext_resource type="PackedScene" uid="uid://cobti6h5lbw1" path="res://doctor.tscn" id="3_g80de"]
-[ext_resource type="Script" uid="uid://c2hi7pbdvyjc6" path="res://npc.gd" id="3_gj118"]
+[ext_resource type="Texture2D" uid="uid://dblb7bk1f5uat" path="res://characters/characters/botanist.png" id="3_84pmw"]
 [ext_resource type="Texture2D" uid="uid://be8r43boghfw7" path="res://terrain sprites/background.png" id="4_g80de"]
-[ext_resource type="PackedScene" uid="uid://bnkhxhler4qmi" path="res://Story storage files/gien/mailman.tscn" id="4_mo42o"]
-[ext_resource type="PackedScene" path="res://astro_andbotanist.tscn" id="5_mo42o"]
-[ext_resource type="PackedScene" uid="uid://dyhsa7tqwf3wn" path="res://gardening_book.tscn" id="5_yj753"]
-[ext_resource type="PackedScene" path="res://orion_house.tscn" id="6_cejpv"]
-[ext_resource type="PackedScene" uid="uid://dspnv5ms5ihdm" path="res://journal.tscn" id="6_lm85a"]
+[ext_resource type="PackedScene" uid="uid://fsu0rcqg5rd6" path="res://Story storage files/Arneb/dialogue_boxARNEB.tscn" id="4_tsh4l"]
+[ext_resource type="PackedScene" uid="uid://bd7wmjh1sguxv" path="res://astro_andbotanist.tscn" id="5_mo42o"]
+[ext_resource type="Texture2D" uid="uid://dk32xnjr7fdxm" path="res://characters/characters/doctor.png" id="5_tsh4l"]
+[ext_resource type="PackedScene" uid="uid://chkv487d7fx7l" path="res://orion_house.tscn" id="6_cejpv"]
+[ext_resource type="Texture2D" uid="uid://xr42hkothikk" path="res://assets/gardening_book.png" id="7_n1whf"]
 [ext_resource type="PackedScene" uid="uid://cb6qp8aiuo216" path="res://tavernhouse.tscn" id="7_txw6s"]
-[ext_resource type="PackedScene" uid="uid://hspaev627dif" path="res://pesticide.tscn" id="7_u6en8"]
-[ext_resource type="PackedScene" uid="uid://bfsxy58x00ood" path="res://mail.tscn" id="8_0g7p0"]
+[ext_resource type="PackedScene" path="res://dialogue_boxGARDENINGBOOK.tscn" id="8_6akxl"]
+[ext_resource type="Texture2D" uid="uid://h1thb3nqx33o" path="res://characters/characters/mailman.png" id="8_83adm"]
+[ext_resource type="Texture2D" uid="uid://dhibo1k4aex60" path="res://assets/mail.png" id="8_kpmq8"]
 [ext_resource type="PackedScene" uid="uid://bl3uhtnb6p7es" path="res://townhouse_house.tscn" id="8_txw6s"]
+[ext_resource type="PackedScene" path="res://dialogue_boxMAILS.tscn" id="9_forea"]
+[ext_resource type="Texture2D" uid="uid://d2c3pp1hee6e6" path="res://assets/journal.png" id="9_i57lt"]
 [ext_resource type="PackedScene" path="res://nutjob_house.tscn" id="9_txw6s"]
 [ext_resource type="PackedScene" uid="uid://drs7r18k2tk86" path="res://nutjob.tscn" id="9_u0smt"]
 [ext_resource type="PackedScene" path="res://doctorandsherrif.tscn" id="10_0g7p0"]
+[ext_resource type="PackedScene" path="res://dialogue_boxJOURNAL.tscn" id="10_ib2m5"]
+[ext_resource type="Texture2D" uid="uid://cy7a4ij6oogpq" path="res://assets/pesticide.png" id="11_lbful"]
 [ext_resource type="PackedScene" uid="uid://cfjq3bvg5aqm8" path="res://mailmanhouse.tscn" id="11_u0smt"]
+[ext_resource type="PackedScene" uid="uid://b4yr52cv5ojvv" path="res://Story storage files/tauri/dialogue_boxTAURI.tscn" id="12_cejpv"]
+[ext_resource type="PackedScene" path="res://dialogue_boxPESTICIDE.tscn" id="12_gjiaj"]
 [ext_resource type="PackedScene" uid="uid://cyy5envltj1tx" path="res://minimap.tscn" id="23_hyq37"]
+[ext_resource type="Texture2D" uid="uid://0ebe4qpwbmw4" path="res://characters/sheriff (2).png" id="24_83adm"]
 [ext_resource type="Texture2D" uid="uid://s13oomnv0c3b" path="res://characters/characters/astrologist.png" id="24_saqfl"]
 [ext_resource type="PackedScene" uid="uid://0p5e15bf2yxs" path="res://Story storage files/Coffin/dialogue_boxCoffin.tscn" id="25_83adm"]
+[ext_resource type="PackedScene" uid="uid://bpebhmsuvowff" path="res://dialogue_boxSHERRIF.tscn" id="25_kpmq8"]
 [ext_resource type="PackedScene" uid="uid://d3uu4h21hbkgb" path="res://Story storage files/Sadal/dialogue_boxSADAL.tscn" id="31_84pmw"]
+[ext_resource type="PackedScene" uid="uid://bjn3tcfqhmdon" path="res://Story storage files/gien/dialogue_boxGIEN.tscn" id="31_ggt0o"]
 [ext_resource type="Script" uid="uid://c103ebm4crq6q" path="res://npcTalk.gd" id="31_n1whf"]
 [ext_resource type="Texture2D" uid="uid://swmnlgs4hrvj" path="res://characters/characters/tavern_owner.png" id="32_6akxl"]
+[ext_resource type="Texture2D" uid="uid://bav7lrqoof5g3" path="res://check.png" id="33_n1whf"]
+[ext_resource type="PackedScene" uid="uid://ge4merxv8nt6" path="res://Story storage files/Exclamation 1/dialogue_boxEXCLAMATION.tscn" id="34_6akxl"]
+[ext_resource type="Texture2D" uid="uid://bymakhwwkgspa" path="res://Story storage files/exclamation.png" id="35_i57lt"]
+[ext_resource type="PackedScene" uid="uid://c6abc8bg34usi" path="res://Story storage files/Exclamation 2/dialogue_boxExclamation2.tscn" id="36_ib2m5"]
+[ext_resource type="PackedScene" uid="uid://fha2iax8ty4n" path="res://dialogue_boxexclamation3.tscn" id="37_lbful"]
+[ext_resource type="PackedScene" uid="uid://c1gdbvdajbv33" path="res://dialogue_boxEXCLAMATION4.tscn" id="38_lbful"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_355fe"]
+radius = 197.0
+height = 618.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3ok8u"]
+radius = 218.0
+height = 1250.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ku616"]
+size = Vector2(303, 224)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_julo4"]
+size = Vector2(315, 328)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i3yv4"]
+size = Vector2(240, 387)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7x436"]
+size = Vector2(571, 328)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ftmwj"]
+radius = 165.0
+height = 884.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4xy5q"]
 radius = 152.0
 height = 928.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i2kc8"]
-size = Vector2(1466.61, 794.791)
+size = Vector2(246.931, 642.631)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_sdap6"]
+radius = 26.9
+height = 96.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lbful"]
+size = Vector2(246.931, 642.631)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_sb33a"]
+radius = 197.0
+height = 618.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gjiaj"]
+radius = 197.0
+height = 618.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gjiaj"]
+size = Vector2(264.801, 679.497)
 
 [node name="Normal" type="Node2D"]
 scale = Vector2(0.1, 0.1)
@@ -49,40 +104,262 @@ limit_top = -390
 limit_right = 560
 limit_bottom = 360
 
-[node name="botanist" parent="." instance=ExtResource("2_gj118")]
+[node name="botanist" type="CharacterBody2D" parent="."]
 z_index = 2
 position = Vector2(-450, 2130)
 disable_mode = 2
+script = ExtResource("31_n1whf")
 
-[node name="doctor" parent="." instance=ExtResource("3_g80de")]
+[node name="Botanist" type="Sprite2D" parent="botanist"]
+texture = ExtResource("3_84pmw")
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="botanist"]
+visibility_layer = 3
+position = Vector2(15, -112)
+shape = SubResource("CapsuleShape2D_355fe")
+
+[node name="NameTag" type="Label" parent="botanist"]
+offset_left = -145.0
+offset_top = -637.0
+offset_right = 116.0
+offset_bottom = -360.0
+theme_override_font_sizes/font_size = 100
+text = "Arneb"
+horizontal_alignment = 1
+
+[node name="Node2D" type="Node2D" parent="botanist"]
+
+[node name="Control" type="Control" parent="botanist/Node2D"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="DialogueBox" parent="botanist/Node2D/Control" instance=ExtResource("4_tsh4l")]
+layout_mode = 1
+
+[node name="doctor" type="CharacterBody2D" parent="."]
 z_index = 2
 position = Vector2(-1170, -1880)
 disable_mode = 2
+script = ExtResource("31_n1whf")
 
-[node name="gardening_Book" parent="." instance=ExtResource("5_yj753")]
+[node name="Doctor" type="Sprite2D" parent="doctor"]
+position = Vector2(38, 0)
+scale = Vector2(0.7675, 0.751944)
+texture = ExtResource("5_tsh4l")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="doctor"]
+position = Vector2(78, 0)
+scale = Vector2(1, 1)
+shape = SubResource("CapsuleShape2D_3ok8u")
+
+[node name="NameTag" type="Label" parent="doctor"]
+offset_left = -58.0
+offset_top = -788.0
+offset_right = 203.0
+offset_bottom = -511.0
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 100
+text = "Tauri"
+horizontal_alignment = 1
+
+[node name="Node2D" type="Node2D" parent="doctor"]
+scale = Vector2(1, 1)
+
+[node name="Control" type="Control" parent="doctor/Node2D"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="DialogueBox" parent="doctor/Node2D/Control" instance=ExtResource("12_cejpv")]
+layout_mode = 1
+
+[node name="gardening_Book" type="CharacterBody2D" parent="."]
 z_index = 2
 position = Vector2(-3400, 2380)
 disable_mode = 2
+script = ExtResource("31_n1whf")
 
-[node name="journal" parent="." instance=ExtResource("6_lm85a")]
+[node name="GardeningBook" type="Sprite2D" parent="gardening_Book"]
+position = Vector2(3467, -1733)
+scale = Vector2(1.75096, 1.37993)
+texture = ExtResource("7_n1whf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="gardening_Book"]
+position = Vector2(31.5, 62)
+shape = SubResource("RectangleShape2D_ku616")
+
+[node name="NameTag" type="Label" parent="gardening_Book"]
+offset_left = -145.0
+offset_top = -637.0
+offset_right = 116.0
+offset_bottom = -360.0
+theme_override_font_sizes/font_size = 100
+text = "gardenbook"
+horizontal_alignment = 1
+
+[node name="Node2D" type="Node2D" parent="gardening_Book"]
+
+[node name="Control" type="Control" parent="gardening_Book/Node2D"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="DialogueBox" parent="gardening_Book/Node2D/Control" instance=ExtResource("8_6akxl")]
+layout_mode = 1
+
+[node name="journal" type="CharacterBody2D" parent="."]
 z_index = 2
 position = Vector2(-2890, 2930)
 disable_mode = 2
+script = ExtResource("31_n1whf")
 
-[node name="pesticide" parent="." instance=ExtResource("7_u6en8")]
+[node name="Journal" type="Sprite2D" parent="journal"]
+position = Vector2(2447, -2598)
+scale = Vector2(1.58594, 1.63194)
+texture = ExtResource("9_i57lt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="journal"]
+position = Vector2(97.5, -19)
+shape = SubResource("RectangleShape2D_julo4")
+
+[node name="NameTag" type="Label" parent="journal"]
+offset_left = -145.0
+offset_top = -637.0
+offset_right = 116.0
+offset_bottom = -360.0
+theme_override_font_sizes/font_size = 100
+text = "journal"
+horizontal_alignment = 1
+
+[node name="Node2D" type="Node2D" parent="journal"]
+
+[node name="Control" type="Control" parent="journal/Node2D"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="DialogueBox" parent="journal/Node2D/Control" instance=ExtResource("10_ib2m5")]
+layout_mode = 1
+
+[node name="pesticide" type="CharacterBody2D" parent="."]
 z_index = 2
 position = Vector2(-2390, 2800)
 disable_mode = 2
+script = ExtResource("31_n1whf")
 
-[node name="mail" parent="." instance=ExtResource("8_0g7p0")]
+[node name="Pesticide" type="Sprite2D" parent="pesticide"]
+position = Vector2(2094, -2423)
+scale = Vector2(1.76063, 1.65556)
+texture = ExtResource("11_lbful")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pesticide"]
+position = Vector2(-21, 10.5)
+shape = SubResource("RectangleShape2D_i3yv4")
+
+[node name="NameTag" type="Label" parent="pesticide"]
+offset_left = -145.0
+offset_top = -637.0
+offset_right = 116.0
+offset_bottom = -360.0
+theme_override_font_sizes/font_size = 100
+text = "pesticide_bottle"
+horizontal_alignment = 1
+
+[node name="Node2D" type="Node2D" parent="pesticide"]
+
+[node name="Control" type="Control" parent="pesticide/Node2D"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="DialogueBox" parent="pesticide/Node2D/Control" instance=ExtResource("12_gjiaj")]
+layout_mode = 1
+
+[node name="mail" type="CharacterBody2D" parent="."]
 z_index = 2
 position = Vector2(-2690, 2480)
 disable_mode = 2
+script = ExtResource("31_n1whf")
 
-[node name="mailman" parent="." instance=ExtResource("4_mo42o")]
+[node name="Mail" type="Sprite2D" parent="mail"]
+position = Vector2(2562, -2514)
+scale = Vector2(1.74708, 1.99056)
+texture = ExtResource("8_kpmq8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="mail"]
+position = Vector2(-30.5, -19)
+shape = SubResource("RectangleShape2D_7x436")
+
+[node name="NameTag" type="Label" parent="mail"]
+offset_left = -145.0
+offset_top = -637.0
+offset_right = 116.0
+offset_bottom = -360.0
+theme_override_font_sizes/font_size = 100
+text = "letters"
+horizontal_alignment = 1
+
+[node name="Node2D" type="Node2D" parent="mail"]
+
+[node name="Control" type="Control" parent="mail/Node2D"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="DialogueBox" parent="mail/Node2D/Control" instance=ExtResource("9_forea")]
+layout_mode = 1
+
+[node name="mailman" type="CharacterBody2D" parent="."]
 z_index = 2
 position = Vector2(4180, 2650)
 disable_mode = 2
+script = ExtResource("31_n1whf")
+
+[node name="Mailman" type="Sprite2D" parent="mailman"]
+position = Vector2(-6.00003, 16)
+scale = Vector2(0.594444, 0.52)
+texture = ExtResource("8_83adm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="mailman"]
+position = Vector2(-8, -14)
+shape = SubResource("CapsuleShape2D_ftmwj")
+
+[node name="NameTag" type="Label" parent="mailman"]
+offset_left = -145.0
+offset_top = -637.0
+offset_right = 116.0
+offset_bottom = -360.0
+theme_override_font_sizes/font_size = 100
+text = "Gien"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Node2D" type="Node2D" parent="mailman"]
+
+[node name="Control" type="Control" parent="mailman/Node2D"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+metadata/_edit_use_anchors_ = true
+
+[node name="DialogueBox" parent="mailman/Node2D/Control" instance=ExtResource("31_ggt0o")]
+layout_mode = 1
 
 [node name="Background" type="Sprite2D" parent="."]
 z_index = -3
@@ -90,13 +367,6 @@ position = Vector2(654, -129)
 scale = Vector2(2.1, 2.1)
 texture = ExtResource("4_g80de")
 metadata/_edit_lock_ = true
-
-[node name="Npc" parent="." instance=ExtResource("2_cejpv")]
-z_index = 2
-position = Vector2(990, -2350)
-disable_mode = 2
-input_pickable = true
-script = ExtResource("3_gj118")
 
 [node name="astroandbotaniststatic" parent="." instance=ExtResource("5_mo42o")]
 position = Vector2(-1190, -350)
@@ -150,14 +420,16 @@ theme_override_font_sizes/font_size = 100
 text = "Sadal"
 horizontal_alignment = 1
 
-[node name="Control" type="Control" parent="tavern"]
+[node name="Node2D" type="Node2D" parent="tavern"]
+
+[node name="Control" type="Control" parent="tavern/Node2D"]
 visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="DialogueBox" parent="tavern/Control" instance=ExtResource("31_84pmw")]
+[node name="DialogueBox" parent="tavern/Node2D/Control" instance=ExtResource("31_84pmw")]
 layout_mode = 1
 
 [node name="nutjob" parent="." instance=ExtResource("9_u0smt")]
@@ -179,7 +451,7 @@ texture = ExtResource("24_saqfl")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="coffin"]
 position = Vector2(51, -59)
-scale = Vector2(0.615556, 0.623889)
+scale = Vector2(2.61554, 0.623889)
 shape = SubResource("RectangleShape2D_i2kc8")
 
 [node name="NameTag" type="Label" parent="coffin"]
@@ -193,7 +465,9 @@ text = "Coffin"
 horizontal_alignment = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="Control" type="Control" parent="coffin"]
+[node name="Node2D" type="Node2D" parent="coffin"]
+
+[node name="Control" type="Control" parent="coffin/Node2D"]
 visible = false
 z_index = 11
 layout_mode = 3
@@ -202,21 +476,222 @@ offset_right = 40.0
 offset_bottom = 40.0
 metadata/_edit_use_anchors_ = true
 
-[node name="DialogueBox" parent="coffin/Control" instance=ExtResource("25_83adm")]
+[node name="DialogueBox" parent="coffin/Node2D/Control" instance=ExtResource("25_83adm")]
 layout_mode = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="TextureRect" parent="coffin/Control/DialogueBox" index="0"]
+[node name="TextureRect" parent="coffin/Node2D/Control/DialogueBox" index="0"]
 metadata/_edit_use_anchors_ = true
 
-[node name="Textlabel" parent="coffin/Control/DialogueBox" index="1"]
+[node name="Textlabel" parent="coffin/Node2D/Control/DialogueBox" index="1"]
 metadata/_edit_use_anchors_ = true
 
-[node name="choice2" parent="coffin/Control/DialogueBox/choices" index="0"]
+[node name="choice2" parent="coffin/Node2D/Control/DialogueBox/choices" index="0"]
 metadata/_edit_use_anchors_ = true
 
-[node name="choice 1" parent="coffin/Control/DialogueBox/choices" index="1"]
+[node name="choice 1" parent="coffin/Node2D/Control/DialogueBox/choices" index="1"]
+metadata/_edit_use_anchors_ = true
+
+[node name="sheriff" type="CharacterBody2D" parent="."]
+script = ExtResource("31_n1whf")
+
+[node name="Sheriff(2)" type="Sprite2D" parent="sheriff"]
+position = Vector2(600, 409.5)
+scale = Vector2(0.814444, 0.702778)
+texture = ExtResource("24_83adm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="sheriff"]
+position = Vector2(488, 522)
+scale = Vector2(10, 10)
+shape = SubResource("CapsuleShape2D_sdap6")
+debug_color = Color(0.928477, 3.11887e-05, 0.664508, 0.42)
+
+[node name="NameTag" type="Label" parent="sheriff"]
+visible = false
+offset_left = -145.0
+offset_top = -637.0
+offset_right = 116.0
+offset_bottom = -360.0
+theme_override_font_sizes/font_size = 100
+text = "sherrif1"
+horizontal_alignment = 1
+
+[node name="Node2D" type="Node2D" parent="sheriff"]
+
+[node name="Control" type="Control" parent="sheriff/Node2D"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="DialogueBox" parent="sheriff/Node2D/Control" instance=ExtResource("25_kpmq8")]
+layout_mode = 1
+
+[node name="exclamation1" type="CharacterBody2D" parent="."]
+script = ExtResource("31_n1whf")
+
+[node name="Astrologist" type="Sprite2D" parent="exclamation1"]
+position = Vector2(11, -11)
+scale = Vector2(0.615556, 0.623889)
+texture = ExtResource("33_n1whf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="exclamation1"]
+position = Vector2(51, -59)
+scale = Vector2(0.615556, 0.623889)
+shape = SubResource("RectangleShape2D_i2kc8")
+
+[node name="NameTag" type="Label" parent="exclamation1"]
+visible = false
+offset_left = -145.0
+offset_top = -637.0
+offset_right = 116.0
+offset_bottom = -360.0
+theme_override_font_sizes/font_size = 100
+text = "Exclamation1"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Node2D" type="Node2D" parent="exclamation1"]
+
+[node name="Control" type="Control" parent="exclamation1/Node2D"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+metadata/_edit_use_anchors_ = true
+
+[node name="DialogueBox" parent="exclamation1/Node2D/Control" instance=ExtResource("34_6akxl")]
+layout_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="exclamation2" type="CharacterBody2D" parent="."]
+script = ExtResource("31_n1whf")
+
+[node name="Astrologist" type="Sprite2D" parent="exclamation2"]
+position = Vector2(11, -11)
+scale = Vector2(0.615556, 0.623889)
+texture = ExtResource("35_i57lt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="exclamation2"]
+position = Vector2(-6, -11.5346)
+scale = Vector2(0.615556, 0.623889)
+shape = SubResource("RectangleShape2D_lbful")
+
+[node name="NameTag" type="Label" parent="exclamation2"]
+visible = false
+offset_left = -145.0
+offset_top = -637.0
+offset_right = 116.0
+offset_bottom = -360.0
+theme_override_font_sizes/font_size = 100
+text = "Exclamation2"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Node2D" type="Node2D" parent="exclamation2"]
+
+[node name="Control" type="Control" parent="exclamation2/Node2D"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+metadata/_edit_use_anchors_ = true
+
+[node name="DialogueBox" parent="exclamation2/Node2D/Control" instance=ExtResource("36_ib2m5")]
+layout_mode = 1
+
+[node name="exclamation3" type="CharacterBody2D" parent="."]
+script = ExtResource("31_n1whf")
+
+[node name="exclamation" type="Sprite2D" parent="exclamation3"]
+texture = ExtResource("35_i57lt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="exclamation3"]
+visibility_layer = 3
+shape = SubResource("CapsuleShape2D_sb33a")
+
+[node name="NameTag" type="Label" parent="exclamation3"]
+visible = false
+offset_left = 318.0
+offset_top = -689.0
+offset_right = 611.0
+offset_bottom = -412.0
+theme_override_font_sizes/font_size = 100
+text = "Exclamation3"
+horizontal_alignment = 1
+
+[node name="Node2D" type="Node2D" parent="exclamation3"]
+
+[node name="Control" type="Control" parent="exclamation3/Node2D"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="DialogueBoxexclamation3" parent="exclamation3/Node2D/Control" instance=ExtResource("37_lbful")]
+layout_mode = 1
+
+[node name="exclamation4" type="CharacterBody2D" parent="."]
+script = ExtResource("31_n1whf")
+
+[node name="exclamation" type="Sprite2D" parent="exclamation4"]
+texture = ExtResource("35_i57lt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="exclamation4"]
+visibility_layer = 3
+shape = SubResource("CapsuleShape2D_gjiaj")
+
+[node name="NameTag" type="Label" parent="exclamation4"]
+visible = false
+offset_left = 318.0
+offset_top = -689.0
+offset_right = 611.0
+offset_bottom = -412.0
+theme_override_font_sizes/font_size = 100
+text = "exclamation4"
+horizontal_alignment = 1
+
+[node name="Node2D" type="Node2D" parent="exclamation4"]
+
+[node name="Control" type="Control" parent="exclamation4/Node2D"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="DialogueBox" parent="exclamation4/Node2D/Control" instance=ExtResource("38_lbful")]
+layout_mode = 1
+
+[node name="exclamation5" type="CharacterBody2D" parent="."]
+script = ExtResource("31_n1whf")
+
+[node name="Astrologist" type="Sprite2D" parent="exclamation5"]
+position = Vector2(11, -11)
+scale = Vector2(0.615556, 0.623889)
+texture = ExtResource("35_i57lt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="exclamation5"]
+position = Vector2(17.5, -23)
+scale = Vector2(0.615556, 0.623889)
+shape = SubResource("RectangleShape2D_gjiaj")
+
+[node name="NameTag" type="Label" parent="exclamation5"]
+offset_left = -145.0
+offset_top = -637.0
+offset_right = 116.0
+offset_bottom = -360.0
+theme_override_font_sizes/font_size = 100
+text = "Exclamation5"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Control" type="Control" parent="exclamation5"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
 metadata/_edit_use_anchors_ = true
 
 [editable path="CanvasLayer"]
-[editable path="coffin/Control/DialogueBox"]
+[editable path="coffin/Node2D/Control/DialogueBox"]

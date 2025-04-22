@@ -1,17 +1,32 @@
-[gd_scene load_steps=19 format=3 uid="uid://bmcuhqrpxcctd"]
+[gd_scene load_steps=27 format=3 uid="uid://bmcuhqrpxcctd"]
 
 [ext_resource type="Script" uid="uid://d07xoy34n6ap1" path="res://main.gd" id="1_o3mya"]
 [ext_resource type="PackedScene" uid="uid://bnrqduc4ah6q4" path="res://player.tscn" id="2_x68gl"]
-[ext_resource type="PackedScene" uid="uid://km67prk0b6h" path="res://Npc.tscn" id="3_1m6vu"]
-[ext_resource type="Script" uid="uid://c2hi7pbdvyjc6" path="res://npc.gd" id="4_x1p1m"]
-[ext_resource type="PackedScene" uid="uid://bnkhxhler4qmi" path="res://Story storage files/gien/mailman.tscn" id="5_f8kkc"]
-[ext_resource type="PackedScene" uid="uid://cobti6h5lbw1" path="res://doctor.tscn" id="6_cojvf"]
+[ext_resource type="Texture2D" uid="uid://h1thb3nqx33o" path="res://characters/characters/mailman.png" id="5_x1p1m"]
+[ext_resource type="Script" uid="uid://c103ebm4crq6q" path="res://npcTalk.gd" id="6_1m6vu"]
+[ext_resource type="PackedScene" uid="uid://bjn3tcfqhmdon" path="res://Story storage files/gien/dialogue_boxGIEN.tscn" id="6_f8kkc"]
 [ext_resource type="PackedScene" uid="uid://drs7r18k2tk86" path="res://nutjob.tscn" id="7_pytj0"]
+[ext_resource type="Texture2D" uid="uid://dk32xnjr7fdxm" path="res://characters/characters/doctor.png" id="7_x1p1m"]
+[ext_resource type="PackedScene" uid="uid://b4yr52cv5ojvv" path="res://Story storage files/tauri/dialogue_boxTAURI.tscn" id="8_f8kkc"]
 [ext_resource type="Texture2D" uid="uid://be8r43boghfw7" path="res://terrain sprites/background.png" id="8_hp6te"]
 [ext_resource type="PackedScene" uid="uid://bmabqjkdmj1ky" path="res://townhouseOPENING.tscn" id="9_7r764"]
-[ext_resource type="PackedScene" uid="uid://blti3j6sfrehl" path="res://Story storage files/Coffin/coffinastrologist.tscn" id="10_ub888"]
-[ext_resource type="PackedScene" uid="uid://cmobt3tbacu2d" path="res://Story storage files/Sadal/tavern.tscn" id="11_5w2tu"]
-[ext_resource type="PackedScene" uid="uid://bjq7sekqi0bme" path="res://Story storage files/opening/opening_npc.tscn" id="13_x68gl"]
+[ext_resource type="Texture2D" uid="uid://s13oomnv0c3b" path="res://characters/characters/astrologist.png" id="11_1m6vu"]
+[ext_resource type="Script" uid="uid://b5aqt2gv2bkku" path="res://Story storage files/opening/opening_npc_script.gd" id="12_1m6vu"]
+[ext_resource type="PackedScene" uid="uid://c5gymfcgkuabo" path="res://Story storage files/opening/dialogue_boxOPENING.tscn" id="12_v8p35"]
+[ext_resource type="PackedScene" uid="uid://0p5e15bf2yxs" path="res://Story storage files/Coffin/dialogue_boxCoffin.tscn" id="12_x1p1m"]
+[ext_resource type="Texture2D" uid="uid://swmnlgs4hrvj" path="res://characters/characters/tavern_owner.png" id="13_x1p1m"]
+[ext_resource type="PackedScene" uid="uid://d3uu4h21hbkgb" path="res://Story storage files/Sadal/dialogue_boxSADAL.tscn" id="14_x1p1m"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ftmwj"]
+radius = 165.0
+height = 884.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3ok8u"]
+radius = 218.0
+height = 1250.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i2kc8"]
+size = Vector2(246.931, 642.631)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4xy5q"]
 radius = 152.0
@@ -32,6 +47,10 @@ bg_color = Color(0.53528, 0.654675, 0.212876, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s1pmf"]
 bg_color = Color(0.73111, 0.573056, 0.268446, 1)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_67qdd"]
+radius = 152.0
+height = 928.0
 
 [node name="normal" type="Node2D"]
 position = Vector2(462, 400)
@@ -64,22 +83,80 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
-[node name="Npc" parent="." instance=ExtResource("3_1m6vu")]
-z_index = 1
-position = Vector2(-2040, -810)
-disable_mode = 2
-input_pickable = true
-script = ExtResource("4_x1p1m")
-
-[node name="mailman" parent="." instance=ExtResource("5_f8kkc")]
+[node name="mailman" type="CharacterBody2D" parent="."]
 z_index = 1
 position = Vector2(-2040, 6.10352e-05)
 disable_mode = 2
+script = ExtResource("6_1m6vu")
 
-[node name="doctor" parent="." instance=ExtResource("6_cojvf")]
+[node name="Mailman" type="Sprite2D" parent="mailman"]
+position = Vector2(-6.00003, 16)
+scale = Vector2(0.594444, 0.52)
+texture = ExtResource("5_x1p1m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="mailman"]
+position = Vector2(-8, -14)
+shape = SubResource("CapsuleShape2D_ftmwj")
+
+[node name="NameTag" type="Label" parent="mailman"]
+offset_left = -145.0
+offset_top = -637.0
+offset_right = 116.0
+offset_bottom = -360.0
+theme_override_font_sizes/font_size = 100
+text = "Gien"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Node2D" type="Node2D" parent="mailman"]
+
+[node name="Control" type="Control" parent="mailman/Node2D"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+metadata/_edit_use_anchors_ = true
+
+[node name="DialogueBox" parent="mailman/Node2D/Control" instance=ExtResource("6_f8kkc")]
+layout_mode = 1
+
+[node name="doctor" type="CharacterBody2D" parent="."]
 z_index = 1
 position = Vector2(-920, -310)
 disable_mode = 2
+script = ExtResource("6_1m6vu")
+
+[node name="Doctor" type="Sprite2D" parent="doctor"]
+position = Vector2(38, -1.52588e-05)
+scale = Vector2(0.7675, 0.751944)
+texture = ExtResource("7_x1p1m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="doctor"]
+position = Vector2(78, 0)
+shape = SubResource("CapsuleShape2D_3ok8u")
+
+[node name="NameTag" type="Label" parent="doctor"]
+offset_left = -58.0
+offset_top = -788.0
+offset_right = 203.0
+offset_bottom = -511.0
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 100
+text = "Tauri"
+horizontal_alignment = 1
+
+[node name="Node2D" type="Node2D" parent="doctor"]
+
+[node name="Control" type="Control" parent="doctor/Node2D"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="DialogueBox" parent="doctor/Node2D/Control" instance=ExtResource("8_f8kkc")]
+layout_mode = 1
 
 [node name="nutjob" parent="." instance=ExtResource("7_pytj0")]
 z_index = 1
@@ -95,29 +172,133 @@ metadata/_edit_lock_ = true
 [node name="house" parent="." instance=ExtResource("9_7r764")]
 position = Vector2(2980, 1760)
 
-[node name="coffin" parent="." instance=ExtResource("10_ub888")]
+[node name="coffin" type="CharacterBody2D" parent="."]
 position = Vector2(-1400, 710)
+script = ExtResource("6_1m6vu")
 
-[node name="tavern" parent="." instance=ExtResource("11_5w2tu")]
+[node name="Astrologist" type="Sprite2D" parent="coffin"]
+position = Vector2(11, -11)
+scale = Vector2(0.615556, 0.623889)
+texture = ExtResource("11_1m6vu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coffin"]
+position = Vector2(51, -59)
+scale = Vector2(0.615556, 0.623889)
+shape = SubResource("RectangleShape2D_i2kc8")
+
+[node name="NameTag" type="Label" parent="coffin"]
+visible = false
+offset_left = -145.0
+offset_top = -637.0
+offset_right = 116.0
+offset_bottom = -360.0
+theme_override_font_sizes/font_size = 100
+text = "Coffin"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Node2D" type="Node2D" parent="coffin"]
+
+[node name="Control" type="Control" parent="coffin/Node2D"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+metadata/_edit_use_anchors_ = true
+
+[node name="DialogueBox" parent="coffin/Node2D/Control" instance=ExtResource("12_x1p1m")]
+layout_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="tavern" type="CharacterBody2D" parent="."]
 z_index = 1
 position = Vector2(-520, 500)
+script = ExtResource("6_1m6vu")
 
-[node name="CollisionShape2D" parent="tavern" index="1"]
+[node name="TavernOwner" type="Sprite2D" parent="tavern"]
+position = Vector2(7.62939e-06, 0)
+scale = Vector2(0.596667, 0.562222)
+texture = ExtResource("13_x1p1m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="tavern"]
+position = Vector2(-33, -34)
 shape = SubResource("CapsuleShape2D_4xy5q")
 
-[node name="Textlabel" parent="tavern/Control/DialogueBox" index="1"]
+[node name="NameTag" type="Label" parent="tavern"]
+offset_left = -145.0
+offset_top = -637.0
+offset_right = 116.0
+offset_bottom = -360.0
+theme_override_font_sizes/font_size = 100
+text = "Sadal"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Node2D" type="Node2D" parent="tavern"]
+
+[node name="Control" type="Control" parent="tavern/Node2D"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+metadata/_edit_use_anchors_ = true
+
+[node name="DialogueBox" parent="tavern/Node2D/Control" instance=ExtResource("14_x1p1m")]
+layout_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Textlabel" parent="tavern/Node2D/Control/DialogueBox" index="1"]
 label_settings = SubResource("LabelSettings_fthp3")
 
-[node name="choice2" parent="tavern/Control/DialogueBox/choices" index="0"]
+[node name="choice2" parent="tavern/Node2D/Control/DialogueBox/choices" index="0"]
 theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_3oyv4")
 theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_gi2ia")
 theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_macfk")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_s1pmf")
 
-[node name="opening" parent="." instance=ExtResource("13_x68gl")]
+[node name="opening" type="CharacterBody2D" parent="."]
 z_index = 10
+script = ExtResource("12_1m6vu")
+
+[node name="TavernOwner" type="Sprite2D" parent="opening"]
+visible = false
+position = Vector2(7.62939e-06, 0)
+scale = Vector2(0.596667, 0.562222)
+texture = ExtResource("13_x1p1m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="opening"]
+visible = false
+position = Vector2(-33, -34)
+shape = SubResource("CapsuleShape2D_67qdd")
+
+[node name="NameTag" type="Label" parent="opening"]
+offset_left = -145.0
+offset_top = -637.0
+offset_right = 116.0
+offset_bottom = -360.0
+theme_override_font_sizes/font_size = 100
+text = "Opening"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Control" type="Control" parent="opening"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+metadata/_edit_use_anchors_ = true
+
+[node name="DialogueBox" parent="opening/Control" instance=ExtResource("12_v8p35")]
+layout_mode = 1
+
+[node name="label text" parent="opening/Control/DialogueBox/Node2D/Name panel" index="1"]
+visible = false
 
 [editable path="Player"]
-[editable path="tavern"]
-[editable path="tavern/Control/DialogueBox"]
-[editable path="tavern/Control/DialogueBox/SpellCast/spellcast3"]
+[editable path="doctor/Node2D/Control/DialogueBox"]
+[editable path="coffin/Node2D/Control/DialogueBox"]
+[editable path="tavern/Node2D/Control/DialogueBox"]
+[editable path="tavern/Node2D/Control/DialogueBox/SpellCast/spellcast3"]
+[editable path="opening/Control/DialogueBox"]

@@ -6,7 +6,7 @@ var dlines = null
 
 var current_line = 0
 
-
+@onready var SpellCast = $SpellCast
 func _ready():
 	hide()
 	await get_tree().create_timer(0.5).timeout 
@@ -16,7 +16,7 @@ func _ready():
 	if get_node_or_null("$choice2"):
 		$choice2.hide()
 	if get_node_or_null("$SpellCast"):
-		var SpellCast = $SpellCast
+		var SpellCast = null
 		$SpellCast.hide()
 	
 	##display_next_line()
@@ -26,14 +26,14 @@ func display_next_line():
 		if (!dlines.lines[current_line].contains("#")):
 			$Textlabel.text = dlines.lines[current_line]
 			current_line += 1
-			print("no # found, normal text")
+			print(dlines.lines[current_line])
 		elif dlines.lines[current_line].contains("#speaker"):
 			var end = dlines.lines[current_line].find("#")
 			var speaker = end + 9
 			$"Node2D/Name panel/label text".text = dlines.lines[current_line].substr(speaker)
 			$Textlabel.text = dlines.lines[current_line].substr(0,end)
 			current_line += 1
-			print("speaker #")
+			print(dlines.lines[current_line].substr(0,end))
 		elif dlines.lines[current_line].contains("#choices"):
 			print("# parsed through")
 			##choice_on = true
@@ -52,7 +52,7 @@ func display_next_line():
 			await get_tree().create_timer(0.5).timeout 
 			##spell_on = true
 			NpcTalkOrder.spellOn = true
-			##SpellCast.show()
+			SpellCast.show()
 			##$spellcast1.set_process(true)
 			##get_tree().change_scene_to_file("res://spellcast_1.tscn")
 			##$choices.show()
@@ -67,7 +67,7 @@ func display_next_line():
 			##current_line += 1
 	else:
 		_dialogueEnd()
-		emit_signal("dialogue_finished")  # Optional: use this to trigger spellcast, etc.
+		##emit_signal("dialogue_finished")  # Optional: use this to trigger spellcast, etc.
 		 
 		##get_tree().change_scene_to_file("res://spellcast_1.tscn")
 

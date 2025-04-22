@@ -1,9 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://b4lsyd1tvieh7"]
+[gd_scene load_steps=4 format=3 uid="uid://bnb6ws874m1op"]
 
 [ext_resource type="Script" uid="uid://c103ebm4crq6q" path="res://npcTalk.gd" id="1_xcq8d"]
 [ext_resource type="Texture2D" uid="uid://bymakhwwkgspa" path="res://Story storage files/exclamation.png" id="2_e3tl0"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_i2kc8"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gjiaj"]
 size = Vector2(264.801, 679.497)
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
@@ -17,7 +17,7 @@ texture = ExtResource("2_e3tl0")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(17.5, -23)
 scale = Vector2(0.615556, 0.623889)
-shape = SubResource("RectangleShape2D_i2kc8")
+shape = SubResource("RectangleShape2D_gjiaj")
 
 [node name="NameTag" type="Label" parent="."]
 offset_left = -145.0

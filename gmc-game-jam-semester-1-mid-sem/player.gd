@@ -55,9 +55,9 @@ func walk(delta: float):
 	
 	if collision:
 		NpcTalkOrder.inRange = true
-		print("enter:cantalk bool is: " + str(NpcTalkOrder.inRange))
+		##print("enter:cantalk bool is: " + str(NpcTalkOrder.inRange))
 	else:
 		await get_tree().create_timer(2).timeout 
 		NpcTalkOrder.inRange = false
-		print("exit:cantalk bool is: " + str(NpcTalkOrder.inRange))
+		##print("exit:cantalk bool is: " + str(NpcTalkOrder.inRange))
 	

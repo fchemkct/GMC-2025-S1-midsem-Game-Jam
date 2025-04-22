@@ -5,9 +5,9 @@
 [ext_resource type="PackedScene" uid="uid://ge4merxv8nt6" path="res://Story storage files/Exclamation 1/dialogue_boxEXCLAMATION.tscn" id="3_4155w"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i2kc8"]
-size = Vector2(1466.61, 794.791)
+size = Vector2(246.931, 642.631)
 
-[node name="Area2D" type="Area2D"]
+[node name="CharacterBody2D" type="CharacterBody2D"]
 script = ExtResource("1_eoywx")
 
 [node name="Astrologist" type="Sprite2D" parent="."]
